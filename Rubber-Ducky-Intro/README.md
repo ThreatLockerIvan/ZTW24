@@ -112,7 +112,10 @@ Now all you have to do is just to plug in the ducky and the ducky should start s
 ![](https://github.com/ThreatLockerRay/ZTW-Pictures/blob/main/Intro_to_Rubber_ducky/Screenshot%202024-01-26%20150640.png)
 
 # Notes
-- You will most likely have to play with the delay if it does run right. 
+- You will most likely have to play with the delay if it does run right.
+- You should add the title, Author, Description, and the target incase you forgot or someone else have to look at it. 
+
+![](https://github.com/ThreatLockerRay/ZTW-Pictures/blob/main/Intro_to_Rubber_ducky/Screenshot%202024-01-26%20155329.png)
 
 # Great Site to help you learn more.
 - Ducky Quick Reference Guild​​
