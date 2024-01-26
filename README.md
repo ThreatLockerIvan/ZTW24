@@ -1,7 +1,7 @@
 ![ZTW - LOGO](https://zerotrustworld.threatlocker.com/hubfs/ZTW_Acronym_Logo.svg)
 
 
-# ZTW Hacking Labs Content
+# Hacking Labs Content
 
   
 
