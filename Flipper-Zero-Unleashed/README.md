@@ -62,7 +62,7 @@ It has the following Capabilities:
 > Always be aware of the type of card or tag you are trying to hack with the Flipper, this helps you understand what module you need to use to actually be able to read it. For example, if you have an iClass card you don't want to be using the Mifare NFC Module.
 ## Bad Bluetooth (BadKB)
 
-I always tell others that Bad Bluetooth is basically a wireless rubber ducky attack. If you don't know what a rubber ducky is then that ok. This attack essentially allows you to emulate a keyboard and send pre-programmed key strokes to any device you are connected to. In this case of a rubber ducky you must plug it into a computer as it looks like a "USB" device. But in this case The Flipper most connect over Bluetooth to the victims device to launch the attack.
+I always tell others that Bad Bluetooth is basically a wireless rubber ducky attack. If you don't know what a rubber ducky is then that's ok. Bad KB and Rubber Duckies allows you to emulate a keyboard and send pre-programmed key strokes to any device you are connected to. In this case of a rubber ducky you must plug it into a computer as it looks like a "USB" device. But in this case The Flipper must connect over Bluetooth to the victims device to launch the attack.
 
 
 ## Bluetooth Impersonation Attacks
