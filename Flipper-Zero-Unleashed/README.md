@@ -69,6 +69,18 @@ I always tell others that Bad Bluetooth is basically a wireless rubber ducky att
 
 Our team recently gained recognition on TheHackerNews for uncovering a Bluetooth and macOS vulnerability. This exploit enabled us to mimic a Bluetooth device, such as AirPods or an iPhone, using a Flipper Zero. By impersonating the MAC Address, we could intercept or establish an initial connection with a victim's machine. The success of this approach relied on the machine itself trusting us as the legitimate AirPods or Bluetooth device of choice for the victim. Once the initial connection was established, our Flippers could then function as "HID Devices" (Keyboards) with the "Bad Bluetooth" (BadKB) module. This capability allowed us to send malicious keystrokes, ultimately granting us reverse shell access to the targeted machine.
 
-**Research Article:**[ New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
+**THN Article:**[ New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
 
-**Reverse Shell Payload:**
+**Threat Locker Blog Post:**[ How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
+
+**Reverse Shell Payloads:**
+* macOS:[ ZTW/Payload (github.com)](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Flipper-Zero-Unleashed/Payloads/macos-reverseshell-payload.txt)
+~~~
+REM --- MACOS REVERSE SHELL ---
+GUI r
+~~~
+* Windows: [ZTW/Payloads (github.com)](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Flipper-Zero-Unleashed/Payloads/windows-revershell-payload.txc)
+~~~
+REM --- WINDOWS REVERSE SHELL ---
+GUI r
+~~~
