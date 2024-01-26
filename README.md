@@ -1,4 +1,5 @@
-![Example Image](https://imgur.com/a/RSSehwD)
+[ZTW - Logo](https://imgur.com/a/RSSehwD)
+
 
 # ZTW Hacking Labs Content
 
