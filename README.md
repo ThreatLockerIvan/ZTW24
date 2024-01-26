@@ -17,4 +17,4 @@ This repository holds all the course content from hacking labs from ZTW2024. The
 >  **Tip:** Click one of links above to access its respective course content.
 
 ## Values
-Our Team at ThreatLocker makes it our absolute goal to educate and advocate for a cyber-safe world. We have dedicated countless hours to crafting our content to ensure a comprehensive and enriching learning experience. We hope you have an amazing learning experience at ZTW2024!
+Our Team at ThreatLocker makes it an absolute goal to educate and advocate for a cyber-safe world. We have dedicated countless hours to crafting our content to ensure a comprehensive and enriching learning experience. We hope you have an amazing learning experience at ZTW2024!
