@@ -1,4 +1,4 @@
-[ZTW - Logo](https://i.imgur.com/dRYFYH2.png)
+![ZTW - LOGO](https://zerotrustworld.threatlocker.com/hubfs/ZTW_Acronym_Logo.svg)
 
 
 # ZTW Hacking Labs Content
