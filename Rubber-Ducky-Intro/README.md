@@ -39,6 +39,8 @@ Site: https://payloadstudio.hak5.org/community/
 
 This will be the place that you will spend most of your time when making payloads for the ducky. 
 
+![](https://github.com/ThreatLockerRay/ZTW-Pictures/blob/main/Intro_to_Rubber_ducky/Screenshot%202024-01-26%20151743.png)
+
 The menu will be as follows:
 - File (This where you can make new files and save them.)
 	-	New 
