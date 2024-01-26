@@ -27,7 +27,7 @@ A Flipper Zero is a versatile and programmable multi tool that is commonly used 
 
 ## Jail Breaking a Flipper Zero
 
-Jail Breaking a Flipper or otherwise known as Flashing a Flipper typically refers to the process of loading or updating the firmware on the device. Firmware is the software that runs on embedded systems. Flashing is necessary when you want to install new features to extend your hacking abilities.
+Jail Breaking a Flipper otherwise known as Flashing a Flipper typically refers to the process of loading or updating the firmware on the device. Firmware is the software that runs on embedded systems. Flashing is necessary when you want to install new features to extend your hacking abilities.
 
 You may be asking how do I flash firmware onto my Flipper, is it easy? 
 My answer to this yes it easy, if you use the Web Updater. Many GitHub repositories provide instant links to the web updater to install their firmware. Once you click these links all you have to do is plug in your flipper to your machine and click "Update".
