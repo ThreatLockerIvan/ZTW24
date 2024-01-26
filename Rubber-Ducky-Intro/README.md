@@ -79,10 +79,11 @@ The menu will be as follows:
 
 # Hello World 
 What's a better way to learn than a Hello world. 
+I have add a bunch of Comments to explain how this thing works
 ~~~ 
 REM This is a comment.
 
-DELAY 3000 REM This is a delay so that the ducky doesn't start the attack early.  
+DELAY 3000 REM This is a delay so that the ducky doesn't start the attack early when you plug it in.  
 
 GUI r REM Opens the run prompt.
 
