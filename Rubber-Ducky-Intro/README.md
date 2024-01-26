@@ -10,10 +10,11 @@
 -   Launching the payload
 # Unboxing 
 ![enter image description here](https://github.com/ThreatLockerRay/ZTW-Pictures/blob/main/Intro_to_Rubber_ducky/Screenshot%202024-01-26%20150431.png)
+
 You will get the following:
-	- info card
-	- USB Rubber Ducky in an Esp bag 
-	- Sticker card 
+- info card
+-  USB Rubber Ducky in an Esp bag 
+-  Sticker card 
 	
 # Button Mod For The Ducky
 The reason why we open the ducky is to add some sticker to the case, so it is easy to press the button when the case is put back together. 
