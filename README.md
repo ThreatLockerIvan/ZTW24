@@ -1,4 +1,4 @@
-[ZTW - Logo](https://imgur.com/a/RSSehwD)
+[ZTW - Logo](https://i.imgur.com/dRYFYH2.png)
 
 
 # ZTW Hacking Labs Content
