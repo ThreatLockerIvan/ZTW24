@@ -11,7 +11,7 @@
 # Unboxing 
 ![enter image description here](https://github.com/ThreatLockerRay/ZTW-Pictures/blob/main/Intro_to_Rubber_ducky/Screenshot%202024-01-26%20150431.png)
 
-You will get the following:
+You will get the following in the Rubber ducky Bag:
 - info card
 -  USB Rubber Ducky in an Esp bag 
 -  Sticker card 
