@@ -67,5 +67,8 @@ I always tell others that Bad Bluetooth is basically a wireless rubber ducky att
 
 ## Bluetooth Impersonation Attacks
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+Our team recently gained recognition on TheHackerNews for uncovering a Bluetooth and macOS vulnerability. This exploit enabled us to mimic a Bluetooth device, such as AirPods or an iPhone, using a Flipper Zero. By impersonating the MAC Address, we could intercept or establish an initial connection with a victim's machine. The success of this approach relied on the machine itself trusting us as the legitimate AirPods or Bluetooth device of choice for the victim. Once the initial connection was established, our Flippers could then function as "HID Devices" (Keyboards) with the "Bad Bluetooth" (BadKB) module. This capability allowed us to send malicious keystrokes, ultimately granting us reverse shell access to the targeted machine.
 
+**Research Article:**[ New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
+
+**Reverse Shell Payload:**
