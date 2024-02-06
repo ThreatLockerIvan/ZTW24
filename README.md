@@ -9,7 +9,7 @@ interactively with the Hacking Lab's, get a recap, or extend their knowledge fur
 ## Courses
 
 **Intro to Rubbery Ducky:** [ZTW24/Rubber-Ducky-Intro (Course Content)](Rubber-Ducky-Intro/README.md)
-  
+
 **Advanced Rubber Ducky:** [ZTW24/Rubber-Ducky-Advanced  (Course Content)](Rubber-Ducky-Advanced/README.md)
 
 **Flipper Zero Unleashed:** [ZTW24/Flipper-Zero-Unleashed  (Course Content)](Flipper-Zero-Unleashed/README.md)
