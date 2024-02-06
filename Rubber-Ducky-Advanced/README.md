@@ -36,6 +36,7 @@ REM ^^^ Enter payload
 ~~~
 ## Note:
 You will have to replace "**\<ReveShell payload\>**" with one from https://www.revshells.com/. In this case the class will use the PowerShell #1 payload. (Don't forget to change the IP address to the listener. (kali computer))
+<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20073814.png" width="300" />
 
 ## Setting Up Our C2 listener
 
