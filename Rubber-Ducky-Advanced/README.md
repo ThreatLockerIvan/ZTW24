@@ -38,6 +38,7 @@ You will have to replace "**\<ReveShell payload\>**" with one from https://www.r
  - C2 Listener is just a computer that the victim of the rubber ducky will try to connect to. (In most case it will be a kali/parrot machine with Netcat as the listener.)  
   - Command to start the Listener:
 	 -  nc -lnvp 5757
+    ![](/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20143100.png)
 
 ## Note
 It reminded to have the C2 listener on a cloud machine, so you don't have to worry about network problems. 
