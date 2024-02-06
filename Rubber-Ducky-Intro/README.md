@@ -1,5 +1,4 @@
-# Intro To Rubber Ducky 
-
+# Rubber Ducky Intro
 # Objectives ​
 -   Setting up the rubber ducky​
     
