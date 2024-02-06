@@ -45,7 +45,7 @@ easy to press the button when the case is put back together.
 
 ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150558.png)
 
-5. Put the Rubber ducky back togther.
+5. Put the Rubber ducky back together.
 
 
 # Payload Studio IDE(Integrated development environment)
@@ -70,8 +70,8 @@ The menu will be as follows:
 	- Unfold all
 	- find
 	- Replace
-	- copy playload
-	- Curor
+	- copy payload
+	- Cursor
 	- BOF
 	- EOF
 	- Last change
@@ -113,7 +113,7 @@ REM ^^^ This will write NotePad.exe and hit the enter key into the run prompt.
 DELAY 1000 REM Delay to wait for notepad to open.
 
 STRING Hello, World!
-REM ^^^ Write Hello, World! to notpad without hitting enter
+REM ^^^ Write Hello, World! to notepad without hitting enter
 ~~~
 
 # Generate Payload and getting it on the ducky.
