@@ -55,6 +55,9 @@ This basic payload, and all EDR/Anti malware know what a basic payload looks lik
 
 <img scr="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/microsoftdefenderlogo.png" width="100" />
 
+
+
+
 # Advance Payload
 There are a few ways to bypass EDR/ Anti Malware services. but why spend so much time to develop a bypass when you can just turn off EDR/Anti malware. :thinking:
 
@@ -126,6 +129,7 @@ DELAY 500
 
  - You can navigate most GUI with tab key to move forward and Shift + tab to go back.
  1. So, this part will move from the Quick Scan button to manage settings under right under virus & threat protection settings and Enter the manage settings button.
+    ![](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125337.png)
 
 ~~~
 REM Open and turn off Realtime Protection
