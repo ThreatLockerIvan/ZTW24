@@ -1,4 +1,4 @@
-<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/ZTW_Logos_Text_only_light_wo_TL.png"  width="500" />
+<img src="/../main/Assets/ZTW_Logos_Text_only_light_wo_TL.png"  width="500" />
 
 # Rubber Ducky Advance
 
