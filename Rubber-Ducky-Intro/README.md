@@ -1,4 +1,4 @@
-<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/ZTW_Logos_Text_only_light_wo_TL.png" width="250" />
+<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/ZTW_Logos_Text_only_light_wo_TL.png" width="500" />
 # Rubber Ducky Intro
 <img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Intro_to_Rubber_ducky/baby_ducky.png" alt="Ducky" width="200" />
 # Objectives ​
