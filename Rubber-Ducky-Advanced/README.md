@@ -1,8 +1,8 @@
-<img src="/../main/Assets/ZTW_Logos_Text_only_light_wo_TL.png"  width="500" />
+![ZTW Logo Text](../Assets/ZTW_Logos_Full_500x500.png)
 
 # Rubber Ducky Advance
 
-<img src="/../main/Assets/Advance_ducky/ducky1.png" width="200" />
+![Super ducky](../Assets/Advance_ducky/ducky1_200x200.png)
 
 # Objectives ​
 -   Create Basic and advance payloads.
@@ -31,7 +31,7 @@ REM ^^^ Enter payload
 ## Note:
 You will have to replace "**\<ReveShell payload\>**" with one from https://www.revshells.com/. In this case the class will use the PowerShell #1 payload. (Don't forget to change the IP address to the listener. (kali computer))
 
-<img src="/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20073814.png" width="400" />
+![](../Assets/Advance_ducky/Screenshot_2024-02-06_073814_400x354.png)
 
 # Setting Up Our C2 listener
 
@@ -39,7 +39,7 @@ You will have to replace "**\<ReveShell payload\>**" with one from https://www.r
   - Command to start the Listener:
 	 -  nc -lnvp 5757
     
-    ![](/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20143100.png)
+    ![](../Assets/Advance_ducky/Screenshot_2024-02-06_143100.png)
 
 ## Note
 It reminded to have the C2 listener on a cloud machine, so you don't have to worry about network problems. 
@@ -47,7 +47,7 @@ It reminded to have the C2 listener on a cloud machine, so you don't have to wor
 
 # What Happen When We Ran The Basic Payload.
 
-<img src="/../main/Assets/Advance_ducky/microsoftdefenderlogo.png" width="100" />
+![Microsoft Defender logo](../Assets/Advance_ducky/microsoftdefenderlogo_100x105.png)
 
 When you ran the basic payload, you might have notice that it didn't work. But why? 
 This basic payload, and all EDR/Anti malware know what a basic payload looks like. 
@@ -127,7 +127,7 @@ DELAY 500
  - You can navigate most GUI with tab key to move forward and Shift + tab to go back.
  1. So, this part will move from the Quick Scan button to manage settings under right under virus & threat protection settings and Enter the manage settings button.
     
-    ![](/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20125337.png)
+    ![](../Assets/Advance_ducky/Screenshot_2024-02-06_125337.png)
 
 ~~~
 REM Open and turn off Realtime Protection
@@ -137,12 +137,13 @@ ALT y
 DELAY 1000
 ~~~
 
- 1. This part will hit the space bar to toggle the on/off setting.
+1. This part will hit the space bar to toggle the on/off setting.
     
-<img src ="/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20125356.png" width="600"/>
- 2.  When this happens, the UAC will active and ask for yes or no. ALT + y will hit the yes button.
+![](../Assets/Advance_ducky/Screenshot_2024-02-06_125356_600x191.png)
+
+1.  When this happens, the UAC will active and ask for yes or no. ALT + y will hit the yes button.
     
-<img src="/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20125409.png" width="500" />
+![](../Assets/Advance_ducky/Screenshot_2024-02-06_125409_500x412.png)
 
 ~~~
 REM Exit security settings
