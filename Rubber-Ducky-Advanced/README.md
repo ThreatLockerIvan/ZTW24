@@ -53,7 +53,7 @@ It reminded to have the C2 listener on a cloud machine, so you don't have to wor
 When you ran the basic payload, you might have notice that it didn't work. But why? 
 This basic payload, and all EDR/Anti malware know what a basic payload looks like. 
 
-<img scr="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/microsoftdefenderlogo.png" width="100" />
+![](/../main/Assets/Advance_ducky/microsoftdefenderlogo.png")
 
 
 
@@ -63,6 +63,7 @@ There are a few ways to bypass EDR/ Anti Malware services. but why spend so much
 
 ## Starting the Advance Payload.
 Instead of using a 3000-millisecond delay, this payload will use Extension Detect-Ready module 
+
 Extension in ducky script is just a fast way to import something in the Payload Studio IDE that might be use multiple time or in multiple payloads. 
 
  - To learn more about Extension https://docs.hak5.org/hak5-usb-rubber-ducky/advanced-features/extensions
