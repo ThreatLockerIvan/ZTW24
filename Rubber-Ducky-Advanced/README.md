@@ -49,7 +49,7 @@ You will have to replace "**\<ReveShell payload\>**" with one from https://www.r
 It reminded to have the C2 listener on a cloud machine, so you don't have to worry about network problems. 
 
 
-## What Happen When We Ran The Basic Payload.
+# What Happen When We Ran The Basic Payload.
 When you ran the basic payload, you might have notice that it didn't work. But why? 
 This basic payload, and all EDR/Anti malware know what a basic payload looks like. 
 
