@@ -1,4 +1,4 @@
-<img src="/../main/Assets/ZTW_Logos_Text_only_light_wo_TL.png"  width="500" />
+![](../Assets/ZTW_Logos_Text_only_light_wo_TL_500x185.png)
 
 # Flipper Zero Unleashed
 
