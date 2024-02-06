@@ -2,7 +2,7 @@
 
 # Rubber Ducky Advance
 
-<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/ducky1.png" width="200" />
+<img src="/../main/Assets/Advance_ducky/ducky1.png" width="200" />
 
 # Objectives ​
 -   Create Basic and advance payloads.
@@ -37,7 +37,7 @@ REM ^^^ Enter payload
 ## Note:
 You will have to replace "**\<ReveShell payload\>**" with one from https://www.revshells.com/. In this case the class will use the PowerShell #1 payload. (Don't forget to change the IP address to the listener. (kali computer))
 
-<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20073814.png" width="400" />
+<img src="/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20073814.png" width="400" />
 
 # Setting Up Our C2 listener
 
@@ -131,7 +131,7 @@ DELAY 500
  - You can navigate most GUI with tab key to move forward and Shift + tab to go back.
  1. So, this part will move from the Quick Scan button to manage settings under right under virus & threat protection settings and Enter the manage settings button.
     
-    ![](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125337.png)
+    ![](/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20125337.png)
 
 ~~~
 REM Open and turn off Realtime Protection
@@ -143,10 +143,10 @@ DELAY 1000
 
  1. This part will hit the space bar to toggle the on/off setting.
     
-<img src ="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125356.png" width="600"/>
+<img src ="/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20125356.png" width="600"/>
  2.  When this happens, the UAC will active and ask for yes or no. ALT + y will hit the yes button.
     
-<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125409.png" width="500" />
+<img src="/../main/Assets/Advance_ducky/Screenshot%202024-02-06%20125409.png" width="500" />
 
 ~~~
 REM Exit security settings
@@ -179,7 +179,7 @@ GUI DOWNARROW
 ~~~
 Note: don't forget to change the "\<ReveShell Payload\>" to the PowerShell #1 from the ReveShell Site (don't forget about the IP).
 # Generate and putting it on the ducky. 
-[ZTW24/Rubber-Ducky-Intro/README.md at main · ThreatLockerIvan/ZTW24 (github.com)](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Rubber-Ducky-Intro/README.md#generate-payload-and-getting-it-on-the-ducky)
+[ZTW24/Rubber-Ducky-Intro/README.md at main · ThreatLockerIvan/ZTW24 (github.com)](/../main/Rubber-Ducky-Intro/README.md#generate-payload-and-getting-it-on-the-ducky)
 # Notes
 - You will most likely have to play with the delay if it does run right.
 -   The computers must be on the same network. Or host the listener on the cloud. ​ 
