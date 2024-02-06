@@ -129,6 +129,7 @@ DELAY 500
 
  - You can navigate most GUI with tab key to move forward and Shift + tab to go back.
  1. So, this part will move from the Quick Scan button to manage settings under right under virus & threat protection settings and Enter the manage settings button.
+    
     ![](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125337.png)
 
 ~~~
@@ -141,8 +142,8 @@ DELAY 1000
 
  1. This part will hit the space bar to toggle the on/off setting.
     
-   <img src ="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125356.png" width="600"/>
- 3.  When this happens, the UAC will active and ask for yes or no. ALT + y will hit the yes button.
+<img src ="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125356.png" width="600"/>
+ 2.  When this happens, the UAC will active and ask for yes or no. ALT + y will hit the yes button.
     
 <img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125409.png" width="500" />
 
