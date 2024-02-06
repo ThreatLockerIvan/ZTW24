@@ -8,11 +8,11 @@ interactively with the Hacking Lab's, get a recap, or extend their knowledge fur
 
 ## Courses
 
-**Intro to Rubbery Ducky:** [ZTW24/Rubber-Ducky-Intro (Course Content)](https://github.com/ThreatLockerIvan/ZTW24/tree/main/Rubber-Ducky-Intro)
+**Intro to Rubbery Ducky:** [ZTW24/Rubber-Ducky-Intro (Course Content)](Rubber-Ducky-Intro/README.md)
   
-**Advanced Rubber Ducky:** [ZTW24/Rubber-Ducky-Advanced  (Course Content)](https://github.com/ThreatLockerIvan/ZTW24/tree/main/Rubber-Ducky-Advanced)
+**Advanced Rubber Ducky:** [ZTW24/Rubber-Ducky-Advanced  (Course Content)](Rubber-Ducky-Advanced/README.md)
 
-**Flipper Zero Unleashed:**[ ZTW24/Flipper-Zero-Unleashed  (Course Content)](https://github.com/ThreatLockerIvan/ZTW24/tree/main/Flipper-Zero-Unleashed)
+**Flipper Zero Unleashed:** [ZTW24/Flipper-Zero-Unleashed  (Course Content)](Flipper-Zero-Unleashed/README.md)
 
 >  **Tip:** Click one of links above to access its respective course content.
 
