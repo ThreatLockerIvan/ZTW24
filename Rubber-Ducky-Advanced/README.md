@@ -55,9 +55,6 @@ This basic payload, and all EDR/Anti malware know what a basic payload looks lik
 
 ![](/../main/Assets/Advance_ducky/microsoftdefenderlogo.png")
 
-
-
-
 # Advance Payload
 There are a few ways to bypass EDR/ Anti Malware services. but why spend so much time to develop a bypass when you can just turn off EDR/Anti malware. :thinking:
 
