@@ -50,10 +50,13 @@ It reminded to have the C2 listener on a cloud machine, so you don't have to wor
 
 
 # What Happen When We Ran The Basic Payload.
+
+<img src="/../main/Assets/Advance_ducky/microsoftdefenderlogo.png" width="100" />
+
 When you ran the basic payload, you might have notice that it didn't work. But why? 
 This basic payload, and all EDR/Anti malware know what a basic payload looks like. 
 
-<img src="/../main/Assets/Advance_ducky/microsoftdefenderlogo.png" width="100" />
+
 
 # Advance Payload
 There are a few ways to bypass EDR/ Anti Malware services. but why spend so much time to develop a bypass when you can just turn off EDR/Anti malware. :thinking:
