@@ -1,5 +1,6 @@
+<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/ZTW_Logos_Text_only_light_wo_TL.png"  width="500" />
 # Rubber Ducky Advance
-
+<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/ducky1.png" width="200" />
 # Objectives ​
 -   Create Basic and advance payloads.
 -    Understand how to navigate the GUI
