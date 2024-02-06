@@ -1,3 +1,4 @@
+![ZTW - LOGO](https://zerotrustworld.threatlocker.com/hubfs/ZTW_Acronym_Logo.svg)
 # Rubber Ducky Intro
 # Objectives ​
 -   Setting up the rubber ducky​
