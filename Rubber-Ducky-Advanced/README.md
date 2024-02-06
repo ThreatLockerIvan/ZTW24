@@ -36,7 +36,8 @@ REM ^^^ Enter payload
 ~~~
 ## Note:
 You will have to replace "**\<ReveShell payload\>**" with one from https://www.revshells.com/. In this case the class will use the PowerShell #1 payload. (Don't forget to change the IP address to the listener. (kali computer))
-<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20073814.png" width="300" />
+
+<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20073814.png" width="400" />
 
 ## Setting Up Our C2 listener
 
@@ -52,6 +53,7 @@ It reminded to have the C2 listener on a cloud machine, so you don't have to wor
 When you ran the basic payload, you might have notice that it didn't work. But why? 
 This basic payload, and all EDR/Anti malware know what a basic payload looks like. 
 
+<img scr="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/microsoftdefenderlogo.png" width="100" />
 
 # Advance Payload
 There are a few ways to bypass EDR/ Anti Malware services. but why spend so much time to develop a bypass when you can just turn off EDR/Anti malware. :thinking:
@@ -133,7 +135,12 @@ ALT y
 DELAY 1000
 ~~~
 
- 1. This part will hit the space bar to toggle the on/off setting. When this happens, the UAC will active and ask for yes or no. ALT + y will hit the yes button.
+ 1. This part will hit the space bar to toggle the on/off setting.
+    
+   <img src ="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125356.png" width="600"/>
+ 3.  When this happens, the UAC will active and ask for yes or no. ALT + y will hit the yes button.
+    
+<img src="https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Advance_ducky/Screenshot%202024-02-06%20125409.png" width="500" />
 
 ~~~
 REM Exit security settings
