@@ -28,22 +28,22 @@ easy to press the button when the case is put back together.
 
 1. Take the metal cover off by lightly prying it open to release the ducky.
 
-![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150513.png)
+   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150513.png)
 
 2. Take a knife or fingernail to light pry open the case. (I use the small gap
    on the USB A side to pry it open)
 
-![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150500.png)
+   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150500.png)
 
 3. Once open, on the sticker card you will have four small tear shape stickers.
    (NOTE: If you add 4 sticker it will make the button very easy to press and
    only having 1 sticker will make it hard to press the button.)
 
-![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150538.png)
+   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150538.png)
 
 4. Place the tear drop sticker on this spot of the case
 
-![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150558.png)
+   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150558.png)
 
 5. Put the Rubber ducky back together.
 
@@ -98,7 +98,7 @@ The menu will be as follows:
 What's a better way to learn than a Hello world.
 I have add a bunch of Comments to explain how this thing works
 
-~~~
+```duckyscript
 REM This is a comment.
 
 DELAY 3000 REM This is a delay so that the ducky doesn't start the attack early when you plug it in.
@@ -114,7 +114,7 @@ DELAY 1000 REM Delay to wait for notepad to open.
 
 STRING Hello, World!
 REM ^^^ Write Hello, World! to notepad without hitting enter
-~~~
+```
 
 # Generate Payload and getting it on the ducky.
 
@@ -127,7 +127,7 @@ REM ^^^ Write Hello, World! to notepad without hitting enter
    assigned to do something)
 4. Move the inject.bin file to the root of ducky.
 
-![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150707.png)
+   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150707.png)
 
 5. eject ducky
 
@@ -147,7 +147,5 @@ sending keystrokes.
 
 # Great Site to help you learn more.
 
-* Ducky Quick Reference Guild
-* https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
-* Payload Library
-* https://github.com/hak5/usbrubberducky-payloads
+* Ducky Quick Reference Guild: https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
+* Payload Library: https://github.com/hak5/usbrubberducky-payloads
