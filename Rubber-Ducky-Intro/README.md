@@ -1,4 +1,4 @@
-![ZTW - LOGO]('../Assets/ZTW%20Logos_Text%20only%20light%20wo%20TL.png')
+![ZTW - LOGO](main/Assets/ZTW_Logos_Text_only_light_wo_TL.png)
 # Rubber Ducky Intro
 # Objectives ​
 -   Setting up the rubber ducky​
