@@ -10,8 +10,9 @@
 - Payload IDE(Integrated development environment). https://payloadstudio.hak5.org/community/
 - A simple library of reverse shell. https://www.revshells.com/
 - Ducky Quick Reference Guild​​. https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference​​
--  Hak5 Ducky Payload Library​​. https://github.com/hak5/usbrubberducky-payloads​
-- 
+- Hak5 Ducky Payload Library​​. https://github.com/hak5/usbrubberducky-payloads​
+-  Keyboard shortcuts https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec\
+- Ducky Extension https://docs.hak5.org/hak5-usb-rubber-ducky/advanced-features/extensions
 # Basic Shell
 This is what a basic reverse shell looks like. 
 ~~~
