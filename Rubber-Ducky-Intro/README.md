@@ -1,4 +1,4 @@
-![ZTW - LOGO]("../Assets/ZTW Logos_Text only light wo TL.png")
+![ZTW - LOGO]('../Assets/ZTW Logos_Text only light wo TL.png')
 # Rubber Ducky Intro
 # Objectives ​
 -   Setting up the rubber ducky​
