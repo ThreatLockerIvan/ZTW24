@@ -10,13 +10,7 @@
 - Understand how to disable windows defender. 
 - Understand Extensions 
 -   Launching the payload
-# Help full link
-- Payload IDE(Integrated development environment). https://payloadstudio.hak5.org/community/
-- A simple library of reverse shell. https://www.revshells.com/
-- Ducky Quick Reference Guild​​. https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference​​
-- Hak5 Ducky Payload Library​​. https://github.com/hak5/usbrubberducky-payloads​
--  Keyboard shortcuts https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec\
-- Ducky Extension https://docs.hak5.org/hak5-usb-rubber-ducky/advanced-features/extensions
+
 # Basic Shell
 This is what a basic reverse shell looks like. 
 ~~~
@@ -179,8 +173,16 @@ GUI DOWNARROW
 ~~~
 Note: don't forget to change the "\<ReveShell Payload\>" to the PowerShell #1 from the ReveShell Site (don't forget about the IP).
 # Generate and putting it on the ducky. 
-[ZTW24/Rubber-Ducky-Intro/README.md at main · ThreatLockerIvan/ZTW24 (github.com)](/../main/Rubber-Ducky-Intro/README.md#generate-payload-and-getting-it-on-the-ducky)
+[Intro ducky class](/../main/Rubber-Ducky-Intro/README.md#generate-payload-and-getting-it-on-the-ducky)
 # Notes
 - You will most likely have to play with the delay if it does run right.
 -   The computers must be on the same network. Or host the listener on the cloud. ​ 
--   This payload will take about 25 seconds or more, if you have to change the delay for slower computers.​  
+-   This payload will take about 25 seconds or more, if you have to change the delay for slower computers.​
+
+# Help full link
+- Payload IDE(Integrated development environment). https://payloadstudio.hak5.org/community/
+- A simple library of reverse shell. https://www.revshells.com/
+- Ducky Quick Reference Guild​​. https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference​​
+- Hak5 Ducky Payload Library​​. https://github.com/hak5/usbrubberducky-payloads​
+-  Keyboard shortcuts https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec\
+- Ducky Extension https://docs.hak5.org/hak5-usb-rubber-ducky/advanced-features/extensions
