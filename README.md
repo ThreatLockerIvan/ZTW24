@@ -1,4 +1,4 @@
-![ZTW - LOGO](Assets/ZTW%20Logos_Full%20version.png)
+<img src="Assets/ZTW%20Logos_Full%20version.png" width="500" />
 
 
 # Hacking Labs Content
