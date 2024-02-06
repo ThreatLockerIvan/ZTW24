@@ -1,5 +1,5 @@
 REM Title: Hello world
-REM Author: Threatlock_Ray
+REM Author: Threatlocker_Ray
 REM Description: Prints hello world.
 REM Target: Windows
 
@@ -22,4 +22,4 @@ DELAY 1000
 REM ^^^ Delay to wait for notepad to open.
 
 STRING Hello, World!
-REM ^^^ Write Hello, World! to notpad without hitting enter
+REM ^^^ Write Hello, World! to notepad without hitting enter
