@@ -98,7 +98,7 @@ STRING Hello, World!
 REM ^^^ Write Hello, World! to notpad without hitting enter
 ~~~
 # Generate Payload and getting it on the ducky. 
-![enter image description here](https://github.com/ThreatLockerRay/ZTW-Pictures/blob/main/Intro_to_Rubber_ducky/Screenshot%202024-01-26%20150707.png)
+![enter image description here](https://github.com/ThreatLockerRay/ZTW-Pictures/blob/main/Intro_to_Rubber_ducky/Screenshot%202024-02-06%20081328.png)
 1. Hit the Generate payload button 
 2. Hit the Download button (This should save it to the download folder)
 3. Plug in the Rubber ducky. (If you already have a payload on it, you can press the button to stop the payload Early unless you have the button assigned to do something)
