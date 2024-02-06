@@ -33,7 +33,7 @@ The reason why we open the ducky is to add some sticker to the case, so it is ea
 5. Put the Rubber ducky back togther. 
 
 
-# Payload Studio IDE
+# Payload Studio IDE(Integrated development environment)
 Site: https://payloadstudio.hak5.org/community/
 
 This will be the place that you will spend most of your time when making payloads for the ducky. 
