@@ -1,5 +1,6 @@
 ![ZTW - LOGO](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/ZTW_Logos_Text_only_light_wo_TL.png)
 # Rubber Ducky Intro
+![ducky](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/Intro_to_Rubber_ducky/baby_ducky.png)
 # Objectives ​
 -   Setting up the rubber ducky​
     
