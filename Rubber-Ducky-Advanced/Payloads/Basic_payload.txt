@@ -1,0 +1,13 @@
+REM Title:My Basic Reverse shell
+REM Author: Ray
+REM Description:Opens an reverse shell with powershell
+REM Target: Windows 11/10
+
+DELAY 3000 
+REM ^^^ this is still a delay for 3 seconds
+GUI r
+REM ^^^ opens the run Window
+DELAY 300
+REM ^^^ Delay for 300 milliseconds
+STRINGLN <Payload>
+REM ^^^ Enter payload
