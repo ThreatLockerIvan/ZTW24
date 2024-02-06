@@ -1,4 +1,4 @@
-![ZTW - LOGO]([main/Assets/ZTW_Logos_Text_only_light_wo_TL.png](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/ZTW_Logos_Text_only_light_wo_TL.png))
+![ZTW - LOGO](https://github.com/ThreatLockerIvan/ZTW24/blob/main/Assets/ZTW_Logos_Text_only_light_wo_TL.png)
 # Rubber Ducky Intro
 # Objectives ​
 -   Setting up the rubber ducky​
