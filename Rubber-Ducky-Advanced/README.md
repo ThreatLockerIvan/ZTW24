@@ -1,4 +1,4 @@
-![ZTW Logo Text](../Assets/ZTW_Logos_Full_500x500.png)
+![ZTW Logo text only](../Assets/ZTW_Logos_Text_only_light_wo_TL_500x185.png)
 
 # Rubber Ducky Advance
 
