@@ -122,7 +122,7 @@ access to the targeted machine.
     GUI r
     ```
 
-    * Windows: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
+  * Windows: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
 
     ```duckyscript
     REM --- WINDOWS REVERSE SHELL ---
