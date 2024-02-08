@@ -74,6 +74,22 @@ machine and click `Update`.
 
 * Ultimate Guide: [Talking Sasquatch : Starter Guide - YouTube](https://www.youtube.com/watch?v=12M_oHmxcCQ)
 
+## NFC/RFID Hacking
+
+The Flipper Zero is great for Hacking RFID and NFC cards or tags. To access
+these navigate to the "Apps" section on your device.
+
+It has the following Capabilities:
+
+* **Sniffing/Reading:** The Flipper can read most cards/tags
+* **Writing** The Flipper can write to other cards/tags
+* **Emulate** The Flipper can emulate a signal it has previously read and stored
+
+> Always be aware of the type of card or tag you are trying to hack with the
+> Flipper, this helps you understand what module you need to use to actually be
+> able to read it. For example, if you have an iClass card you don't want to be
+> using the Mifare NFC Module.
+
 ## Bad Bluetooth (BadKB)
 
 I always tell others that Bad Bluetooth is basically a wireless rubber ducky
@@ -113,18 +129,4 @@ access to the targeted machine.
     GUI r
     ```
 
-## NFC/RFID Hacking
 
-The Flipper Zero is great for Hacking RFID and NFC cards or tags. To access
-these navigate to the "Apps" section on your device.
-
-It has the following Capabilities:
-
-* **Sniffing/Reading:** The Flipper can read most cards/tags
-* **Writing** The Flipper can write to other cards/tags
-* **Emulate** The Flipper can emulate a signal it has previously read and stored
-
-> Always be aware of the type of card or tag you are trying to hack with the
-> Flipper, this helps you understand what module you need to use to actually be
-> able to read it. For example, if you have an iClass card you don't want to be
-> using the Mifare NFC Module.
