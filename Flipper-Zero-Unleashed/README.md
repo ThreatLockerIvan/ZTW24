@@ -85,6 +85,8 @@ It has the following Capabilities:
 * **Writing** The Flipper can write to other cards/tags
 * **Emulate** The Flipper can emulate a signal it has previously read and stored
 
+  ## How to Clone Emulate NFC
+
 > Always be aware of the type of card or tag you are trying to hack with the
 > Flipper, this helps you understand what module you need to use to actually be
 > able to read it. For example, if you have an iClass card you don't want to be
