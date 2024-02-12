@@ -87,7 +87,7 @@ It has the following Capabilities:
 
   ## How to Clone Emulate NFC
 
-> Always be aware of the type of card or tag you are trying to hack with the
+> Disclaimer: Always be aware of the type of card or tag you are trying to hack with the
 > Flipper, this helps you understand what module you need to use to actually be
 > able to read it. For example, if you have an iClass card you don't want to be
 > using the Mifare NFC Module.
