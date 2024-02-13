@@ -21,3 +21,6 @@ Welcome to the Guided Capture The Flag (CTF) experience! In this hands-on sessio
 - **Linpeas:** Linpeas is a Linux Privilege Escalation Awesome Script designed to automate the process of privilege escalation on Linux systems. It performs thorough system enumeration to identify potential paths for privilege escalation.
 
 
+## Follow Along
+We have created a writeup for this CTF in hope sof leaving no one behind, if you get lost or wish to follow along click the link below:
+[Write-UpLink](https://github.com/ThreatLockerIvan/ZTW24/tree/main/Metasploit-CTF/Write-Ups)
