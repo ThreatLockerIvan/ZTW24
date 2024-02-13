@@ -1,11 +1,4 @@
-**Link to CTF:**
-
-[Hack the Dina VM (CTF Challenge) - Hacking Articles](https://www.hackingarticles.in/hack-dina-vm-ctf-challenge/)
-
-**Link to VM:**
-
-[Dina: 1.0.1](https://www.vulnhub.com/entry/dina-101,200/)
-
+# Metasploit CTF [Dina]
 ## Enumeration
 
 **Nmap Port Scan:**
