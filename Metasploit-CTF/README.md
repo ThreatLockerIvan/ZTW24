@@ -127,10 +127,7 @@ https://github.com/carlospolop/PEASS-ng/releases
     
 
 
-💡 We find that Perl has Sudo privileges without having to authenticate as a Sudo user “/user/bin/perl”
-
-
-[perl
+**💡 We find that Perl has Sudo privileges without having to authenticate as a Sudo user “/user/bin/perl”**
             
             |
             
