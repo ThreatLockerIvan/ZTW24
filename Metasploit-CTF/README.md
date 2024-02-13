@@ -129,9 +129,9 @@ https://github.com/carlospolop/PEASS-ng/releases
 
 **💡 Using Linpeas.sh We find that Perl has Sudo privileges without having to authenticate as a Sudo user “/user/bin/perl”**
             
-            |
-            
-            GTFOBins](https://gtfobins.github.io/gtfobins/perl/)
+    ```jsx
+    sudo -l
+    ```
 
 **Get a root shell:**
 
