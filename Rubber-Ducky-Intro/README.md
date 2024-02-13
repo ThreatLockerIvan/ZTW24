@@ -118,7 +118,7 @@ REM ^^^ Write Hello, World! to notepad without hitting enter
 
 # Generate Payload and getting it on the ducky.
 
-   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot 2024-02-13 101649.png)
+   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-13_101649.png)
 
 1. Hit the Generate payload button
 2. Hit the Download button (This should save it to the download folder)
