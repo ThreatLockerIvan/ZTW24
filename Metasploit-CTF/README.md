@@ -23,4 +23,4 @@ Welcome to the Guided Capture The Flag (CTF) experience! In this hands-on sessio
 
 ## Follow Along
 We have created a writeup for this CTF in hope sof leaving no one behind, if you get lost or wish to follow along click the link below:
-[Write-UpLink](https://github.com/ThreatLockerIvan/ZTW24/tree/main/Metasploit-CTF/Write-Ups)
+[Write-Up](https://github.com/ThreatLockerIvan/ZTW24/tree/main/Metasploit-CTF/Write-Ups)
