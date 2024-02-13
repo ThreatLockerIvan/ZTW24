@@ -1,4 +1,5 @@
-![Untitled](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2F10feee22-0c2c-4f4e-a973-15c1f7722460%2FMetasploit_Header-01.png?table=block&id=d345f7e4-25fe-49f0-a452-8c17cc1513bc&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=&cache=v2)
+![Untitled](../Assets/Metasploit_CTF/metasploit_header_600x375.png)
+
 # Metasploit CTF
 Welcome to the Guided Capture The Flag (CTF) experience! In this hands-on session, you will delve into the world of penetration testing guided by our specially crafted Matesploit class. Our aim is to provide an interactive journey through the intricate steps of a penetration test, utilizing real-world scenarios and tools. In this class we will cover the folowing topics:
 
