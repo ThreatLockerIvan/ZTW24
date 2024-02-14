@@ -6,7 +6,24 @@ This write up will be most helpful while following along with the class.
 If you need to you can jump ahead to a given section to keep up with the class.
 If not just follow along with this and you should get the flag.
 
+## Table of Contents
 
+- [Metasploit CTF \[Dina\]](#metasploit-ctf-dina)
+  - [Table of Contents](#table-of-contents)
+- [Given information and Objective](#given-information-and-objective)
+- [Enumeration](#enumeration)
+  - [Nmap Port Scan](#nmap-port-scan)
+  - [GoBuster Directory Scan](#gobuster-directory-scan)
+  - [Directory Search](#directory-search)
+    - [Nothing](#nothing)
+    - [Secure](#secure)
+      - [Cracking with John the Ripper](#cracking-with-john-the-ripper)
+    - [PlaySMS Gateway](#playsms-gateway)
+- [Exploitation](#exploitation)
+  - [PlaySMS Exploit](#playsms-exploit)
+- [Privilege Escalation](#privilege-escalation)
+- [Collect the flag and win](#collect-the-flag-and-win)
+- [Resources](#resources)
 
 
 # Given information and Objective
