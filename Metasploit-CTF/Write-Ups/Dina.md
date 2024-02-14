@@ -6,6 +6,9 @@ This write up will be most helpful while following along with the class.
 If you need to you can jump ahead to a given section to keep up with the class.
 If not just follow along with this and you should get the flag.
 
+
+
+
 # Given information and Objective
 
 We have a some given information that will help us in breaking into our vulnerable
@@ -458,7 +461,7 @@ go for.
 
 In order to take advantage of this, we are going to need to figure out how to
 make a shell with perl. Luckily we have resources that can help us, such as
-[GTFOBins][gtfobins].
+[GTFOBins](https://gtfobins.github.io/).
 
 ![sudo section of gtfobins perl](../../Assets/Metasploit_CTF/gtfobins_perl_800x177.jpg)
 
@@ -507,4 +510,4 @@ And with that, we have pwned the machine.
 
 # Resources
 
- - [gtfobins] https://gtfobins.github.io/
+- GTFOBins: https://gtfobins.github.io/
