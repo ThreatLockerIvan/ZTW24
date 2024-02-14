@@ -194,7 +194,7 @@ normal error that would occur on finding nothing.
 ![Dina nothing page](../../Assets/Metasploit_CTF/dir_check_nothing_800x447.jpg)
 
 This is a regular page. We might find more if we look in the source code using
-`F12` or `CTRL+U` to view the source code, you will get the same response as
+`CTRL+U` or `F12` to view the source code, you will get the same response as
 shown below.
 
 ```html
