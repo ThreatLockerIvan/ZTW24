@@ -416,7 +416,7 @@ msf > exploit
 ```
 
 And now you should be given a meterpreter session, which is just a more advanced
-remote access connection. To get terminal access, we only need to type in
+remote control point. To get terminal access, we only need to type in
 `shell`. To make it cleaner, we run a python command to spawn us a really nice
 shell.
 
@@ -428,13 +428,13 @@ $
 
 > This will give you a nice shell but no tab completions, so be sure to spell correctly.
 
-Looking at the shell given, we are running at *www-data*. We have completed step
-1 of getting access to the machine. The next step is getting access to root from
-here.
+Looking at the shell given, we are running as the user "*www-data*". We have
+completed step 1 of getting access to the machine. The next step is getting access
+to root from here.
 
 # Privilege Escalation
 
-Now that we have our access point, we need to know all of the ways that we are
+Now that we have access to the machine, we need to know all of the ways that we are
 allowed to use root. We can check all the executables that we are allowed to run
 as root with `sudo`.
 
@@ -466,7 +466,7 @@ make a shell with perl. Luckily we have resources that can help us, such as
 ![sudo section of gtfobins perl](../../Assets/Metasploit_CTF/gtfobins_perl_800x177.jpg)
 
 Searching up perl on the website, we can see that we can use perl exec to create
-a shell on the spot. If we just run the command on our access point, it should
+a shell on the spot. If we just run the command on our shell, it should
 upgrade our user to root.
 
 ```shell
