@@ -291,7 +291,7 @@ backup-cred.mp3: ASCII text
 And according to linux this is a text file. We can use the `cat` command to view
 the contents of our file. Upon doing so, we get these results.
 
-```
+```shell
 $ cat backup-cred.mp3
 
 I am not toooo smart in computer .......dat the resoan i always choose easy password...with creds backup file....
