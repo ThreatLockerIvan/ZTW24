@@ -189,6 +189,8 @@ But sometimes we will get something interesting. If we look in the `/nothing`
 directory it will say nothing found, except that it doesn't look like the
 normal error that would occur on finding nothing.
 
+![Dina nothing page](../../Assets/Metasploit_CTF/dir_check_nothing_800x447.jpg)
+
 This is a regular page. We might find more if we look in the source code using
 `F12` or `CTRL+U` to view the source code, you will get the same response as
 shown below.
@@ -226,6 +228,9 @@ iloveroot
 ### Secure
 
 Looking into the `/secure` we can see that we have a zip file called `backup.zip`.
+
+![Dina secure folder](../../Assets/Metasploit_CTF/dir_check_secure_800x448.jpg)
+
 After downloading it and attempting to open the zip file, we can see that
 `backup-creds.mp3` is encrypted with a password. This can be dealt with using
 john the ripper.
