@@ -5,3 +5,6 @@ This is the complete guild to the Pwn To Own Challenge for Zero Trust World 2024
 -  **Zero:**  [Zero Writeup](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 -  **Trust:**  [Trust Writeup](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
+
+# Note:
+Write ups will be posted later during ZTW
