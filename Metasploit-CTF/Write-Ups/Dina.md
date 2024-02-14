@@ -1,3 +1,5 @@
+![ZTW Logo text only](../Assets/ZTW_Logos_Text_only_light_wo_TL_500x185.png)
+
 # Metasploit CTF [Dina]
 
 Welcome to our walkthrough of Dina for the Zero Trust World 2024 Conference.
