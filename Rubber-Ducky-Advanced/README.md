@@ -4,6 +4,20 @@
 
 ![Super ducky](../Assets/Advance_ducky/ducky1_200x200.png)
 
+# Table of Contents
+
+- [Rubber Ducky Advance](#rubber-ducky-advance)
+- [Table of Contents](#table-of-contents)
+- [Objectives](#objectives)
+- [Basic Shell](#basic-shell)
+  - [Setting Up Our C2 listener](#setting-up-our-c2-listener)
+  - [What Happened When We Ran The Basic Payload.](#what-happened-when-we-ran-the-basic-payload)
+- [Advance Payload](#advance-payload)
+  - [Starting the Advance Payload.](#starting-the-advance-payload)
+  - [Navigate GUI to disable windows Defender settings](#navigate-gui-to-disable-windows-defender-settings)
+- [Generate and putting it on the ducky.](#generate-and-putting-it-on-the-ducky)
+- [References](#references)
+
 # Objectives
 
 - Create Basic and advance payloads.
