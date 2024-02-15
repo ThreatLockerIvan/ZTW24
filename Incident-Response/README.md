@@ -8,27 +8,7 @@ In our Incident Response Class, we'll dive into the process of analyzing logs to
 REKT Corp. has been breached. Their Administrator has reached out to us in hope we can conduct an investigation and find out what happened.
 
 **Email:**
-
-```markdown
-Hello Team,
- 
-I need assistance. I have a compromised machine and need to find out what happened. These Unified Audit Logs are not making any sense to me.
-I am looking for help from someone who can help me break things down. I also need to know what ThreatLocker can do for mitigation.
- 
-Here are the details that are known by us so far:
-This happened between the hours of 11:20am - 1:30pm on 2/14/24.
-Machine is REKT-FRONT-OFFI
-The admin that was logged in at that time informed us that they were abruptly logged out during their session and didn't know why.
-When the admin logged back into the machine, they noticed that the computer's performance was significantly slower than usual.
-When looking in the Unified Audit, there are an abundnance of network logs that I need to make sense of.
- 
-Thank you for your support in addressing this critical issue. Please feel free to reach back out and give me a call at your earliest availability.
- 
-Regards,
-Frank Pint
-Technical Administrator
-407-555-5555
-```
+![Email](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2F76563e23-8e31-405c-8601-aae2feddb109%2FUntitled.png?table=block&id=a1e33980-3673-4128-81ae-9aea81b3334a&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=1900&userId=&cache=v2)
 
 # Gather Information
 
@@ -38,9 +18,94 @@ When collecting information, understanding the tools at your disposal is crucial
 
 A playbook acts as our blueprint or strategic guide when encountering incidents like the one described. It outlines specific steps and procedures to be followed in response to various scenarios, ensuring a systematic and organized approach to incident management. These playbooks contain detailed instructions on the actions to be taken, such as identifying the incident, containing it, mitigating its effects, and ultimately resolving the issue. They serve as a vital resource for incident responders, providing clarity and direction during high-stress situations.
 
-**Strategy:** 
+## Phase 1 [Incident Scope]
+The Scope encapsulates the area affected and time of potential breach. This helps us focus on the assets that are truly in danger.
+* Gather Time of Attack: 
+* Gather Organization Name: 
+* Gather Hostname(s):
 
-![playbook](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2F67bce66b-8450-4e4a-af43-54e4ad3a752b%2FUntitled.png?table=block&id=6a3c14cb-c9fd-4004-888f-05c8f0965d15&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=1920&userId=&cache=v2)
+## Phase 2 [Machine State]
+Understanding the state in which the machine is in is crucial as we can better understand how that machine is intended to behave.
+* Learning Mode: Automatically Catalogs Files based on users behaviour and learns them(Storing File Dat and Allowing it to run Next Time)
+* Monitor Mode: Does not take action on the End Point. This just monitors the behaviour on the machine to forward logs
+
+## Phase 3 [Mystery Phase]
+This is step involves the use of our new tool we just released, we will cover this later in this class.
+
+
+## Phase 4 [Network Activity]
+Check network logs in the Unified Audit for any unusual behaviour. 
+Red Flags indicators are  external connection to common ports of entry(Ports that can are commonly used gain access to a device):
+| PROTOCOL | PORT |
+| --- | --- |
+| SSH  | 22 |
+| RDP | 3389 |
+| FTP | 21 |
+| SMB | 445 |
+
+## Phase 5 [Proof of Execution]
+Look for signs of permitted execution, this lets us know what actually ran on the system.
+* Filter Unified Audit: (Action = Permit) (Action Type = Execute) 
+
+## Phase 6 [Registry Changes]
+Check logs for registry changes, in many occasions this can be a sign of a breach or persistence.
+Below is a list of Registry Keys often targeted by malicious actors for persistence:
+Run and RunOnce Keys:
+
+1. **Run and RunOnce Keys**:
+   - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run`
+   - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce`
+   - `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`
+   - `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce`
+
+2. **Run Services Keys**:
+   - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services`
+
+3. **Explorer Run Keys**:
+   - `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run`
+   - `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run32`
+
+4. **AppInit_DLLs**:
+   - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows`
+
+5. **Winlogon**:
+   - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon`
+
+6. **Shell Registry Key**:
+   - `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run`
+
+7. **Userinit Key**:
+   - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon`
+
+8. **Scheduled Tasks**:
+   - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree`
+
+9. **Service DLL**:
+   - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services`
+
+10. **App Paths Key**:
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths`
+
+11. **Install Location**:
+    - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`
+
+12. **Office Registry Keys** (for macros and add-ins):
+    - `HKEY_CURRENT_USER\Software\Microsoft\Office`
+    - `HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Word\Security`
+
+13. **Browser Extensions**:
+    - `HKEY_LOCAL_MACHINE\Software\Microsoft\Internet Explorer\Extensions`
+    - `HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Extensions`
+
+14. **Lsaas and LSASS Protection**:
+    - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`
+
+15. **Firewall Rules**:
+    - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules`
+
+
+## Phase 7 [Record Findings]
+This stage involves organizing all your discoveries and transforming them into a format that is easy to understand, allowing you to effectively communicate your findings to the customer. Additionally, it includes saving the organized information to later modify and generate a comprehensive report.
 
 
 # ThreatLocker Ops
