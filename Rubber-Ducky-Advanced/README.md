@@ -205,7 +205,7 @@ GUI DOWNARROW
 - The computers must be on the same network. Or host the listener on the cloud. 
 - This payload will take about 25 seconds or more, if you have to change the delay for slower computers.
 
-# Help full link
+# Reference Link
 - Payload IDE(Integrated development environment): https://payloadstudio.hak5.org/community/
 - A simple library of reverse shell: https://www.revshells.com/
 - Ducky Quick Reference Guild: https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
