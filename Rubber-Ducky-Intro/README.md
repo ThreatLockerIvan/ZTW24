@@ -99,18 +99,27 @@ What's a better way to learn than a Hello world.
 I have add a bunch of Comments to explain how this thing works
 
 ```duckyscript
+REM Title: Hello world
+REM Author: Threatlocker_Ray
+REM Description: Prints hello world.
+REM Target: Windows
+
 REM This is a comment.
 
-DELAY 3000 REM This is a delay so that the ducky doesn't start the attack early when you plug it in.
+DELAY 3000
+REM ^^^ This is a delay so that the ducky doesn't start the attack early when you plug it in. This Delay waits 3 seconds.
 
-GUI r REM Opens the run prompt.
+GUI r
+REM ^^^ Opens the run prompt.
 
-DELAY 1000 REM Delays are done in milliseconds.
+DELAY 1000
+REM ^^^ Delays are done in milliseconds so this would wait 1 second.
 
 STRINGLN Notepad.exe
 REM ^^^ This will write NotePad.exe and hit the enter key into the run prompt.
 
-DELAY 1000 REM Delay to wait for notepad to open.
+DELAY 1000
+REM ^^^ Delay to wait for notepad to open.
 
 STRING Hello, World!
 REM ^^^ Write Hello, World! to notepad without hitting enter
