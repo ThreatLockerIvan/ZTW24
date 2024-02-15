@@ -66,7 +66,8 @@ easy to press the button when the case is put back together.
 
 Site: https://payloadstudio.hak5.org/community/
 
-This will be the place that you will spend most of your time when making payloads for the ducky.
+This will be the place that you will spend most of your time when making
+payloads for the ducky.
 
 ![](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_155329.png)
 
