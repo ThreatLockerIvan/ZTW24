@@ -4,6 +4,21 @@
 
 ![Baby ducky](../Assets/Intro_to_Rubber_ducky/baby_ducky_200x200.png)
 
+
+# Table of Contents
+
+- [Rubber Ducky Intro](#rubber-ducky-intro)
+- [Table of Contents](#table-of-contents)
+- [Objectives](#objectives)
+- [Unboxing](#unboxing)
+  - [Button Mod For The Ducky](#button-mod-for-the-ducky)
+- [Payload Studio IDE(Integrated development environment)](#payload-studio-ideintegrated-development-environment)
+  - [Hello World](#hello-world)
+- [Generate Payload and getting it on the ducky.](#generate-payload-and-getting-it-on-the-ducky)
+- [Running payload](#running-payload)
+- [References](#references)
+
+
 # Objectives
 
 1. Setting up the rubber ducky
