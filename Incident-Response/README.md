@@ -5,7 +5,7 @@ In our Incident Response Class, we'll dive into the process of analyzing logs to
 
 # Scenario
 
-REKT Corp. has been breached. Their Administrator has reached out to us in hope we can conduct an investigation and find out what happened.
+> REKT Corp. has been breached. Their Administrator "Frank Pint" has reached out to us in hope we can conduct an investigation and find out what happened.
 
 **Email:**
 ![Email](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2F76563e23-8e31-405c-8601-aae2feddb109%2FUntitled.png?table=block&id=a1e33980-3673-4128-81ae-9aea81b3334a&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=1900&userId=&cache=v2)
@@ -102,9 +102,10 @@ Run and RunOnce Keys:
 
 15. **Firewall Rules**:
     - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules`
+## Phase 7 [Explicit Denies]
+This applies to machine in **Secure Mode**, when a machine is in secure mode malware mayb be attempting to run against it but gets denied by our platform in cases like these we still want to know about it and recrod the data so we can further understand where the attakc is coming from and how to clode that point of entry for the attacker
 
-
-## Phase 7 [Record Findings]
+## Phase 8 [Record Findings]
 This stage involves organizing all your discoveries and transforming them into a format that is easy to understand, allowing you to effectively communicate your findings to the customer. Additionally, it includes saving the organized information to later modify and generate a comprehensive report. 
 
 Record all your findings, this can include but not be limited to
