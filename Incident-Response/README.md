@@ -30,13 +30,13 @@ Technical Administrator
 407-555-5555
 ```
 
-# Playbook
-
-A playbook acts as our blueprint or strategic guide when encountering incidents like the one described. It outlines specific steps and procedures to be followed in response to various scenarios, ensuring a systematic and organized approach to incident management. These playbooks contain detailed instructions on the actions to be taken, such as identifying the incident, containing it, mitigating its effects, and ultimately resolving the issue. They serve as a vital resource for incident responders, providing clarity and direction during high-stress situations.
-
 # Gather Information
 
 When collecting information, understanding the tools at your disposal is crucial for obtaining the necessary data. In this context, our **Unified Audit** proves invaluable as it enables us to access logs tailored to specific machines. These logs encompass a wide array of information, including network activity, command line parameters, file executions, registry modifications, and other pertinent details. Leveraging such a tool provides us with comprehensive insights into the system's activities, facilitating effective incident response and investigation processes.
+
+# Playbook
+
+A playbook acts as our blueprint or strategic guide when encountering incidents like the one described. It outlines specific steps and procedures to be followed in response to various scenarios, ensuring a systematic and organized approach to incident management. These playbooks contain detailed instructions on the actions to be taken, such as identifying the incident, containing it, mitigating its effects, and ultimately resolving the issue. They serve as a vital resource for incident responders, providing clarity and direction during high-stress situations.
 
 **Strategy:** 
 
