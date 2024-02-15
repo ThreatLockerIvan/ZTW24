@@ -16,7 +16,7 @@
 
 This is what a basic reverse shell looks like.
 
-```duckyscript
+```bat
 REM Title:My Basic Reverse shell
 REM Author: Ray
 REM Description:Opens an reverse shell with powershell
