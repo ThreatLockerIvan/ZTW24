@@ -37,7 +37,7 @@ REM ^^^ Enter payload
 
 ![](../Assets/Advance_ducky/Screenshot_2024-02-06_073814_400x354.png)
 
-# Setting Up Our C2 listener
+## Setting Up Our C2 listener
 
 C2 Listener is just a computer that the victim of the rubber ducky will try to connect to. (In most case it will be a kali/parrot machine with Netcat as the listener.)
 
@@ -52,7 +52,7 @@ nc -lnvp 5757
 > It reminded to have the C2 listener on a cloud machine, so you don't have to worry about network problems.\
 > The computers must be on the same network. Or host the listener on the cloud. 
 
-# What Happen When We Ran The Basic Payload.
+## What Happen When We Ran The Basic Payload.
 
 ![Microsoft Defender logo](../Assets/Advance_ducky/microsoftdefenderlogo_100x105.png)
 
@@ -193,7 +193,7 @@ GUI DOWNARROW
 > You will most likely have to play with the delay if it does run right.
 > This payload will take about 25 seconds or more, if you have to change the delay for slower computers.
 
-# Generate and putting it on the ducky.
+## Generate and putting it on the ducky.
 
 [Intro ducky class](../Rubber-Ducky-Intro/README.md#generate-payload-and-getting-it-on-the-ducky)
 
