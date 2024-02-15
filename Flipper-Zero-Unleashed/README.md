@@ -114,12 +114,12 @@ initial connection was established, our Flippers could then function as
 allowed us to send malicious keystrokes, ultimately granting us reverse shell
 access to the targeted machine.
 
-* **THN Article:** [New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
-* **Threat Locker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
+* **The Hack News Article:** [New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
+* **ThreatLocker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
 * **Reverse Shell Payloads:**
   * macOS:[ ZTW/Payload (github.com)](macos-reverseshell-payload.txt)
 
-    ```duckyscript
+    ```bat
     REM --- MACOS REVERSE SHELL ---
     DEFAULT_DELAY 14
     DELAY 1000
@@ -136,9 +136,15 @@ access to the targeted machine.
 
   * Windows: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
 
-    ```duckyscript
+    ```bat
     REM --- WINDOWS REVERSE SHELL ---
     GUI r
     ```
-
-
+# Reference Links 
+* **Unleashed Web Updater Version unlshd0.69:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw/unlshd-069/flipper-z-f7-update-unlshd-069.tgz&channel=release-cfw&version=unlshd-069)
+* **Extreme Web Updater: [Xtreme Web Updater](https://flipper-xtre.me/update/)
+* **Unleashed Github:** [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)
+* **Extreme Github:** [Flipper-XFW/Xtreme-Firmware (github.com)](https://github.com/Flipper-XFW/Xtreme-Firmware)
+* **Ultimate Guide For New Flipper Owners:** [Talking Sasquatch : Starter Guide - YouTube](https://www.youtube.com/watch?v=12M_oHmxcCQ)
+* **The Hack News Article:** [New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
+* **ThreatLocker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
