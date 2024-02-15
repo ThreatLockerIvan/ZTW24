@@ -154,7 +154,8 @@ sending keystrokes.
 
 ![](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_155329.png)
 
-# Great Site to help you learn more.
+# Reference Links
 
 * Ducky Quick Reference Guild: https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
 * Payload Library: https://github.com/hak5/usbrubberducky-payloads
+* Payload Studio: https://payloadstudio.hak5.org/community/
