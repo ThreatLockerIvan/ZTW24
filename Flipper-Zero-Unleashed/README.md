@@ -117,7 +117,7 @@ access to the targeted machine.
 * **The Hack News Article:** [New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
 * **ThreatLocker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
 * **Reverse Shell Payloads:**
-  * macOS:[ ZTW/Payload (github.com)](macos-reverseshell-payload.txt)
+  * MacOS Payload:[ ZTW/Payload (github.com)](macos-reverseshell-payload.txt)
 
     ```bat
     REM --- MACOS REVERSE SHELL ---
@@ -134,7 +134,7 @@ access to the targeted machine.
     ENTER
     ```
 
-  * Windows: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
+  * Windows Payload: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
 
     ```bat
     REM --- WINDOWS REVERSE SHELL ---
@@ -148,3 +148,5 @@ access to the targeted machine.
 * **Ultimate Guide For New Flipper Owners:** [Talking Sasquatch : Starter Guide - YouTube](https://www.youtube.com/watch?v=12M_oHmxcCQ)
 * **The Hack News Article:** [New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
 * **ThreatLocker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
+* **MacOS Payload:**[ ZTW/Payload (github.com)](macos-reverseshell-payload.txt)
+* **Windows Payload:** [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
