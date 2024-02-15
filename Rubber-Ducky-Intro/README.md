@@ -157,9 +157,10 @@ REM ^^^ Write Hello, World! to notepad without hitting enter
   press the button to stop the payload Early unless you have the button
   assigned to do something)
 4. Move the inject.bin file to the root of ducky.
+   
   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150707.png)
 
-5. eject ducky
+6. eject ducky
 
 # Running payload
 
