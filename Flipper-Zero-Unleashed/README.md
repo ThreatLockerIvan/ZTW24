@@ -24,21 +24,21 @@ users to explore and understand different aspects of cybersecurity.
 Here's a breakdown of its key features:
 
 1. **RFID/NFC Emulation:** The Flipper Zero can emulate RFID and NFC cards,
-   allowing users to interact with contactless systems and understand their
-   vulnerabilities.
+  allowing users to interact with contactless systems and understand their
+  vulnerabilities.
 2. **Bluetooth Hacking:** It has capabilities to analyze and manipulate
-   Bluetooth signals, making it a useful tool for learning about wireless
-   security protocols.
+  Bluetooth signals, making it a useful tool for learning about wireless
+  security protocols.
 3. **Infrared Control:** With infrared capabilities, the Flipper Zero can be
-   used for tasks like controlling TVs and other devices that use infrared
-   communication.
+  used for tasks like controlling TVs and other devices that use infrared
+  communication.
 4. **Tamagotchi-Like Interface:** The device has a playful tamagotchi-like
-   interface, making it more engaging for users while they learn about hacking
-   and security.
+  interface, making it more engaging for users while they learn about hacking
+  and security.
 5. **Open-Source and Customizable:** One of the notable aspects is that it's
-   open-source, meaning users can modify and customize the software to suit their
-   needs. This makes it a great tool for learning programming, cybersecurity, and
-   ethical hacking.
+  open-source, meaning users can modify and customize the software to suit their
+  needs. This makes it a great tool for learning programming, cybersecurity, and
+  ethical hacking.
 
 ## Jail Breaking a Flipper Zero
 
@@ -85,7 +85,7 @@ It has the following Capabilities:
 * **Writing** The Flipper can write to other cards/tags
 * **Emulate** The Flipper can emulate a signal it has previously read and stored
 
-  ## How to Clone Emulate NFC
+## How to Clone Emulate NFC
 
 > Disclaimer: Always be aware of the type of card or tag you are trying to hack with the
 > Flipper, this helps you understand what module you need to use to actually be
@@ -118,7 +118,6 @@ access to the targeted machine.
 * **ThreatLocker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
 * **Reverse Shell Payloads:**
   * MacOS Payload:[ ZTW/Payload (github.com)](macos-reverseshell-payload.txt)
-
     ```bat
     REM --- MACOS REVERSE SHELL ---
     DEFAULT_DELAY 14
@@ -133,14 +132,14 @@ access to the targeted machine.
     DELAY 500
     ENTER
     ```
-
   * Windows Payload: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
-
     ```bat
     REM --- WINDOWS REVERSE SHELL ---
     GUI r
     ```
+
 # Reference Links 
+
 * **Unleashed Web Updater Version unlshd0.69:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw/unlshd-069/flipper-z-f7-update-unlshd-069.tgz&channel=release-cfw&version=unlshd-069)
 * **Extreme Web Updater:** [Xtreme Web Updater](https://flipper-xtre.me/update/)
 * **Unleashed Github:** [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)

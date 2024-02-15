@@ -12,9 +12,10 @@ interactively with the Hacking Lab's, get a recap, or extend their knowledge fur
 * **Advanced Rubber Ducky:** [ZTW24/Rubber-Ducky-Advanced (Course Content)](Rubber-Ducky-Advanced/README.md)
 * **Flipper Zero Unleashed:** [ZTW24/Flipper-Zero-Unleashed (Course Content)](Flipper-Zero-Unleashed/README.md)
 * **Metasploit-CTF:**  [ZTW24/Metasploit-CTF (Course Content)](Metasploit-CTF/README.md)
-*  **Incident-Response:** [ZTW24/Incident-Response (Course Content)](Incident-Response/README.md)
-*  **PwnToOwn Challenge WriteUp:** [ZTW24/Incident-Response (Course Content)](/PwnToOwn/ReadMe.md)
->  **Tip:** Click one of links above to access its respective course content.
+* **Incident-Response:** [ZTW24/Incident-Response (Course Content)](Incident-Response/README.md)
+* **PwnToOwn Challenge WriteUp:** [ZTW24/Incident-Response (Course Content)](/PwnToOwn/ReadMe.md)
+
+> **Tip:** Click one of links above to access its respective course content.
 
 ## Values
 
