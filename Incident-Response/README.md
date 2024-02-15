@@ -105,7 +105,15 @@ Run and RunOnce Keys:
 
 
 ## Phase 7 [Record Findings]
-This stage involves organizing all your discoveries and transforming them into a format that is easy to understand, allowing you to effectively communicate your findings to the customer. Additionally, it includes saving the organized information to later modify and generate a comprehensive report.
+This stage involves organizing all your discoveries and transforming them into a format that is easy to understand, allowing you to effectively communicate your findings to the customer. Additionally, it includes saving the organized information to later modify and generate a comprehensive report. 
+
+Record all your findings, this can include but not be limited to
+* Execution Time Stamps: (List of mailcous binaries executed and time stamps)
+* Explanation: (Explanation of what those executable do)
+* Hashes: (Provide SHA256 or MD5 hashes)
+* Malicious Network Activity: (Any Malicious Connection)
+* Other Malicious Behaviour: (Signs of persistence, Data Exfiltration)
+
 
 
 # ThreatLocker Ops
