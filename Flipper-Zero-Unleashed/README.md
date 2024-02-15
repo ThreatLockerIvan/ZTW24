@@ -142,7 +142,7 @@ access to the targeted machine.
     ```
 # Reference Links 
 * **Unleashed Web Updater Version unlshd0.69:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw/unlshd-069/flipper-z-f7-update-unlshd-069.tgz&channel=release-cfw&version=unlshd-069)
-* **Extreme Web Updater: [Xtreme Web Updater](https://flipper-xtre.me/update/)
+* **Extreme Web Updater:** [Xtreme Web Updater](https://flipper-xtre.me/update/)
 * **Unleashed Github:** [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)
 * **Extreme Github:** [Flipper-XFW/Xtreme-Firmware (github.com)](https://github.com/Flipper-XFW/Xtreme-Firmware)
 * **Ultimate Guide For New Flipper Owners:** [Talking Sasquatch : Starter Guide - YouTube](https://www.youtube.com/watch?v=12M_oHmxcCQ)
