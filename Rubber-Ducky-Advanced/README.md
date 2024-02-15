@@ -31,12 +31,9 @@ REM ^^^ Delay for 300 milliseconds
 STRINGLN powershell -c <RevShell payload>
 REM ^^^ Enter payload
 ```
-
-## Note:
-
-You will have to replace `<RevShell payload>` with one from
-https://www.revshells.com/. In this case the class will use the PowerShell #1
-payload. (Don't forget to change the IP address to the listener. (kali computer))
+> You will have to replace `<RevShell payload>` with one from
+> https://www.revshells.com/. In this case the class will use the PowerShell #1
+> payload. (Don't forget to change the IP address to the listener. (kali computer))
 
 ![](../Assets/Advance_ducky/Screenshot_2024-02-06_073814_400x354.png)
 
