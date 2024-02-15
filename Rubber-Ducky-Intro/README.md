@@ -27,10 +27,11 @@ The reason why we open the ducky is to add some sticker to the case, so it is
 easy to press the button when the case is put back together.
 
 1. Take the metal cover off by lightly prying it open to release the ducky.
+
   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150513.png)
 
 2. Take a knife or fingernail to light pry open the case. (I use the small gap
-   on the USB A side to pry it open)
+  on the USB A side to pry it open)
 
   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150500.png)
 
@@ -139,7 +140,6 @@ REM ^^^ Write Hello, World! to notepad without hitting enter
   press the button to stop the payload Early unless you have the button
   assigned to do something)
 4. Move the inject.bin file to the root of ducky.
-
   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150707.png)
 
 5. eject ducky
