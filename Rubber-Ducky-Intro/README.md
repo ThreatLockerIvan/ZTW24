@@ -53,7 +53,7 @@ Site: https://payloadstudio.hak5.org/community/
 
 This will be the place that you will spend most of your time when making payloads for the ducky.
 
-![](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_151743.png)
+![](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_155329.png)
 
 The menu will be as follows:
 
