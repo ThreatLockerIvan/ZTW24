@@ -4,7 +4,6 @@
 
 ![Baby ducky](../Assets/Intro_to_Rubber_ducky/baby_ducky_200x200.png)
 
-
 # Table of Contents
 
 - [Rubber Ducky Intro](#rubber-ducky-intro)
@@ -17,7 +16,6 @@
 - [Generate Payload and getting it on the ducky.](#generate-payload-and-getting-it-on-the-ducky)
 - [Running payload](#running-payload)
 - [References](#references)
-
 
 # Objectives
 
