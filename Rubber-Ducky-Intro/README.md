@@ -41,22 +41,25 @@ easy to press the button when the case is put back together.
 
 1. Take the metal cover off by lightly prying it open to release the ducky.
 
-  ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150513.png)
+  ![USB without the metal bit](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150513.png)
 
 2. Take a knife or fingernail to light pry open the case. (I use the small gap
   on the USB A side to pry it open)
 
-  ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150500.png)
+  ![Where on the USB to take apart case.](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150500.png)
 
 3. Once open, on the sticker card you will have four small tear shape stickers.
   (NOTE: If you add 4 sticker it will make the button very easy to press and
   only having 1 sticker will make it hard to press the button.)
 
-  ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150538.png)
+  ![Sticker locations](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150538.png)
 
-4. Place the tear drop sticker on this spot of the case
+4. Place the tear drop sticker on this spot of the one case
 
-  ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150558.png)
+  ![Where to put stickers](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-15_183919.png)
+
+  What it should look like after you put all stickers on.
+  ![What it should look after you put the sticker on](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-15_183946.png) 
 
 5. Put the Rubber ducky back together.
 
