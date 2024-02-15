@@ -57,7 +57,7 @@ nc -lnvp 5757
 ![Microsoft Defender logo](../Assets/Advance_ducky/microsoftdefenderlogo_100x105.png)
 
 When you ran the basic payload, you might have notice that it didn't work. But why?
-This basic payload, and all EDR/Anti malware know what a basic payload looks like.
+This basic payload from reveshells, is known by all EDR/Anti malware solutions and would stop the payload from running.
 
 # Advance Payload
 
