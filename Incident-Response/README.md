@@ -42,40 +42,40 @@ A playbook acts as our blueprint or strategic guide when encountering incidents 
 
 Scope:
 
-Gather the names of machines affected:
+    Gather the names of machines affected:
 
-- FRONT-DESK-OFFI
+    - FRONT-DESK-OFFI
 
-ThreatLocker Machine State:
+    ThreatLocker Machine State:
 
-Is the machine in learning mode, monitoring, or secured?
+        Is the machine in learning mode, monitoring, or secured?
 
-Mystery?:
+    Mystery?:
 
-This is step involves the use of a new tool we just released, we will cover this alter in this class
+        This is step involves the use of a new tool we just released, we will cover this alter in this class
 
-Network Activity: 
+    Network Activity: 
 
-Scan for connections from unknown ports or common ports of entry:
+        Scan for connections from unknown ports or common ports of entry:
 
-| PROTOCOL | PORT |
-| --- | --- |
-| SSH  | 22 |
-| RDP | 3389 |
-| FTP | 21 |
-| SMB | 445 |
+        | PROTOCOL | PORT |
+        | --- | --- |
+        | SSH  | 22 |
+        | RDP | 3389 |
+        | FTP | 21 |
+        | SMB | 445 |
 
-Proof of Execution:
+    Proof of Execution:
 
-Look for signs of permitted execution, filter by permits.
+        Look for signs of permitted execution, filter by permits.
 
-Registry Changes:
+    Registry Changes:
 
-Check logs for registry changes, in many occasions this can be a sign of a breach or persistence.
+        Check logs for registry changes, in many occasions this can be a sign of a breach or persistence.
 
-Record Findings:
+    Record Findings:
 
-Fill in Incident Response Report With Findings.
+        Fill in Incident Response Report With Findings.
 
 # ThreatLocker Ops
 
