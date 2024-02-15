@@ -40,42 +40,8 @@ A playbook acts as our blueprint or strategic guide when encountering incidents 
 
 **Strategy:** 
 
-Scope:
+![playbook](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2F67bce66b-8450-4e4a-af43-54e4ad3a752b%2FUntitled.png?table=block&id=6a3c14cb-c9fd-4004-888f-05c8f0965d15&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=1920&userId=&cache=v2)
 
-    Gather the names of machines affected:
-
-    - FRONT-DESK-OFFI
-
-    ThreatLocker Machine State:
-
-        Is the machine in learning mode, monitoring, or secured?
-
-    Mystery?:
-
-        This is step involves the use of a new tool we just released, we will cover this alter in this class
-
-    Network Activity: 
-
-        Scan for connections from unknown ports or common ports of entry:
-
-        | PROTOCOL | PORT |
-        | --- | --- |
-        | SSH  | 22 |
-        | RDP | 3389 |
-        | FTP | 21 |
-        | SMB | 445 |
-
-    Proof of Execution:
-
-        Look for signs of permitted execution, filter by permits.
-
-    Registry Changes:
-
-        Check logs for registry changes, in many occasions this can be a sign of a breach or persistence.
-
-    Record Findings:
-
-        Fill in Incident Response Report With Findings.
 
 # ThreatLocker Ops
 
