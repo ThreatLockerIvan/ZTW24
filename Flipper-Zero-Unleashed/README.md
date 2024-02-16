@@ -65,7 +65,7 @@ machine and click `Update`.
 
 > Below are Direct Links to the Flipper Labs Web Updater
 
-* Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw/unlshd-069/flipper-z-f7-update-unlshd-069.tgz&channel=release-cfw&version=unlshd-069)
+* Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * Extreme: [Xtreme Web Updater](https://flipper-xtre.me/update/)
 
 ### Resources:
@@ -140,7 +140,7 @@ access to the targeted machine.
 
 # Reference Links 
 
-* **Unleashed Web Updater Version unlshd0.69:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw/unlshd-069/flipper-z-f7-update-unlshd-069.tgz&channel=release-cfw&version=unlshd-069)
+* **Unleashed Web Updater Version unlshd0.69:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * **Extreme Web Updater:** [Xtreme Web Updater](https://flipper-xtre.me/update/)
 * **Unleashed Github:** [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)
 * **Extreme Github:** [Flipper-XFW/Xtreme-Firmware (github.com)](https://github.com/Flipper-XFW/Xtreme-Firmware)
