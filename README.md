@@ -27,7 +27,7 @@ amazing learning experience at ZTW2024!
 ## Made by
 ### Rayton Li 
 
-![Rayton Li HEADSHOT]()
+![Rayton Li HEADSHOT](Assets/HeadShots/Rayton_L.jpg)
 
 [Rayton Li Linkedin](https://www.linkedin.com/in/rayton-li/)
 
