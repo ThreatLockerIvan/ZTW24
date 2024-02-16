@@ -5,7 +5,7 @@
 Welcome to the Flipper Zero Unleashed course. This class holds everything from
 an intro to intermediate level content.
 
-![](../Assets\Flipper\Main_Flipper_background.png)
+![](../Assets/Flipper/Main_Flipper_background.png)
 # Guide
 
 The following will be covered in this course:
@@ -42,7 +42,7 @@ Here's a breakdown of its key features:
   ethical hacking.
 
 ### Navigating the Flipper
-![Flipper Button explain](../Assets\Flipper\Fllipper_zero_Button_explained.png)
+![Flipper Button explain](../Assets/Flipper/Fllipper_zero_Button_explained.png)
 
 The main way to navigate the Flipper with the right side of the flipper. The 
 defualt firmware and unleash menu can be very hard for newcomers and thats one 
@@ -87,7 +87,7 @@ it is, There are two way to flash the frimware
 * Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * Extreme: [Xtreme Web Updater](https://flipper-xtre.me/update/)
   
-![](../Assets\Flipper\X_and_unleash_webupdater.png)
+![](../Assets/Flipper/X_and_unleash_webupdater.png)
 ### QFlipper app update process
 
 ### Resources:
