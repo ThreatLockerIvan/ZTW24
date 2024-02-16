@@ -51,45 +51,33 @@ us focus on the assets that are truly in danger.
 * Gather Hostname(s):
 
 ## Phase 2 [Machine State]
+Understanding the state in which the machine is in is crucial as we can better understand how that machine is intended to behave.
+* **Learning Mode**: Automatically Catalogs Files based on users behaviour and learns them(Storing File Dat and Allowing it to run Next Time)
+* **Monitor Mode**: Does not take action on the End Point. This just monitors the behaviour on the machine to forward logs
+* **Secure Mode**: Only allows application previously trusted to run, everything else is blocked by default
 
-Understanding the state in which the machine is in is crucial as we can better
-understand how that machine is intended to behave.
-
-* Learning Mode: Automatically Catalogs Files based on users behavior and
-  learns them(Storing File Dat and Allowing it to run Next Time)
-* Monitor Mode: Does not take action on the End Point. This just monitors the
-  behavior on the machine to forward logs
-
-## Phase 3 [Mystery Phase]
+### Phase 3 [Mystery Phase]
+This is step involves the use of our new tool we just released, we will cover this later in this class.
 
 This is step involves the use of our new tool we just released, we will cover
 this later in this class.
 
-## Phase 4 [Network Activity]
+### Phase 4 [Network Activity]
+Check network logs in the Unified Audit for any unusual behaviour. 
+Red Flags indicators are  external connection to common ports of entry(Ports that can are commonly used gain access to a device):
+| PROTOCOL | PORT |
+| --- | --- |
+| SSH  | 22 |
+| RDP | 3389 |
+| FTP | 21 |
+| SMB | 445 |
 
-Check network logs in the Unified Audit for any unusual behavior.
-Red Flags indicators are  external connection to common ports of entry(Ports
-that can are commonly used gain access to a device):
+### Phase 5 [Proof of Execution]
+Look for signs of permitted execution, this lets us know what actually ran on the system.
+* Filter Unified Audit: (Action = Permit) (Action Type = Execute) 
 
-| PROTOCOL | PORT  |
-| :------: | :---: |
-|   SSH    |  22   |
-|   RDP    | 3389  |
-|   FTP    |  21   |
-|   SMB    |  445  |
-
-## Phase 5 [Proof of Execution]
-
-Look for signs of permitted execution, this lets us know what actually ran on
-the system.
-
-* Filter Unified Audit: (Action = Permit) (Action Type = Execute)
-
-## Phase 6 [Registry Changes]
-
-Check logs for registry changes, in many occasions this can be a sign of a breach
-or persistence.
-
+### Phase 6 [Registry Changes]
+Check logs for registry changes, in many occasions this can be a sign of a breach or persistence.
 Below is a list of Registry Keys often targeted by malicious actors for persistence:
 Run and RunOnce Keys:
 
@@ -129,21 +117,11 @@ Run and RunOnce Keys:
     - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`
 15. **Firewall Rules**:
     - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules`
+### Phase 7 [Explicit Denies]
+This applies to machine in **Secure Mode**, when a machine is in secure mode malware mayb be attempting to run against it but gets denied by our platform in cases like these we still want to know about it and recrod the data so we can further understand where the attakc is coming from and how to clode that point of entry for the attacker
 
-## Phase 7 [Explicit Denies]
-
-This applies to machine in **Secure Mode**, when a machine is in secure mode
-malware may be attempting to run against it but gets denied by our platform in
-cases like these we still want to know about it and record the data so we can
-further understand where the attack is coming from and how to block that point
-of entry for the attacker
-
-## Phase 8 [Record Findings]
-
-This stage involves organizing all your discoveries and transforming them into
-a format that is easy to understand, allowing you to effectively communicate
-your findings to the customer. Additionally, it includes saving the organized
-information to later modify and generate a comprehensive report.
+### Phase 8 [Record Findings]
+This stage involves organizing all your discoveries and transforming them into a format that is easy to understand, allowing you to effectively communicate your findings to the customer. Additionally, it includes saving the organized information to later modify and generate a comprehensive report. 
 
 Record all your findings, this can include but not be limited to
 
@@ -163,9 +141,18 @@ watches for unusual events or Indicators of Compromise (IoCs).
 behavior, in this case we can navigate to the **Response Center** and see if any
 indicators of compromise(Threats) have been detected
 
+### Response Center
+The **Response Center** allows you to manage all your **ThreatLocker Ops** alerts from one place under the **Threats** tab. 
+
+![ResponseCenter](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2Fc327b279-dc7c-4c99-980b-9535f5945605%2FUntitled.png?table=block&id=8a21489f-ef50-406a-aedf-5543dba9880c&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=&cache=v2)
+
+### Managing Alerts
+Alerts in the **Response Center** are organized by machine(hostname) so if you click an alert you will see all the alerts relative to that machine.
+
+![ManageAlerts1](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2Fce358ff6-8ea6-4356-aa50-586a5ae9557d%2FUntitled.png?table=block&id=fb998b7f-f395-4c21-9eb0-a1ed82db1c4b&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=&cache=v2)
 # Report Findings
 
-During this phase, we compile a detailed report outlining all our discoveries
+This is the final step, we will compile a detailed report outlining all our discoveries
 and any recommended actions. This report serves as a comprehensive document
 summarizing our investigation, findings, and suggested steps to address any
 identified issues or vulnerabilities.
