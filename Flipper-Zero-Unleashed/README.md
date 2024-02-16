@@ -161,6 +161,8 @@ access to the targeted machine.
     ENTER
     ```
 
+    > Note: Windows Defender need to be turn off for this to work
+
 # Reference Links 
 
 * **Unleashed Web Updater Version unlshd0.69:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
