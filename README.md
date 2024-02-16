@@ -23,3 +23,29 @@ Our Team at ThreatLocker makes it an absolute goal to educate and advocate for
 a cyber-safe world. We have dedicated countless hours to crafting our content
 to ensure a comprehensive and enriching learning experience. We hope you have an
 amazing learning experience at ZTW2024!
+
+## Made by
+### Rayton Li 
+
+![Rayton Li HEADSHOT]()
+
+[Rayton Li Linkedin](https://www.linkedin.com/in/rayton-li/)
+
+### Ivan Fonseca
+
+![Ivan Fonseca HEADSHOT]()
+
+[Ivan Fonseca Linkedin](https://www.linkedin.com/in/ivan-fonseca-64139222b/)
+
+### Nicholas Cottrell
+
+![Nicholas Cottrell HEADSHOT]()
+
+[Nicholas Cottrell Linkedin](https://www.linkedin.com/in/nicholas-cottrell-083564165/)
+
+### Craig Stevenson
+
+![Craig Stevenson HEADSHOT]()
+
+[Craig Stevenson Linkedin](https://www.linkedin.com/in/craig-stevenson-hq/)
+
