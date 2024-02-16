@@ -147,8 +147,7 @@ The **Response Center** allows you to manage all your **ThreatLocker Ops** alert
 
 ### Managing Alerts
 Alerts in the **Response Center** are organized by machine(hostname) so if you click an alert you will see all the alerts relative to that machine.
-![ManageAlerts1](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2Faf8a8e31-8765-40e6-b248-eab68fd98fee%2FUntitled.png?table=block&id=0bbac112-dffc-4649-9684-caa24a7a5ce9&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=&cache=v2)
-![ManageAlerts2](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2F7bb700e2-57df-4bff-9f94-1d99a273b13f%2FUntitled.png?table=block&id=f3bdbfca-8651-46d5-9c31-72fd3feffafe&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=&cache=v2)
+![ManageAlerts1](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2F7bb700e2-57df-4bff-9f94-1d99a273b13f%2FUntitled.png?table=block&id=f3bdbfca-8651-46d5-9c31-72fd3feffafe&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=&cache=v2)
 # Report Findings
 
 This is the final step, we will compile a detailed report outlining all our discoveries
