@@ -16,7 +16,7 @@ The following will be covered in this course:
 * Bad Bluetooth (BadKB)
 * Bluetooth Impersonation Attacks
 
-## Introduction to Flipper Zero
+# Introduction to Flipper Zero
 
 A Flipper Zero is a versatile and programmable multi tool that is commonly used
 for hacking. It's a handheld device equipped with various features that allow
@@ -41,7 +41,8 @@ Here's a breakdown of its key features:
   needs. This makes it a great tool for learning programming, cybersecurity, and
   ethical hacking.
 
-### Navigating the Flipper
+## Navigating the Flipper
+
 ![Flipper Button explain](../Assets/Flipper/Fllipper_zero_Button_explained.png)
 
 The main way to navigate the Flipper with the right side of the flipper. The 
@@ -57,7 +58,7 @@ reason Extreme was made.
  > - You can learn more about the Flipper controls here [Flipper main website](https://docs.flipper.net/basics/control)
 
 
-## Jail Breaking a Flipper Zero
+# Jail Breaking a Flipper Zero
 
 Jail Breaking a Flipper otherwise known as Flashing a Flipper typically refers
 to the process of loading or updating the firmware on the device. Firmware is
@@ -74,11 +75,20 @@ it is, There are two way to flash the frimware
 > - To update/Jail break a flipper you need a SD card
 > - Also Flipper can support up to 256 GB SD cards
 
-### GitHub Repositories:
+## GitHub Repositories:
+
  This are the main GitHub Repositories for the two most common Flipper Firmware's
 
 * Unleashed: [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)
 * Extreme: [Flipper-XFW/Xtreme-Firmware (github.com)](https://github.com/Flipper-XFW/Xtreme-Firmware)
+
+## First Step to Flash Flipper
+
+1. Connect Flipper to computer with type C to USB A cable
+   >Make sure Flipper has a SD card
+   
+   ![COmputer connected to flipper](../Assets/Flipper/Flipper_connect_to_laptop.jpg)
+2. Use Web updater or QFlipper app.
 
 ### Web Updater process:
 
@@ -87,16 +97,33 @@ it is, There are two way to flash the frimware
 * Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * Extreme: [Xtreme Web Updater](https://flipper-xtre.me/update/)
   
-![](../Assets/Flipper/X_and_unleash_webupdater.png)
+![Both Extreme and unleash web flasher](../Assets/Flipper/X_and_unleash_webupdater.png)
+
+After picking what you want on your flipper. Just hit connect and then select your Flipper to connect to the web browser and then flash.
+
+![Step to connect to web browser](../Assets/Flipper/X_webupdater.png)
+![After connection](../Assets/Flipper/X_webupdater_after.png)
+
+After the update is done, just unplug the Flipper from computer. 
+
 ### QFlipper app update process
 
-### Resources:
+1. The first step in this process to install QFlipper on the computer. [Qflipper download page](https://docs.flipper.net/qflipper)
+2. Next you need to install the tgz file for unleash or extreme release download page
+   ![unleash download github](../Assets/Flipper/Unleashed_github_download.png)
+3. After you download the package tgz file open Qflipper app 
+   > Connect Flipper to computer if not already done so.
+
+   ![Qflipper app](../Assets/Flipper/Flipper_App_update.png)
+4. After the up date is done just unplug the Flipper from computer. 
+
+## Resources:
 
 > Below is further Resources that might help you if your struggling to install firmware on your Flipper
 
 * Ultimate Guide: [Talking Sasquatch : Starter Guide - YouTube](https://www.youtube.com/watch?v=12M_oHmxcCQ)
 
-## NFC/RFID Hacking
+# NFC/RFID Hacking
 
 The Flipper Zero is great for Hacking RFID and NFC cards or tags. To access
 these navigate to the "Apps" section on your device.
@@ -109,12 +136,21 @@ It has the following Capabilities:
 
 ## How to Clone Emulate NFC
 
-> Disclaimer: Always be aware of the type of card or tag you are trying to hack 
-> with the Flipper, this helps you understand what module you need to use to 
-> actually be able to read it. For example, if you have an iClass card you 
-> don't want to be using the Mifare NFC Module.
+1. Navigate to the NFC menu 
+2. select Read 
+3. Place Flipper on top of the card. It should look like this 
+   ![Flipper on top of NFC card](../Assets/Flipper/NFC_Scan.jpg)
+It might take a while the flipper is scanning. Once Filpper is done scanning 
+the card you will get the screen above
+4. hit the right button to go to the more tab. 
+5. Now you can ether save the card or emulate the card
+   >If you save the card you have to go back and navigate to the NFC menu and 
+   then go the saved menu and then you can emulate the card
+6.  hold the Flipper to the reader.\
+   You can learn more about NFC here [Flipper NFC page](https://docs.flipper.net/nfc/read)
 
-## Bad Bluetooth (BadKB)
+
+# Bad Bluetooth (BadKB)
 
 I always tell others that Bad Bluetooth is basically a wireless rubber ducky
 attack. If you don't know what a rubber ducky is then that's ok. Bad KB and Rubber
@@ -122,6 +158,7 @@ Duckies allows you to emulate a keyboard and send pre-programmed key strokes to
 any device you are connected to. In this case of a rubber ducky you must plug it
 into a computer as it looks like a "USB" device. But in this case The Flipper
 must connect over Bluetooth to the victims device to launch the attack.
+> If you want to learn more about BadUSB [Flipper badUSB](https://docs.flipper.net/bad-usb)
 
 ## Bluetooth Impersonation Attacks
 
@@ -182,7 +219,10 @@ access to the targeted machine.
     > Note: Windows Defender need to be turn off for this to work
     > , Payload is the powershell#2 from https://www.revshells.com/
 
-# Reference Links 
+# Reference Links
+* **Flipper BADUSB:** [Flipper badUSB](https://docs.flipper.net/bad-usb) 
+* **Fipper NFC:** [Flipper NFC page](https://docs.flipper.net/nfc/read)
+* **QFlipper:** [Qflipper download page](https://docs.flipper.net/qflipper)
 * **Flipper Control page:** [Flipper Control page](https://docs.flipper.net/basics/control)
 * **Unleashed Web Updater Version unlshd0.71e:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * **Extreme Web Updater:** [Xtreme Web Updater](https://flipper-xtre.me/update/)
