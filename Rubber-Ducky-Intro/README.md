@@ -4,14 +4,27 @@
 
 ![Baby ducky](../Assets/Intro_to_Rubber_ducky/baby_ducky_200x200.png)
 
-## Objectives 
+# Table of Contents
+
+- [Rubber Ducky Intro](#rubber-ducky-intro)
+- [Table of Contents](#table-of-contents)
+- [Objectives](#objectives)
+- [Unboxing](#unboxing)
+  - [Button Mod For The Ducky](#button-mod-for-the-ducky)
+- [Payload Studio IDE(Integrated development environment)](#payload-studio-ideintegrated-development-environment)
+  - [Hello World](#hello-world)
+- [Generate Payload and getting it on the ducky.](#generate-payload-and-getting-it-on-the-ducky)
+- [Running payload](#running-payload)
+- [References](#references)
+
+# Objectives
 
 1. Setting up the rubber ducky
 2. Know how to use the web base IDE
-3. Generate payload 
+3. Generate payload
 4. Launching the payload
 
-## Unboxing
+# Unboxing
 
 ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150431.png)
 
@@ -21,39 +34,43 @@ You will get the following in the Rubber ducky Bag:
 - USB Rubber Ducky in an Esp bag
 - Sticker card
 
-# Button Mod For The Ducky
+## Button Mod For The Ducky
 
 The reason why we open the ducky is to add some sticker to the case, so it is
 easy to press the button when the case is put back together.
 
 1. Take the metal cover off by lightly prying it open to release the ducky.
 
-   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150513.png)
+  ![USB without the metal bit](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150513.png)
 
 2. Take a knife or fingernail to light pry open the case. (I use the small gap
-   on the USB A side to pry it open)
+  on the USB A side to pry it open)
 
-   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150500.png)
+  ![Where on the USB to take apart case.](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150500.png)
 
 3. Once open, on the sticker card you will have four small tear shape stickers.
-   (NOTE: If you add 4 sticker it will make the button very easy to press and
-   only having 1 sticker will make it hard to press the button.)
+  (NOTE: If you add 4 sticker it will make the button very easy to press and
+  only having 1 sticker will make it hard to press the button.)
 
-   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150538.png)
+  ![Sticker locations](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150538.png)
 
-4. Place the tear drop sticker on this spot of the case
+4. Place the tear drop sticker on this spot of the one case
 
-   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150558.png)
+  ![Where to put stickers](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-15_183919.png)
+
+  What it should look like after you put all stickers on.
+  ![What it should look after you put the sticker on](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-15_183946.png) 
 
 5. Put the Rubber ducky back together.
 
-
 # Payload Studio IDE(Integrated development environment)
+
 Site: https://payloadstudio.hak5.org/community/
 
-This will be the place that you will spend most of your time when making payloads for the ducky.
+This will be the place that you will spend most of your time when making
+payloads for the ducky.
 
-![](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_151743.png)
+![](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_155329.png)
 
 The menu will be as follows:
 
@@ -93,43 +110,57 @@ The menu will be as follows:
   it as a .txt file)
 - Generate payload (Generate payload into an inject.bin file.)
 
-# Hello World
+## Hello World
 
 What's a better way to learn than a Hello world.
 I have add a bunch of Comments to explain how this thing works
 
-```duckyscript
+```bat
+REM Title: Hello world
+REM Author: ThreatLocker_Ray
+REM Description: Prints hello world.
+REM Target: Windows
+
 REM This is a comment.
 
-DELAY 3000 REM This is a delay so that the ducky doesn't start the attack early when you plug it in.
+DELAY 3000
+REM ^^^ This is a delay so that the ducky doesn't start the attack early when you plug it in. This Delay waits 3 seconds.
 
-GUI r REM Opens the run prompt.
+GUI r
+REM ^^^ Opens the run prompt.
 
-DELAY 1000 REM Delays are done in milliseconds.
+DELAY 1000
+REM ^^^ Delays are done in milliseconds so this would wait 1 second.
 
 STRINGLN Notepad.exe
 REM ^^^ This will write NotePad.exe and hit the enter key into the run prompt.
 
-DELAY 1000 REM Delay to wait for notepad to open.
+DELAY 1000
+REM ^^^ Delay to wait for notepad to open.
 
 STRING Hello, World!
 REM ^^^ Write Hello, World! to notepad without hitting enter
 ```
 
+> You will most likely have to play with the delay if it does run right.
+>
+> You should add the title, Author, Description, and the target incase you
+> forgot or someone else have to look at it.
+
 # Generate Payload and getting it on the ducky.
 
-   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-13_101649.png)
+![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-13_101649.png)
 
 1. Hit the Generate payload button
 2. Hit the Download button (This should save it to the download folder)
 3. Plug in the Rubber ducky. (If you already have a payload on it, you can
-   press the button to stop the payload Early unless you have the button
-   assigned to do something)
+  press the button to stop the payload Early unless you have the button
+  assigned to do something)
 4. Move the inject.bin file to the root of ducky.
+   
+  ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150707.png)
 
-   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150707.png)
-
-5. eject ducky
+6. eject ducky
 
 # Running payload
 
@@ -138,14 +169,8 @@ sending keystrokes.
 
 ![](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150640.png)
 
-# Notes
-- You will most likely have to play with the delay if it does run right.
-- You should add the title, Author, Description, and the target incase you
-  forgot or someone else have to look at it.
-
-![](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_155329.png)
-
-# Great Site to help you learn more.
+# References
 
 * Ducky Quick Reference Guild: https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
 * Payload Library: https://github.com/hak5/usbrubberducky-payloads
+* Payload Studio: https://payloadstudio.hak5.org/community/
