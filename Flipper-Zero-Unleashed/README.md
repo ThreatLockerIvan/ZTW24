@@ -5,6 +5,7 @@
 Welcome to the Flipper Zero Unleashed course. This class holds everything from
 an intro to intermediate level content.
 
+![](../Assets\Flipper\Main_Flipper_background.png)
 # Guide
 
 The following will be covered in this course:
@@ -40,6 +41,22 @@ Here's a breakdown of its key features:
   needs. This makes it a great tool for learning programming, cybersecurity, and
   ethical hacking.
 
+### Navigating the Flipper
+![Flipper Button explain](../Assets\Flipper\Fllipper_zero_Button_explained.png)
+
+The main way to navigate the Flipper with the right side of the flipper. The 
+defualt firmware and unleash menu can be very hard for newcomers and thats one 
+reason Extreme was made.
+
+  - The Navigation buttons move UP RIGHT LEFT DOWN on the menu
+  - Enter/ Select button if for selecting something in the menu.
+  - The back button is to back out of what ever menu you are on.
+ > NOTE: 
+ > - If you get lost you can just hit the back button till you get back to 
+ main art screen. 
+ > - You can learn more about the Flipper controls here [Flipper main website](https://docs.flipper.net/basics/control)
+
+
 ## Jail Breaking a Flipper Zero
 
 Jail Breaking a Flipper otherwise known as Flashing a Flipper typically refers
@@ -48,17 +65,17 @@ the software that runs on embedded systems. Flashing is necessary when you want
 to install new features to extend your hacking abilities.
 
 You may be asking how do I flash firmware onto my Flipper, is it easy?
+it is, There are two way to flash the frimware
+ 
+ 1. **Web updater**
+ 2. **With QFlipper app**
 
-My answer to this yes it easy, if you use the Web Updater. Many GitHub
-repositories provide instant links to the web updater to install their firmware.
-Once you click these links all you have to do is plug in your flipper to your
-machine and click `Update`.
-
->Note: To update/Jail break a flipper you need a SD card, Also Flipper can support up to 256 GB SD cards
+>Note: 
+> - To update/Jail break a flipper you need a SD card
+> - Also Flipper can support up to 256 GB SD cards
 
 ### GitHub Repositories:
-
-> Below are the GitHub Repositories for the two most common Flipper Firmware's
+ This are the main GitHub Repositories for the two most common Flipper Firmware's
 
 * Unleashed: [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)
 * Extreme: [Flipper-XFW/Xtreme-Firmware (github.com)](https://github.com/Flipper-XFW/Xtreme-Firmware)
@@ -69,7 +86,8 @@ machine and click `Update`.
 
 * Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * Extreme: [Xtreme Web Updater](https://flipper-xtre.me/update/)
-
+  
+![](../Assets\Flipper\X_and_unleash_webupdater.png)
 ### QFlipper app update process
 
 ### Resources:
@@ -91,10 +109,10 @@ It has the following Capabilities:
 
 ## How to Clone Emulate NFC
 
-> Disclaimer: Always be aware of the type of card or tag you are trying to hack with the
-> Flipper, this helps you understand what module you need to use to actually be
-> able to read it. For example, if you have an iClass card you don't want to be
-> using the Mifare NFC Module.
+> Disclaimer: Always be aware of the type of card or tag you are trying to hack 
+> with the Flipper, this helps you understand what module you need to use to 
+> actually be able to read it. For example, if you have an iClass card you 
+> don't want to be using the Mifare NFC Module.
 
 ## Bad Bluetooth (BadKB)
 
@@ -165,8 +183,8 @@ access to the targeted machine.
     > , Payload is the powershell#2 from https://www.revshells.com/
 
 # Reference Links 
-
-* **Unleashed Web Updater Version unlshd0.69:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
+* **Flipper Control page:** [Flipper Control page](https://docs.flipper.net/basics/control)
+* **Unleashed Web Updater Version unlshd0.71e:** [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * **Extreme Web Updater:** [Xtreme Web Updater](https://flipper-xtre.me/update/)
 * **Unleashed Github:** [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)
 * **Extreme Github:** [Flipper-XFW/Xtreme-Firmware (github.com)](https://github.com/Flipper-XFW/Xtreme-Firmware)
