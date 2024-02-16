@@ -145,9 +145,13 @@ indicators of compromise(Threats) have been detected
 The **Response Center** allows you to manage all your **ThreatLocker Ops** alerts from one place under the **Threats** tab. 
 ![ResponseCenter](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2Fc327b279-dc7c-4c99-980b-9535f5945605%2FUntitled.png?table=block&id=8a21489f-ef50-406a-aedf-5543dba9880c&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=&cache=v2)
 
+### Managing Alerts
+Alerts in the **Response Center** are organized by machine(hostname) so if you click an alert you will see all the alerts relative to that machine.
+![ManageAlerts1](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2Faf8a8e31-8765-40e6-b248-eab68fd98fee%2FUntitled.png?table=block&id=0bbac112-dffc-4649-9684-caa24a7a5ce9&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=&cache=v2)
+![ManageAlerts2](https://curious-cloth-153.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2F7bb700e2-57df-4bff-9f94-1d99a273b13f%2FUntitled.png?table=block&id=f3bdbfca-8651-46d5-9c31-72fd3feffafe&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=&cache=v2)
 # Report Findings
 
-During this phase, we compile a detailed report outlining all our discoveries
+This is the final step, we will compile a detailed report outlining all our discoveries
 and any recommended actions. This report serves as a comprehensive document
 summarizing our investigation, findings, and suggested steps to address any
 identified issues or vulnerabilities.
