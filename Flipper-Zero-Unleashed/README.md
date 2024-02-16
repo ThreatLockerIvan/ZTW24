@@ -54,6 +54,8 @@ repositories provide instant links to the web updater to install their firmware.
 Once you click these links all you have to do is plug in your flipper to your
 machine and click `Update`.
 
+>Note: To update/Jail break a flipper you need a SD card, Also Flipper can support up to 256 GB SD cards
+
 ### GitHub Repositories:
 
 > Below are the GitHub Repositories for the two most common Flipper Firmware's
@@ -61,12 +63,14 @@ machine and click `Update`.
 * Unleashed: [DarkFlippers/unleashed-firmware (github.com)](https://github.com/DarkFlippers/unleashed-firmware)
 * Extreme: [Flipper-XFW/Xtreme-Firmware (github.com)](https://github.com/Flipper-XFW/Xtreme-Firmware)
 
-### Web Updater:
+### Web Updater process:
 
 > Below are Direct Links to the Flipper Labs Web Updater
 
 * Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * Extreme: [Xtreme Web Updater](https://flipper-xtre.me/update/)
+
+### QFlipper app update process
 
 ### Resources:
 
