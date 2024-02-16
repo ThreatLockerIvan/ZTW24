@@ -162,7 +162,7 @@ access to the targeted machine.
     ```
 
     > Note: Windows Defender need to be turn off for this to work
-    > Payload is the powershell#2 from https://www.revshells.com/
+    > , Payload is the powershell#2 from https://www.revshells.com/
 
 # Reference Links 
 
