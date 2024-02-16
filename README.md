@@ -26,33 +26,7 @@ amazing learning experience at ZTW2024!
 
 ## Made By The ThreatLocker Ops Team
 
-|  | PORT  |
-| :------: | :---: |
-|   SSH    |  22   |
-|   RDP    | 3389  |
-|   FTP    |  21   |
-|   SMB    |  445  |
-### Rayton Li 
-
-![Rayton Li HEADSHOT](Assets\HeadShots\Rayton_200px.jpg)
-
-[Rayton Li Linkedin](https://www.linkedin.com/in/rayton-li/)
-
-### Ivan Fonseca
-
-![Ivan Fonseca HEADSHOT](Assets\HeadShots\Ivan_200px.jpg)
-
-[Ivan Fonseca Linkedin](https://www.linkedin.com/in/ivan-fonseca-64139222b/)
-
-### Nicholas Cottrell
-
-![Nicholas Cottrell HEADSHOT](Assets\HeadShots\Nick_C_200px.jpg)
-
-[Nicholas Cottrell Linkedin](https://www.linkedin.com/in/nicholas-cottrell-083564165/)
-
-### Craig Stevenson
-
-![Craig Stevenson HEADSHOT](Assets\HeadShots\Craig_200px.jpg)
-
-[Craig Stevenson Linkedin](https://www.linkedin.com/in/craig-stevenson-hq/)
-
+|                               Craig Stevenson                               |                                 Ivan Fonseca                                 |                          Rayton Li                           |                                   Nicholas Cottrell                                    |
+| :-------------------------------------------------------------------------: | :--------------------------------------------------------------------------: | :----------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+|       ![Craig Stevenson HEADSHOT](Assets\HeadShots\Rayton_200px.jpg)        |          ![Ivan Fonseca HEADSHOT](Assets\HeadShots\Ivan_200px.jpg)           |   ![Rayton Li HEADSHOT](Assets\HeadShots\Rayton_200px.jpg)   |            ![Nicholas Cottrell HEADSHOT](Assets\HeadShots\Nick_C_200px.jpg)            |
+| [Craig Stevenson Linkedin](https://www.linkedin.com/in/craig-stevenson-hq/) | [Ivan Fonseca Linkedin](https://www.linkedin.com/in/ivan-fonseca-64139222b/) | [Rayton Li Linkedin](https://www.linkedin.com/in/rayton-li/) | [Nicholas Cottrell Linkedin](https://www.linkedin.com/in/nicholas-cottrell-083564165/) |
