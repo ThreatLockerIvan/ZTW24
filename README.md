@@ -24,7 +24,7 @@ a cyber-safe world. We have dedicated countless hours to crafting our content
 to ensure a comprehensive and enriching learning experience. We hope you have an
 amazing learning experience at ZTW2024!
 
-## Made by
+## Made By The ThreatLocker Ops Team
 ### Rayton Li 
 
 ![Rayton Li HEADSHOT](Assets/HeadShots/Rayton_L_200x280.jpg)
