@@ -175,4 +175,4 @@ access to the targeted machine.
 * **ThreatLocker Blog Post:** [How Hackers Use Bluetooth to Take Over Your Mac Device | ThreatLocker](https://www.threatlocker.com/blog/mac-bluetooth-impersonation-attacks)
 * **MacOS Payload:**[ ZTW/Payload (github.com)](macos-reverseshell-payload.txt)
 * **Windows Payload:** [ZTW/Payloads (github.com)](windows-revershell-payload.txt)
-* **ReveShell**[ReveShell](https://www.revshells.com/)
+* **ReveShell:** [ReveShell](https://www.revshells.com/)
