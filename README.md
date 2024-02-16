@@ -39,7 +39,7 @@ amazing learning experience at ZTW2024!
 
 ### Nicholas Cottrell
 
-![Nicholas Cottrell HEADSHOT]()
+![Nicholas Cottrell HEADSHOT](Assets/HeadShots/Nick_C_200x133.png)
 
 [Nicholas Cottrell Linkedin](https://www.linkedin.com/in/nicholas-cottrell-083564165/)
 
