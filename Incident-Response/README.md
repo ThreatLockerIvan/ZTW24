@@ -1,4 +1,4 @@
-![Banner](https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F95fa80c9-fc09-41c7-a313-856f4155a90a%2F5a1947a3-a09e-4c51-94a1-8b6fffcf0521%2Fcomputer_fire_blog_extinguisher-01.png?table=block&id=d048762c-1984-419d-8fcd-a60cc03e9392&spaceId=95fa80c9-fc09-41c7-a313-856f4155a90a&width=2000&userId=c51186de-849a-4003-b8ae-be16e8b5d545&cache=v2)
+![Banner](../Assets/Incident_response/computer_fire_blog_extinguisher_01.png)
 
 # Incident Response with ThreatLocker
 

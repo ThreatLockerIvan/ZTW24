@@ -1,4 +1,4 @@
-![](../Assets/ZTW_Logos_Text_only_light_wo_TL_500x185.png)
+![ZTW Logo](../Assets/Hacking_Labs_graphics_banner_1.png)
 
 # Flipper Zero Unleashed
 
