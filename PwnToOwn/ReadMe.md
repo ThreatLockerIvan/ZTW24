@@ -1,15 +1,25 @@
 ![ZTW Logo](../Assets/Hacking_Labs_graphics_pwn_logo_1.png)
-# **Intro**
+# **INTRO**
 
 Welcome to the PwnToOwn Challenge, ThreatLocker Ops teams work very hard on
 this challenge. We hope that you win the computer or at least learn 
 something new.
 
+- [**INTRO**](#intro)
+- [**INFO**](#info)
+  - [**How To Win**](#how-to-win)
+  - [**WIFI**](#wifi)
+  - [**Scope**](#scope)
+  - [**Leader Board**](#leader-board)
+- [**RULES**](#rules)
+- [**Pwn To Own Challenge Write Up**](#pwn-to-own-challenge-write-up)
+
+
 # **INFO**
 
-## How To Win
+## **How To Win**
 
-First person to get the flag.txt on ether boxes. And if nobody hacks the box's then the highest score on the cyber hero test gets it.  
+First person to get the flag.txt on ether boxes and submit the flag to the leader board. And if nobody hacks the box's then the highest score on the cyber hero test gets it.  
 
 ## **WIFI** 
 
@@ -17,11 +27,11 @@ Wi-Fi SSID: `PwnToOwn`
 
 Password: `ZTW2024!` 
 
-## Scope 
+## **Scope** 
 
 There will be four groups of the same two machines;
-1. Zero 
-2. Trust 
+1. `Zero` 
+2. `Trust`
    
 The group are as follows
 |Group 1 |Group 2|
@@ -32,6 +42,10 @@ The group are as follows
 |:----:|:---:|
 |10.0.0.251 Zero, 10.0.0.252 Trust|10.0.0.253 Zero, 10.0.0.254 Trust|
 
+## **Leader Board**
+
+Flags must be submitted to the leader board that is hosted on http://10.0.0.14:80
+
 # **RULES**
 
 1. Only hack machines in scope
@@ -40,9 +54,9 @@ The group are as follows
 4. be mindful of others
 5. No hints, ThreatLocker employees can't even help you even if they wanted to.
 
-#
 
-# Pwn To Own Challenge Write Up
+
+# **Pwn To Own Challenge Write Up**
 This is the complete guild to the Pwn To Own Challenge for Zero Trust World
 2024. If you had problems with the challenge or had no time and want to know
 2025. the answers this is the spot.  It would be too long to put both write
@@ -51,6 +65,4 @@ This is the complete guild to the Pwn To Own Challenge for Zero Trust World
 -  **Zero:**  [Zero Writeup](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 -  **Trust:**  [Trust Writeup](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
-
-# Note:
-Write ups will be posted later during ZTW
+> NOTE: Write ups will be posted later during ZTW
