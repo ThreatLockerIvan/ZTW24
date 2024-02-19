@@ -93,6 +93,8 @@ it is, There are two way to flash the frimware
 ### Web Updater process:
 
 > Below are Direct Links to the Flipper Labs Web Updater
+> On the left is the Extreme web flasher and on the right is the unleashed
+> webflasher. This class will use the unleash webflasher
 
 * Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * Extreme: [Xtreme Web Updater](https://flipper-xtre.me/update/)
