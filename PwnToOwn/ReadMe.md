@@ -6,6 +6,7 @@
   - [**WIFI**](#wifi)
   - [**Scope**](#scope)
   - [**Leader Board**](#leader-board)
+  - [Note:](#note)
 - [**RULES**](#rules)
 - [**Pwn To Own Challenge Write Up**](#pwn-to-own-challenge-write-up)
 
@@ -47,6 +48,10 @@ The group are as follows
 ## **Leader Board**
 
 Flags must be submitted to the leader board that is hosted on http://10.0.0.14:80
+
+## Note:
+
+ All groups will be reset at midnight. 
 
 # **RULES**
 
