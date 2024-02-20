@@ -126,8 +126,8 @@ Run and RunOnce Keys:
 ### Phase 7 [Explicit Denies]
 This applies to machine in **Secure Mode**, when a machine is in secure mode 
 malware mayb be attempting to run against it but gets denied by our platform 
-in cases like these we still want to know about it and recrod the data so we 
-can further understand where the attakc is coming from and how to clode that 
+in cases like these we still want to know about it and record the data so we 
+can further understand where the attack is coming from and how to close that 
 point of entry for the attacker
 
 ### Phase 8 [Record Findings]
