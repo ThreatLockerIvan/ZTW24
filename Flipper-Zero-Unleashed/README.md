@@ -94,7 +94,7 @@ it is, There are two way to flash the frimware
 
 > Below are Direct Links to the Flipper Labs Web Updater
 > On the left is the Extreme web flasher and on the right is the unleashed
-> webflasher. This class will use the unleash webflasher
+> web flasher. This class will use the unleash web flasher
 
 * Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * Extreme: [Xtreme Web Updater](https://flipper-xtre.me/update/)
@@ -103,7 +103,7 @@ it is, There are two way to flash the frimware
 
 After picking what you want on your flipper. Just hit connect and then select your Flipper to connect to the web browser and then flash.
 
-![Step to connect to web browser](../Assets/Flipper/X_webupdater.png)
+![Step to connect to web browser](../Assets/Flipper/Flipper_web_connect.png)
 ![After connection](../Assets/Flipper/X_webupdater_after.png)
 
 After the update is done, just unplug the Flipper from computer. 
