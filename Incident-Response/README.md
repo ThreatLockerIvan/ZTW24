@@ -53,7 +53,7 @@ us focus on the assets that are truly in danger.
 ## Phase 2 [Machine State]
 Understanding the state in which the machine is in is crucial as we can better 
 understand how that machine is intended to behave.
-* **Learning Mode**: Automatically Catalogs Files based on users behaviour and learns them(Storing File Dat and Allowing it to run Next Time)
+* **Learning Mode**: Automatically Catalogs Files based on users behaviour and runs those files
 * **Monitor Mode**: Does not take action on the End Point. This just monitors the behaviour on the machine to forward logs
 * **Secure Mode**: Only allows application previously trusted to run, everything else is blocked by default
 
