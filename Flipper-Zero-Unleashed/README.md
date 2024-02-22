@@ -65,6 +65,8 @@ to the process of loading or updating the firmware on the device. Firmware is
 the software that runs on embedded systems. Flashing is necessary when you want
 to install new features to extend your hacking abilities.
 
+> Note:  If you just unbox your brand new flipper, you have to format the SD card and then update to the lasted stock firmware first before you try jail breaking. 
+
 You may be asking how do I flash firmware onto my Flipper, is it easy?
 it is, There are two way to flash the frimware
  
@@ -104,8 +106,8 @@ it is, There are two way to flash the frimware
 After picking what you want on your flipper. Just hit connect and then select your Flipper to connect to the web browser and then flash.
 
 ![Step to connect to web browser](../Assets/Flipper/Flipper_web_connect.png)
-![After connection](../Assets/Flipper/X_webupdater_after.png)
-
+![After connection](../Assets/Flipper/flipper_unleash_webupdater.png)
+Now just hit Install.
 After the update is done, just unplug the Flipper from computer. 
 
 ### QFlipper app update process
