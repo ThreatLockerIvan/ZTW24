@@ -19,7 +19,10 @@ Welcome to the Trust write up.
     - [HTTP 666](#http-666-1)
     - [postgres 5432](#postgres-5432-1)
   - [Privilege Escalation](#privilege-escalation)
+    - [Linpeas](#linpeas)
+    - [Manual Way](#manual-way)
   - [Getting The Flag](#getting-the-flag)
+- [References](#references)
 
 ## Recon Phase
 
@@ -154,15 +157,21 @@ We will try hydra, We will use this command:
 ```bash
 hydra -L <USER FILE> -P <PASSWORD FILE> <IP> ssh -t 4
 ```
-- `-L` - This would be a text file that has a list of possible usernames for `ssh`.
-- `-P` - This would be a text file that has a list of possible passwords for `ssh`.
+- `-L` - This would be a text file that has a list of possible usernames for
+  `ssh`.
+- `-P` - This would be a text file that has a list of possible passwords for 
+  `ssh`.
   > NOTE: the lowercase `-l` and `-p` will only do one username or password.
-- `<IP>` - this will be the target machine that we will lunch the attack against.
+- `<IP>` - this will be the target machine that we will lunch the attack
+  against.
 - `ssh` - This tells hydra that we are attack port 22. 
-- `-t`  - This tells hydra how many parallel task we want to run. This will basically run 4 hydras. 
+- `-t`  - This tells hydra how many parallel task we want to run. This will
+  basically run 4 hydras. 
 
-When we run this, It will fail because the username and login are not basic username and passwords that can be found on a list.
-> NOTE: You can brute force your way into anything, IF you give it enough time, It might just take a few years.
+When we run this, It will fail because the username and login are not basic
+username and passwords that can be found on a list.
+> NOTE: You can brute force your way into anything, IF you give it enough time,
+> It might just take a few years.
 
 ### HTTP port 80
 
@@ -171,16 +180,23 @@ resource linux uses. When we connect to the web site though we get this.
 
 ![Linux webpage for port 80](../../Assets/PwnToOwn/linuxwebserver.png)
 
-It seems that this page was defaced by the Threatlocker Ops team. And when we look at the source code there does seem like there is anything else.
+It seems that this page was defaced by the Threatlocker Ops team. And when we
+look at the source code there does seem like there is anything else.
 
 ![Linux webpage source page](../../Assets/PwnToOwn/linuxwebserversource.png)
 
 ### SMB
 
-`SMB` is very common for windows machine/computer, it is the main way to share file besides `FTP`. `SMB` tends to run on both 139 and 445. But sometime you will find only port 139 is open only. 
-this is because 139 is for NetBIOS session, this was the main way for `SMB` to work before the newer version of SMB starting to use port 445. And modern version leave both open for backward compatibility. 
+`SMB` is very common for windows machine/computer, it is the main way to share
+file besides `FTP`. `SMB` tends to run on both 139 and 445. But sometime you
+will find only port 139 is open only. 
+this is because 139 is for NetBIOS session, this was the main way for `SMB` to
+work before the newer version of SMB starting to use port 445. And modern
+version leave both open for backward compatibility. 
 
-In the `namp` scan, it also show that port 139 and 445 is open. And the `SYN` scan show that it is the SMB service. We can use tools like `smbmap` or `enum4linux` to scan the `SMB` service/share. 
+In the `namp` scan, it also show that port 139 and 445 is open. And the `SYN`
+scan show that it is the SMB service. We can use tools like `smbmap` or
+`enum4linux` to scan the `SMB` service/share. 
 
 #### Enum4linux
 
@@ -189,7 +205,12 @@ To use `Enum4linux` you can use the following:
 ```bash
 enum4linux -a <IP>
 ```
-Using this command will try to use known usernames and get you basic info about the `SMB`share. When we ran the scan we can even see the Temp share and what permission we have on that share. Another thing that the scan found was the password policy for the share. It even found a user called `alex`. The most important thing to know is that you can connect to the share with a anonymous user and that the only share we have access to is the `Temp` share.  
+Using this command will try to use known usernames and get you basic info about
+the `SMB`share. When we ran the scan we can even see the Temp share and what
+permission we have on that share. Another thing that the scan found was the
+password policy for the share. It even found a user called `alex`. The most
+important thing to know is that you can connect to the share with a anonymous
+user and that the only share we have access to is the `Temp` share.  
 
 #### SMBmap
 
@@ -200,11 +221,15 @@ smbmap -H <IP> -p <port>
 - `-H` - This tell `smbmap` what host to scan.
 - `-p` - This tell `smbmap` what port to scan. 
   
-When we run this scan it don't show as much as `enum4linux` did. But its a lot easy to ready what is on this share. The most important thing to know is that you can connect to the share with a anonymous user and that the only share we have access to is the `Temp` share.  
+When we run this scan it don't show as much as `enum4linux` did. But its a lot
+easy to ready what is on this share. The most important thing to know is that
+you can connect to the share with a anonymous user and that the only share we
+have access to is the `Temp` share.  
 
 #### Connecting to SMB 
 
-Now that we have some info about the `SMB` share, We can connect to the share with the anonymous user. We can use the one of follow to do that:
+Now that we have some info about the `SMB` share, We can connect to the share
+with the anonymous user. We can use the one of follow to do that:
 
 ```bash
 smbclient --no-pass //<IP>/Temp
@@ -214,12 +239,14 @@ OR
 ```bash
 smbmap -H <IP> -p 445 -r Temp
 ```
-Once we connect to the `Temp` share, and use `dir` or `ls` we can see the following files:
+Once we connect to the `Temp` share, and use `dir` or `ls` we can see the
+following files:
 
 - Team1.log
 - Team.log 
 
-Now we can use the `get` command to grab the files. And when we cat the files, we can see this. 
+Now we can use the `get` command to grab the files. And when we cat the
+files, we can see this. 
 
 **Team.log**
 ```
@@ -262,16 +289,22 @@ I.T: You have a course that you need to complete by friday.
 
 Alex: ( ;-;) ok
 ```
-The two files seems to be logs for the microsoft teams chat for a person named Alex.
-From the files we now know that happen to the website that was on port 80 and that there is another web server active. This new website might have a login page with the username and password being `admin:password`.
+The two files seems to be logs for the microsoft teams chat for a person named
+Alex.
+From the files we now know that happen to the website that was on port 80 and
+that there is another web server active. This new website might have a login
+page with the username and password being `admin:password`.
 
 ### HTTP 666
 
-From the `nmap` scan, this port might be a another web server and this would be kinda confirm with the messages form the `SMB` share. Now when we connect to the port with a web browser we get this page. 
+From the `nmap` scan, this port might be a another web server and this would be
+kinda confirm with the messages form the `SMB` share. Now when we connect to
+the port with a web browser we get this page. 
 
 ![Web server on port 666](../../Assets/PwnToOwn/Webserverport666.png)
 
-Even though the the username and password might have change it never hurt to try it. So when we try the `admin:password` and get into the site. 
+Even though the the username and password might have change it never hurt to
+try it. So when we try the `admin:password` and get into the site. 
 
 ![After logging to the login page](../../Assets/PwnToOwn/afterloginport666.png)
 
@@ -280,7 +313,8 @@ exploring the site we can see that it have a ping utility tool on the site.
 
 ![Ping tool on the web page](../../Assets/PwnToOwn/port666pingtool.png)
 
-This page seem to be using the native ping utility on ubuntu, So this might have a command injection. we can test this by a few ways.
+This page seem to be using the native ping utility on ubuntu, So this might
+have a command injection. we can test this by a few ways.
 
 1. Add `|` to the end of the end of the IP
 2. Add `;` to the end of the end of the IP
@@ -291,12 +325,13 @@ This page seem to be using the native ping utility on ubuntu, So this might have
 127.0.0.1 | <COMMMAND>
 ```
 
-We can should use a command that is on every linux machine, `ls` command will work. 
-so when we run this.
+We can should use a command that is on every linux machine, `ls` command will
+work. so when we run this.
 ```bash
 -c 1 127.0.0.1 ; ls
 ```
-- `-c 1` - This will tell the ping command to only send one ICMP packet, inside of four packets.
+- `-c 1` - This will tell the ping command to only send one ICMP packet, inside
+  of four packets.
 - `127.0.0.1` - This is the ip that the ping command will try to ping. 
   > Note: 127.0.0.1 is the for local host. SO it will try to ping itself. 
 - `;` This will tell the web server to run the next command.
@@ -310,9 +345,14 @@ From this we know that command injection works and now we can more the the [Expl
 
 ### Postgres 5432
 
-Postgresql is most used on the back end and in most cases it would be install on a different server due to security. The default port is 5432. Since we don't have a way to interact with it normally like a website to interact with it without a user and password. We will might have to brute force into the database.
+Postgresql is most used on the back end and in most cases it would be install
+on a different server due to security. The default port is 5432. Since we don't
+have a way to interact with it normally like a website to interact with it
+without a user and password. We will might have to brute force into the
+database.
 
-The first thing we can do is to try to connect to the `postgres` with this command t
+The first thing we can do is to try to connect to the `postgres` with this
+command:
 
 ```bash
 psql -h 10.0.0.248 -U postgres -W postgres -P 5432
@@ -327,11 +367,73 @@ SELECT lanname,lanpltrusted,lanacl FROM pg_language;
 ### postgres 5432
 
 ## Privilege Escalation
-find / -uid 0 -perm -4000 -type f 2>/dev/null
 
+Now that we are the on the system as www-data or postgres, You notice that
+don't have a lot access, and we can't find a Flag.txt file anywhere, where we
+have access. This means that we need to do a escalate our privilege. There is a
+few ways to get more privilege:
+
+1. take over a vulnerable application that have more access then we have. 
+2. find an SUID
+
+> Note: There is a lot more way to escalate privilege but that could be its own
+> class.
+
+SUID are one the most easy box to check for privilege escalation. There are two
+way to find SUID 
+1. linpeas https://github.com/carlospolop/PEASS-ng
+2. manual way
+
+To understand what an SUID is and why its a thing, you have to understand that
+sometime on a linux system you might want something to always run as root. This
+now is not as common but it was a thing. so the way we can tell is with the
+`ls -la` command.
+
+![SUID example](../../Assets/PwnToOwn/SUID.png)
+
+You can see that there is an `s` where an `x` should be if SUID was disable on
+the su command. 
+
+### Linpeas
+
+Linpeas is very good at finding any privilege escalation method on a linux.
+
+> Note: Don't think you are safe on windows computer too soon, because there
+> is also Winpeas which is the linpeas of windows.
+
+### Manual Way
+
+The manual way is going to be a lot more work but that is ok. 
+We can use the following command to check if there is SUID set on a program. 
+
+```bash
+find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
+```
+This uses the find command to look for any program that have permission 4000
+which is `-rwsr-xr-x`.
+
+![After running the find command](../../Assets/PwnToOwn/findsuid.png)
+
+Now that we have a list of programs that an SUID set we can go to the GTFO
+website https://gtfobins.github.io/
+
+Get the F**K out (GTFO) site is a site that have a list of programs that can
+give you a privilege escalation method. 
+
+
+bash -p 
+
+Now we should have root and we can this by using the `whoami` command.
+
+![Whoami command](../../Assets/PwnToOwn/root.png)
+
+Now that we have root we can move on to getting the flag.
+ 
 ## Getting The Flag 
 
-Now that we are in as root of the system now we can navigate the system. After a while of look we will find the `/home/alex/` folder with the `Flag.txt` file and when we cat the `Flag.txt` we get the following:
+Now that we are in as root of the system now we can navigate the system. After
+a while of look we will find the `/home/alex/` folder with the `Flag.txt` file
+and when we cat the `Flag.txt` we get the following:
 
 ```
 ZTW{LINUXqggieliywxzqplgalrexiiesssfpvicf}
@@ -339,6 +441,11 @@ ZTW{LINUXqggieliywxzqplgalrexiiesssfpvicf}
 
 Now that we have the flag all we need to do is to go to the leader board and 
 submit the flag.
+
+
+
+# References
+GTFO https://gtfobins.github.io/
 
 
 
