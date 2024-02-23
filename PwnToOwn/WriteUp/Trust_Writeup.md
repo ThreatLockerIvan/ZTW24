@@ -323,9 +323,24 @@ SELECT lanname,lanpltrusted,lanacl FROM pg_language;
 ## Exploitation Phase
 
 ### HTTP 666
+
 ### postgres 5432
+
 ## Privilege Escalation
+find / -uid 0 -perm -4000 -type f 2>/dev/null
+
 ## Getting The Flag 
+
+Now that we are in as root of the system now we can navigate the system. After a while of look we will find the `/home/alex/` folder with the `Flag.txt` file and when we cat the `Flag.txt` we get the following:
+
+```
+ZTW{LINUXqggieliywxzqplgalrexiiesssfpvicf}
+```
+
+Now that we have the flag all we need to do is to go to the leader board and 
+submit the flag.
+
+
 
 HTTP Port 80
 Http 666

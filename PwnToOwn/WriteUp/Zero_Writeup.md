@@ -759,6 +759,7 @@ see the billy user folder. And with further digging when we dir the
 command we can see the following.  
 
 ```
+ZTW{WINDOWSvdgworuwzuxdryzlcegqpsrxdjmzihfj}
 ```
 
 Now that we have the flag all we need to do is to go to the leader board and 
