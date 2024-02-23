@@ -6,6 +6,23 @@ Welcome to the Flipper Zero Unleashed course. This class holds everything from
 an intro to intermediate level content.
 
 ![](../Assets/Flipper/Main_Flipper_background.png)
+
+- [Flipper Zero Unleashed](#flipper-zero-unleashed)
+- [Guide](#guide)
+- [Introduction to Flipper Zero](#introduction-to-flipper-zero)
+  - [Navigating the Flipper](#navigating-the-flipper)
+- [Jail Breaking a Flipper Zero](#jail-breaking-a-flipper-zero)
+  - [GitHub Repositories:](#github-repositories)
+  - [First Step to Flash Flipper](#first-step-to-flash-flipper)
+    - [Web Updater process:](#web-updater-process)
+    - [QFlipper app update process](#qflipper-app-update-process)
+  - [Resources:](#resources)
+- [NFC/RFID Hacking](#nfcrfid-hacking)
+  - [How to Clone Emulate NFC](#how-to-clone-emulate-nfc)
+- [Bad Bluetooth (BadKB)](#bad-bluetooth-badkb)
+  - [Bluetooth Impersonation Attacks](#bluetooth-impersonation-attacks)
+- [Reference Links](#reference-links)
+
 # Guide
 
 The following will be covered in this course:
