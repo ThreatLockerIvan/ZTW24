@@ -2,7 +2,8 @@
 
 # Intro
 
-Welcome to the on demand classes. This will cover how to use `hashcat`.
-here is the link to the class
+Welcome to the on demand classes. This will cover how to use `nmap` and `hashcat`.
+here is the link to the two class
 
+* **Nmap_class:** [ZTW24/Nmap_class (Course Content)](Ondemandclass/Nmap.md)
 * **Hashcat_class:** [ZTW24/Hashcat_class (Course Content)](Ondemandclass/Hashcat.md)
