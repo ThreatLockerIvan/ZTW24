@@ -86,7 +86,6 @@ Once its done installing, you should have Nmap installed
 Nmap is now installed now you can use the `man` command to read the manual.
 Or you can got to https://nmap.org/book/man.html for a super in detail notes.
 
-
 # When to use what
 s
 # References
