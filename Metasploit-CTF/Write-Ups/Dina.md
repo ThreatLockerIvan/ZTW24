@@ -27,7 +27,6 @@ If not just follow along with this and you should get the flag.
 - [Collect the flag and win](#collect-the-flag-and-win)
 - [Resources](#resources)
 
-
 # Given information and Objective
 
 We have a some given information that will help us in breaking into our vulnerable

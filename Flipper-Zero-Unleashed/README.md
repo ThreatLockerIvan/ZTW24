@@ -11,7 +11,6 @@ an intro to intermediate level content.
 - [Guide](#guide)
 - [Introduction to Flipper Zero](#introduction-to-flipper-zero)
   - [Navigating the Flipper](#navigating-the-flipper)
-- [Jail Breaking a Flipper Zero](#jail-breaking-a-flipper-zero)
   - [GitHub Repositories:](#github-repositories)
   - [First Step to Flash Flipper](#first-step-to-flash-flipper)
     - [Web Updater process:](#web-updater-process)
@@ -19,7 +18,6 @@ an intro to intermediate level content.
   - [Resources:](#resources)
 - [NFC/RFID Hacking](#nfcrfid-hacking)
   - [How to Clone Emulate NFC](#how-to-clone-emulate-nfc)
-- [Bad Bluetooth (BadKB)](#bad-bluetooth-badkb)
   - [Bluetooth Impersonation Attacks](#bluetooth-impersonation-attacks)
 - [Reference Links](#reference-links)
 
@@ -62,35 +60,32 @@ Here's a breakdown of its key features:
 
 ![Flipper Button explain](../Assets/Flipper/Fllipper_zero_Button_explained.png)
 
-The main way to navigate the Flipper with the right side of the flipper. The 
-defualt firmware and unleash menu can be very hard for newcomers and thats one 
+The main way to navigate the Flipper with the right side of the flipper. The
+defualt firmware and unleash menu can be very hard for newcomers and thats one
 reason Extreme was made.
 
   - The Navigation buttons move UP RIGHT LEFT DOWN on the menu
   - Enter/ Select button if for selecting something in the menu.
   - The back button is to back out of what ever menu you are on.
- > NOTE: 
- > - If you get lost you can just hit the back button till you get back to 
- main art screen. 
- > - You can learn more about the Flipper controls here [Flipper main website](https://docs.flipper.net/basics/control)
-
-
-# Jail Breaking a Flipper Zero
+ > NOTE:
+ > - If you get lost you can just hit the back button till you get back to
+ main art screen.
+ > - You can learn more about the Flipper controls here [Flipper main website](https://docs.flipper.net/basics/control)# Jail Breaking a Flipper Zero
 
 Jail Breaking a Flipper otherwise known as Flashing a Flipper typically refers
 to the process of loading or updating the firmware on the device. Firmware is
 the software that runs on embedded systems. Flashing is necessary when you want
 to install new features to extend your hacking abilities.
 
-> Note:  If you just unbox your brand new flipper, you have to format the SD card and then update to the lasted stock firmware first before you try jail breaking. 
+> Note:  If you just unbox your brand new flipper, you have to format the SD card and then update to the lasted stock firmware first before you try jail breaking.
 
 You may be asking how do I flash firmware onto my Flipper, is it easy?
 it is, There are two way to flash the frimware
- 
+
  1. **Web updater**
  2. **With QFlipper app**
 
->Note: 
+>Note:
 > - To update/Jail break a flipper you need a SD card
 > - Also Flipper can support up to 256 GB SD cards
 
@@ -105,7 +100,7 @@ it is, There are two way to flash the frimware
 
 1. Connect Flipper to computer with type C to USB A cable
    >Make sure Flipper has a SD card
-   
+
    ![COmputer connected to flipper](../Assets/Flipper/Flipper_connect_to_laptop.jpg)
 2. Use Web updater or QFlipper app.
 
@@ -117,7 +112,7 @@ it is, There are two way to flash the frimware
 
 * Unleashed: [Unleashed Web Updater](https://lab.flipper.net/?url=https://unleashedflip.com/fw_extra_apps/flipper-z-f7-update-unlshd-071e.tgz&channel=release-cfw&version=unlshd-071e)
 * Extreme: [Xtreme Web Updater](https://flipper-xtre.me/update/)
-  
+
 ![Both Extreme and unleash web flasher](../Assets/Flipper/X_and_unleash_webupdater.png)
 
 After picking what you want on your flipper. Just hit connect and then select your Flipper to connect to the web browser and then flash.
@@ -125,18 +120,18 @@ After picking what you want on your flipper. Just hit connect and then select yo
 ![Step to connect to web browser](../Assets/Flipper/Flipper_web_connect.png)
 ![After connection](../Assets/Flipper/flipper_unleash_webupdater.png)
 Now just hit Install.
-After the update is done, just unplug the Flipper from computer. 
+After the update is done, just unplug the Flipper from computer.
 
 ### QFlipper app update process
 
 1. The first step in this process to install QFlipper on the computer. [Qflipper download page](https://docs.flipper.net/qflipper)
 2. Next you need to install the tgz file for unleash or extreme release download page
    ![unleash download github](../Assets/Flipper/Unleashed_github_download.png)
-3. After you download the package tgz file open Qflipper app 
+3. After you download the package tgz file open Qflipper app
    > Connect Flipper to computer if not already done so.
 
    ![Qflipper app](../Assets/Flipper/Flipper_App_update.png)
-4. After the up date is done just unplug the Flipper from computer. 
+4. After the up date is done just unplug the Flipper from computer.
 
 ## Resources:
 
@@ -157,21 +152,18 @@ It has the following Capabilities:
 
 ## How to Clone Emulate NFC
 
-1. Navigate to the NFC menu 
-2. select Read 
-3. Place Flipper on top of the card. It should look like this 
+1. Navigate to the NFC menu
+2. select Read
+3. Place Flipper on top of the card. It should look like this
    ![Flipper on top of NFC card](../Assets/Flipper/NFC_Scan.jpg)
-It might take a while the flipper is scanning. Once Filpper is done scanning 
-the card you will get the screen above
-4. hit the right button to go to the more tab. 
+   It might take a while the flipper is scanning. Once Filpper is done scanning
+   the card you will get the screen above
+4. hit the right button to go to the more tab.
 5. Now you can ether save the card or emulate the card
-   >If you save the card you have to go back and navigate to the NFC menu and 
+   >If you save the card you have to go back and navigate to the NFC menu and
    then go the saved menu and then you can emulate the card
-6.  hold the Flipper to the reader.\
-   You can learn more about NFC here [Flipper NFC page](https://docs.flipper.net/nfc/read)
-
-
-# Bad Bluetooth (BadKB)
+6. hold the Flipper to the reader.\
+   You can learn more about NFC here [Flipper NFC page](https://docs.flipper.net/nfc/read)# Bad Bluetooth (BadKB)
 
 I always tell others that Bad Bluetooth is basically a wireless rubber ducky
 attack. If you don't know what a rubber ducky is then that's ok. Bad KB and Rubber
@@ -241,7 +233,7 @@ access to the targeted machine.
     > , Payload is the powershell#2 from https://www.revshells.com/
 
 # Reference Links
-* **Flipper BADUSB:** [Flipper badUSB](https://docs.flipper.net/bad-usb) 
+* **Flipper BADUSB:** [Flipper badUSB](https://docs.flipper.net/bad-usb)
 * **Fipper NFC:** [Flipper NFC page](https://docs.flipper.net/nfc/read)
 * **QFlipper:** [Qflipper download page](https://docs.flipper.net/qflipper)
 * **Flipper Control page:** [Flipper Control page](https://docs.flipper.net/basics/control)

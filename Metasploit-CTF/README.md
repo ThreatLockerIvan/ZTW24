@@ -38,7 +38,6 @@ and tools. In this class we will cover the following topics:
   to automate the process of privilege escalation on Linux systems. It performs
   thorough system enumeration to identify potential paths for privilege escalation.
 
-
 ## Follow Along
 
 We have created a writeup for this CTF in hopes of leaving no one behind, if you

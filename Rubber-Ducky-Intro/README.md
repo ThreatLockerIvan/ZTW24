@@ -59,7 +59,7 @@ easy to press the button when the case is put back together.
   ![Where to put stickers](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-15_183919.png)
 
   What it should look like after you put all stickers on.
-  ![What it should look after you put the sticker on](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-15_183946.png) 
+  ![What it should look after you put the sticker on](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-02-15_183946.png)
 
 5. Put the Rubber ducky back together.
 
@@ -157,7 +157,7 @@ REM ^^^ Write Hello, World! to notepad without hitting enter
   press the button to stop the payload Early unless you have the button
   assigned to do something)
 4. Move the inject.bin file to the root of ducky.
-   
+
   ![enter image description here](../Assets/Intro_to_Rubber_ducky/Screenshot_2024-01-26_150707.png)
 
 6. eject ducky
