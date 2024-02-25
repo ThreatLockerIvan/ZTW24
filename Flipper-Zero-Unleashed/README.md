@@ -11,6 +11,7 @@ an intro to intermediate level content.
 - [Guide](#guide)
 - [Introduction to Flipper Zero](#introduction-to-flipper-zero)
   - [Navigating the Flipper](#navigating-the-flipper)
+- [Jail Breaking a Flipper Zero](#jail-breaking-a-flipper-zero)
   - [GitHub Repositories:](#github-repositories)
   - [First Step to Flash Flipper](#first-step-to-flash-flipper)
     - [Web Updater process:](#web-updater-process)
@@ -18,6 +19,7 @@ an intro to intermediate level content.
   - [Resources:](#resources)
 - [NFC/RFID Hacking](#nfcrfid-hacking)
   - [How to Clone Emulate NFC](#how-to-clone-emulate-nfc)
+- [Bad Bluetooth (BadKB)](#bad-bluetooth-badkb)
   - [Bluetooth Impersonation Attacks](#bluetooth-impersonation-attacks)
 - [Reference Links](#reference-links)
 
@@ -71,6 +73,8 @@ reason Extreme was made.
  > - If you get lost you can just hit the back button till you get back to
  main art screen.
  > - You can learn more about the Flipper controls here [Flipper main website](https://docs.flipper.net/basics/control)# Jail Breaking a Flipper Zero
+
+# Jail Breaking a Flipper Zero
 
 Jail Breaking a Flipper otherwise known as Flashing a Flipper typically refers
 to the process of loading or updating the firmware on the device. Firmware is
@@ -165,12 +169,15 @@ It has the following Capabilities:
 6. hold the Flipper to the reader.\
    You can learn more about NFC here [Flipper NFC page](https://docs.flipper.net/nfc/read)# Bad Bluetooth (BadKB)
 
+# Bad Bluetooth (BadKB)
+
 I always tell others that Bad Bluetooth is basically a wireless rubber ducky
 attack. If you don't know what a rubber ducky is then that's ok. Bad KB and Rubber
 Duckies allows you to emulate a keyboard and send pre-programmed key strokes to
 any device you are connected to. In this case of a rubber ducky you must plug it
 into a computer as it looks like a "USB" device. But in this case The Flipper
 must connect over Bluetooth to the victims device to launch the attack.
+
 > If you want to learn more about BadUSB [Flipper badUSB](https://docs.flipper.net/bad-usb)
 
 ## Bluetooth Impersonation Attacks
@@ -233,6 +240,7 @@ access to the targeted machine.
     > , Payload is the powershell#2 from https://www.revshells.com/
 
 # Reference Links
+
 * **Flipper BADUSB:** [Flipper badUSB](https://docs.flipper.net/bad-usb)
 * **Fipper NFC:** [Flipper NFC page](https://docs.flipper.net/nfc/read)
 * **QFlipper:** [Qflipper download page](https://docs.flipper.net/qflipper)
