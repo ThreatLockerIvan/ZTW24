@@ -86,8 +86,8 @@ to install new features to extend your hacking abilities.
 You may be asking how do I flash firmware onto my Flipper, is it easy?
 it is, There are two way to flash the frimware
 
- 1. **Web updater**
- 2. **With QFlipper app**
+1. **Web updater**
+2. **With QFlipper app**
 
 >Note:
 > - To update/Jail break a flipper you need a SD card
@@ -119,7 +119,8 @@ it is, There are two way to flash the frimware
 
 ![Both Extreme and unleash web flasher](../Assets/Flipper/X_and_unleash_webupdater.png)
 
-After picking what you want on your flipper. Just hit connect and then select your Flipper to connect to the web browser and then flash.
+After picking what you want on your flipper. Just hit connect and then select
+your Flipper to connect to the web browser and then flash.
 
 ![Step to connect to web browser](../Assets/Flipper/Flipper_web_connect.png)
 ![After connection](../Assets/Flipper/flipper_unleash_webupdater.png)
@@ -128,7 +129,8 @@ After the update is done, just unplug the Flipper from computer.
 
 ### QFlipper app update process
 
-1. The first step in this process to install QFlipper on the computer. [Qflipper download page](https://docs.flipper.net/qflipper)
+1. The first step in this process to install QFlipper on the computer.
+   [Qflipper download page](https://docs.flipper.net/qflipper)
 2. Next you need to install the tgz file for unleash or extreme release download page
    ![unleash download github](../Assets/Flipper/Unleashed_github_download.png)
 3. After you download the package tgz file open Qflipper app
