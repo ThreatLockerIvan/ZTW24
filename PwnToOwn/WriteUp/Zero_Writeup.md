@@ -652,10 +652,17 @@ the Netcat command to open a listener on our machine
 nc -lnvp port
 ```
 
-- `-l` - This tells the Netcat utility to operate in listen mode.
-- `-n` - This tells the Netcat utility to skil DNS resolution.
-- `-v` - This tells the Netcat utility to operate in verbose mode.
-- `-p` - This tells the Netcat utility what port to open up for the listener.
+- `-l`: This switch tells nc to operate in listening mode, which means it will
+  listen for incoming connections rather than initiating connections.
+
+- `-n`: This switch tells nc not to perform DNS resolution on any incoming
+  addresses. This can speed up the operation, especially when dealing with IP addresses instead of domain names.
+
+- `-v`: This switch enables verbose mode, which provides more detailed output,
+  including information about incoming connections and data transfer.
+
+- `-p` port: This switch specifies the port number on which nc should listen
+  for incoming connections.
 
 #### After picking an option
 
@@ -761,7 +768,7 @@ set RHOSTS <IP>
 Now that we have our settings set. Now we can exploit the machine with the 
 `exploit` command 
 
-![Exploit works]()
+![Exploit works](../../Assets/PwnToOwn/msfsmartermail.png)
 
 Now that we are in the system now we can look around and [get the flag](#getting-the-flag)
 

