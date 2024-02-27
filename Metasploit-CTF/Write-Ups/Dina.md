@@ -25,6 +25,7 @@ If not just follow along with this and you should get the flag.
   - [PlaySMS Exploit](#playsms-exploit)
 - [Privilege Escalation](#privilege-escalation)
 - [Collect the flag and win](#collect-the-flag-and-win)
+- [Pwn At Home](#pwn-at-home)
 - [Resources](#resources)
 
 # Given information and Objective
@@ -530,6 +531,27 @@ FLAG : 22d06624cd604a0626eb5a2992a6f2e6
 ```
 
 And with that, we have pwned the machine.
+
+
+# Pwn At Home
+
+ZTW is over, and you want to do this at home, How can I do that?
+
+You can Install both boxes. 
+
+Dina https://www.vulnhub.com/entry/dina-101,200/
+Kali https://www.kali.org/get-kali/#kali-virtual-machines
+
+After you install the two OVA you can import them into your favorite hyper 
+hypervisor.  
+
+> Notes: The IP will be differnt once you install them. You can login on to the
+> guest login and use the `ip` command
+
+```bash
+ip a
+```
+
 
 # Resources
 
