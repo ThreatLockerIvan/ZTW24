@@ -76,7 +76,7 @@ This is the complete guild to the Pwn To Own Challenge for Zero Trust World
 the answers this is the spot.  It would be too long to put both write
 ups in one file so they are split into two files.
 
--  **Zero:**  [Zero Writeup](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
--  **Trust:**  [Trust Writeup](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+-  **Zero:**  [Zero Writeup](WriteUp/Trust_Writeup.md)
+-  **Trust:**  [Trust Writeup](WriteUp/Zero_Writeup.md)
 
 > NOTE: Write ups will be posted later during ZTW
