@@ -1,4 +1,4 @@
-![ZTW Logo](../Assets/Hacking_Labs_graphics_ztw_logo_med_1.png)
+![ZTW Logo](../../Assets/Hacking_Labs_graphics_ztw_logo_med_1.png)
 
 # Metasploit CTF [Dina]
 
