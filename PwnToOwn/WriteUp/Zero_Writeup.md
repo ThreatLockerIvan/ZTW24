@@ -37,7 +37,7 @@ organization. Techniques such as open-source intelligence (OSINT),
 DNS enumeration, WHOIS queries, and reconnaissance tools aid in gathering
 this information.
 
-![selfie with the PwnToOwn machine](../../Assets/)
+![selfie with the PwnToOwn machine](../../Assets/PwnToOwn/reconpic.png)
 
 ![Website](../../Assets/PwnToOwn/PwnToOwn_WebSite.png)
 
