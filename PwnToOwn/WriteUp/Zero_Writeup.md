@@ -41,7 +41,7 @@ this information.
 
 ![Website](../../Assets/PwnToOwn/PwnToOwn_WebSite.png)
 
-![Flyer with details of the PwnToOwn challenge](../../)
+![Flyer with details of the PwnToOwn challenge](../../Assets/PwnToOwn/Pwntoown_Flyer.jpg)
 
 The flyer gave us a QR code that goes to the PwnToOwn page. This has lot of
 details about the challenge.
