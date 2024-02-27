@@ -10,6 +10,8 @@ If not just follow along with this and you should get the flag.
 
 ## Table of Contents
 
+![QR Code to page](../../Assets/QR_Codes/qr_metasploit.png)
+
 - [Metasploit CTF \[Dina\]](#metasploit-ctf-dina)
   - [Table of Contents](#table-of-contents)
 - [Given information and Objective](#given-information-and-objective)

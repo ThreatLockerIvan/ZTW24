@@ -4,6 +4,8 @@
 
 ![Baby ducky](../Assets/Intro_to_Rubber_ducky/baby_ducky_200x200.png)
 
+![QR Code to page](../Assets/QR_Codes/qr_intro_ducky.png)
+
 # Table of Contents
 
 - [Rubber Ducky Intro](#rubber-ducky-intro)

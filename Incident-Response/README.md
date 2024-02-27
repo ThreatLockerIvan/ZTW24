@@ -2,6 +2,8 @@
 
 # Incident Response with ThreatLocker
 
+![QR Code to page](../Assets/QR_Codes/qr_incident_response.png)
+
 In our Incident Response Class, we'll dive into the process of analyzing logs
 to uncover any malicious behavior residing on a machine. This involves
 scrutinizing various log entries to identify and understand potential threats

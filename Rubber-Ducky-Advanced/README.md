@@ -4,6 +4,8 @@
 
 ![Super ducky](../Assets/Advance_ducky/ducky1_200x200.png)
 
+![QR Code to page](../Assets/QR_Codes/qr_ducky_advanced.png)
+
 # Table of Contents
 
 - [Rubber Ducky Advance](#rubber-ducky-advance)

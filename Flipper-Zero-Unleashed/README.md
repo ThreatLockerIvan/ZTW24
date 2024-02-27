@@ -2,6 +2,8 @@
 
 # Flipper Zero Unleashed
 
+![QR Code to page](../Assets/QR_Codes/qr_flipper.png)
+
 Welcome to the Flipper Zero Unleashed course. This class holds everything from
 an intro to intermediate level content.
 

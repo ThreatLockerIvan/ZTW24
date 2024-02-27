@@ -2,6 +2,8 @@
 
 # Metasploit CTF
 
+![QR Code to page](../Assets/QR_Codes/qr_metasploit.png)
+
 Welcome to the Guided Capture The Flag (CTF) experience! In this hands-on
 session, you will delve into the world of penetration testing guided by our
 specially crafted Metasploit class. Our aim is to provide an interactive journey
