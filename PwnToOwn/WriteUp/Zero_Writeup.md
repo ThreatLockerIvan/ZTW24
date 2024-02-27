@@ -231,7 +231,7 @@ start with.
 
 ### FTP Port 21
 
-During the Nmap scan the -A option was able to find out that the FTP server had
+During the Nmap scan the `-A` option was able to find out that the FTP server had
 anonymous login enable, and that it had three files.  The first thing to do,
 is to connect to the server with this command:
 
@@ -315,7 +315,7 @@ enum4linux -a <Target>
 - `-a` This will do all the simple enumeration for the SMB service.
 
 After running the `enum4linux` command we can see that the SMB service allows
-for this username`''` and password`''`. This means that anyone can login to the
+for this username `''` and password `''`. This means that anyone can login to the
 SMB services.
 
 To login with an null user there are two way login on the smb service with kali.
@@ -332,8 +332,8 @@ command to list the directory on the service.
 smbclient --no-pass -L //<IP>
 ```
 
-- `--no-pass` - This is tell `smbclient` to send null as the password.
-- `-L` - This tell `smbclient` to list the files on the Share.
+- `--no-pass` - This tells `smbclient` to send null as the password.
+- `-L`        - This tells `smbclient` to list the files on the Share.
 
 Once run this command we can see that the SMB services is hosting a folder
 called `Stuff`
@@ -422,7 +422,7 @@ code of the web page.
 
 ![Source code of the smartermail page](../../Assets/PwnToOwn/4629_source_page.png)
 
-The thing that we saw is that the vat stProductBuild is 6919 and that stProductVersion is 100.0.6919. This
+The thing that we saw is that the var stProductBuild is 6919 and that stProductVersion is 100.0.6919. This
 
 ## Exploitation Phase
 
@@ -645,7 +645,7 @@ echo '</pre>';
 ?>
 ```
 
-For this to work we need to have a listener open on our machine. So we can use
+For this to work, we need to have a listener open on our machine. So we can use
 the Netcat command to open a listener on our machine
 
 ```bash
@@ -654,13 +654,11 @@ nc -lnvp port
 
 - `-l`: This switch tells nc to operate in listening mode, which means it will
   listen for incoming connections rather than initiating connections.
-
 - `-n`: This switch tells nc not to perform DNS resolution on any incoming
-  addresses. This can speed up the operation, especially when dealing with IP addresses instead of domain names.
-
+  addresses. This can speed up the operation, especially when dealing with IP
+  addresses instead of domain names.
 - `-v`: This switch enables verbose mode, which provides more detailed output,
   including information about incoming connections and data transfer.
-
 - `-p` port: This switch specifies the port number on which nc should listen
   for incoming connections.
 
@@ -758,6 +756,7 @@ Exploit target:
 
 View the full module info with the info, or info -d command.
 ```
+
 Looks like we need to change RHOSTS and LHOST with the `set` command. 
 
 Example
@@ -765,6 +764,7 @@ Example
 ```bash
 set RHOSTS <IP>
 ```
+
 Now that we have our settings set. Now we can exploit the machine with the 
 `exploit` command 
 
@@ -807,11 +807,11 @@ LHOST='<Our attack machine IP>'
 LPORT=5757
 ```
 
-HOST - is the machine we want to use the exploit on, AKA the target.
-PORT - is the port that the exploit will used.
-LHOST - is the IP that the target will used to connect back to our attacker
-machine.
-LPORT - is the port that the target used to connect to our attack machine.
+* HOST  - is the machine we want to use the exploit on, AKA the target.
+* PORT  - is the port that the exploit will used.
+* LHOST - is the IP that the target will used to connect back to our attacker
+  machine.
+* LPORT - is the port that the target used to connect to our attack machine.
 
 Atfer we change the parts that we need to change we can now run the exploit on
 the target.
