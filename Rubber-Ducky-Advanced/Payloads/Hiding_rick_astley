@@ -3,6 +3,7 @@ REM Author: Ray
 REM Description: Hide rick astley in another desktop and set volume to max
 REM Target: windows 11/10
 
+REM Dynamic Delay
 EXTENSION DETECT_READY
     REM VERSION 1.1
     REM AUTHOR: Korben
@@ -31,12 +32,17 @@ EXTENSION DETECT_READY
     CAPSLOCK
 END_EXTENSION
 
+REM Open another desktop
 CTRL GUI d
 DELAY 1000
+
+REM Opens Rick Astley 
 GUI r
 DELAY 600
 STRINGLN msedge.exe https://www.youtube.com/watch?v=xm3YgoEiEDc
 DELAY 1500
+
+REM Open Sound mixer and SET Volume to MAX
 CTRL ESC 
 DELAY 600
 STRING sound mixer options
@@ -45,8 +51,12 @@ ENTER
 DELAY 600
 END
 DELAY 600
+
+REM Close Sound mixer.
 ALT F4
 DELAY 700
+
+REM Go Back to old Desktop
 CTRL GUI LEFTARROW
 
 
