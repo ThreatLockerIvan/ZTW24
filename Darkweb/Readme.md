@@ -95,7 +95,7 @@ people that are just getting into the dark web.
   ![hidden wiki landing page](../Assets/Darkweb/Hiddenwiki.png)
 
 # Reference Links
-Tails OS: https://tails.net/
-Ransomware Gang Research: http://ransomwaregangs.org/
-Dark Web Research: https://darkweblink.com/
-Hidden Wiki: https://hiddenwiki.com/
+- Tails OS: https://tails.net/
+- Ransomware Gang Research: http://ransomwaregangs.org/
+- Dark Web Research: https://darkweblink.com/
+- Hidden Wiki: https://hiddenwiki.com/
