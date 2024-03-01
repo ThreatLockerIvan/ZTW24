@@ -1,4 +1,4 @@
-![ZTW Logo](../../Assets/Hacking_Labs_graphics_ztw_logo_med_1.png)
+![ZTW Logo](../Assets/Hacking_Labs_graphics_ztw_logo_med_1.png)
 
 # Intro
 
@@ -72,7 +72,7 @@ You can use `hash-identifier` in two ways.
 
 You will get results like this:
 
-![Hash-identifier results](../../Assets/OnDemand/Hashcat/hash_identifier.png)
+![Hash-identifier results](../Assets/OnDemand/Hashcat/hash_identifier.png)
 
 > Note: you can use other tools, There is even ones on websites.
 
