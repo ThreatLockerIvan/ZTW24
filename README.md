@@ -14,7 +14,6 @@ interactively with the Hacking Lab's, get a recap, or extend their knowledge fur
 * **Metasploit-CTF:**  [ZTW24/Metasploit-CTF (Course Content)](Metasploit-CTF/README.md)
 * **Incident-Response:** [ZTW24/Incident-Response (Course Content)](Incident-Response/README.md)
 * **PwnToOwn Challenge WriteUp:** [ZTW24/Incident-Response (Course Content)](/PwnToOwn/ReadMe.md)
-* **OnDemand classes:** [ZTW24/OnDemand classes (Course Content)](Ondemand/README.md)
 * **DarkWeb Class:** [ZTW24/Darkweb class (Course Content)](Darkweb/Readme.md)
 * **Hashcat Class:** [ZTW24/Hashcat Class (Course Content)](HashCat/Readme.md)
 
