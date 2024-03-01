@@ -16,6 +16,7 @@ interactively with the Hacking Lab's, get a recap, or extend their knowledge fur
 * **PwnToOwn Challenge WriteUp:** [ZTW24/Incident-Response (Course Content)](/PwnToOwn/ReadMe.md)
 * **OnDemand classes:** [ZTW24/OnDemand classes (Course Content)](Ondemand/README.md)
 * **DarkWeb Class:** [ZTW24/Darkweb class (Course Content)](Darkweb/Readme.md)
+* **Hashcat Class:** [ZTW24/Hashcat Class (Course Content)](Hashcat/Readme.md)
 
 > **Tip:** Click one of links above to access its respective course content.
 
